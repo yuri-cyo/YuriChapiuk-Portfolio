@@ -1872,7 +1872,7 @@ a {
 }
 
 .nav-menu .container__avatar-name h1 {
-  font-size: calc(24px + 2 * ((100vw - 480px) / 1440));
+  font-size: calc(22px + 2 * ((100vw - 480px) / 1440));
 }
 
 .nav-menu .container__avatar-name span {
