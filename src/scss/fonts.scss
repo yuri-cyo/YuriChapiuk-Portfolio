@@ -1,0 +1,69 @@
+@font-face {
+	font-family: icomoon;
+	font-display: swap;
+	src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+
+[class^="_icon-"], [class*=" _icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	// font-family: 'icomoon' !important;
+	// font-family: 'Montserrat' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+ 
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+ }
+ 
+ ._icon-hire:before {
+	content: "\e904";
+	font-family: 'icomoon' !important;
+	padding-right: 10px;
+ }
+ ._icon-download:before {
+	content: "\e903";
+	font-family: 'icomoon' !important;
+	padding-right: 10px;
+ }
+ ._icon-github:before {
+	content: "\e900";
+	font-family: 'icomoon' !important;
+ }
+ ._icon-linkedin:before {
+	content: "\e901";
+	font-family: 'icomoon' !important;
+ }
+ ._icon-telegram:before {
+	content: "\e902";
+	font-family: 'icomoon' !important;
+	// padding-right: 10px;
+ }
+
+//  ._icon-send:before {
+// 	content: "\e909";
+//  }
+ ._icon-send::after {
+	content: "\e909";
+	padding-left: 10px;
+	font-family: 'icomoon' !important;
+ }
+
+ ._icon-location-dot-solid:before {
+	content: "\e906";
+	// padding-right: 10px;
+	font-family: 'icomoon' !important;
+ }
+
+ ._icon-mail-solid:before {
+	content: "\e905";
+	font-family: 'icomoon' !important;
+ }
