@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
     } else {
-      alert('Заповніть обовязкові поля');
+      console.log('Заповніть обовязкові поля');
   //     console.log('Заповніть обовязкові поля');
     }
   }
