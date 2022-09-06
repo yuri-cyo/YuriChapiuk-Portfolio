@@ -1330,7 +1330,7 @@ a {
 
 		
 		&:hover {
-
+			transform: translateY(-5px);
 			ion-icon {
 				// color: #ffff;
 				// transform: translateY(-5px);
@@ -1411,7 +1411,7 @@ ion-icon {
 
 	}
 	
-	&__contact {
+	&__contact {git add
 		gap: 10px;
 		display: flex;
 		align-items: center;
