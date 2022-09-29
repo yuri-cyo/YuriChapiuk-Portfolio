@@ -203,7 +203,7 @@ a {
 			border: solid 5px $color-mark;
 			border-radius: 100px;
 			box-shadow:$box-shadow-out;
-			transition: all .3s;
+			transition: border .3s;
 			
 			&:hover {
 				box-shadow:$box-shadow-out-hover;
@@ -233,6 +233,7 @@ a {
 			padding: 10px;
 			border-radius: 100px;
 			background-color: $bg;
+			// transition: all .3s;
 			
 			ion-icon {
 				padding-left: 10px;
@@ -1411,7 +1412,7 @@ ion-icon {
 
 	}
 	
-	&__contact {git add
+	&__contact {
 		gap: 10px;
 		display: flex;
 		align-items: center;
@@ -1467,6 +1468,29 @@ ion-icon {
 	}
 }
 
+._sending-mail {
+	// overflow: hidden;
+	
+	position: relative;
+	&::after {
+		border-radius: 1.25rem;
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		
+		border: solid 1px #4eb869;
+		color: #367c47;
+		text-align: center;
+		box-shadow: inset 0 0 0.5em 0 #3c9051, 0 0 0.5em 0 #3c9051;
+		backdrop-filter: blur(7px);
+		// background: url(@img/loading.gif) center center no-repeat;
+		
+		transition: all .5s ease 0s;
+	}
+}
 
 .contact-me {
 
@@ -1514,8 +1538,20 @@ ion-icon {
 	}
 
 	&__content {
+		// transition: all .5s ease 0s;
 		// padding: rem(18.5) rem(12);
 		// margin: rem(10);
+		// background-color: $bg;
+		// border-radius: rem(20);
+		// box-shadow: $box-shadow-out;
+		// background: none;
+		// color: $text;
+		// transition: all 0.2s;
+
+		// &:focus {
+		// 	box-shadow: $box-shadow-out;
+		// 	transition: all 0.2s;
+		// }
 	}
 	
 	&__label {
@@ -1527,8 +1563,9 @@ ion-icon {
 		background-color: $bg;
 		border-radius: rem(20);
 		box-shadow: $box-shadow-out;
-		// background: none;
 		color: $text;
+		// background: none;
+		
 		// font-size: 22px;
 		@include adaptiv-font(20, 16);
 		font-family: 'Montserrat';

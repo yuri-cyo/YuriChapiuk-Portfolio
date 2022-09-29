@@ -40,52 +40,107 @@ function closeMenu() {
 }
 
 // !================ \/ Плавная прокрутка до якоря \/ =============
-const anchors = document.querySelectorAll('a[href*="#"]')
-for (let anchor of anchors) {
-  anchor.addEventListener("click", function(event) {
-    event.preventDefault();
-    const blockID = anchor.getAttribute('href')
-    document.querySelector('' + blockID).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    })
-  })
-}
+// const anchors = document.querySelectorAll('a[href*="#"]')
+// for (let anchor of anchors) {
+//   anchor.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     const blockID = anchor.getAttribute('href')
+//     document.querySelector('' + blockID).scrollIntoView({
+//       behavior: "smooth",
+//       block: "start"
+//     })
+//   })
+// }
 // !================ /\ Плавная прокрутка до якоря /\ =============
 
 //! Nav mark list & scroll smoth to section
-const getId = (link) => link.getAttribute('href').replace('#','');
+// const getId = (link) => link.getAttribute('href').replace('#','');
 
-const observer = new IntersectionObserver((entries)=> {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      document.querySelectorAll('.nav-list__item-link').forEach((link) => {
-        link.classList.toggle('nav-list__item-link--active', getId(link) === entry.target.id
-        );
-      });
-    };
-  });
-}, { 
-  threshold: 0.3,
-  // threshold: 0.1,
-});
+// const observer = new IntersectionObserver((entries)=> {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       document.querySelectorAll('.nav-list__item-link').forEach((link) => {
+//         link.classList.toggle('nav-list__item-link--active', getId(link) === entry.target.id
+//         );
+//       });
+//     };
+//   });
+// }, { 
+//   threshold: 0.3,
+//   // threshold: 0.1,
+// });
 
-document.querySelectorAll('.section').forEach(
-  (section) => observer.observe(section),
-);
+// document.querySelectorAll('.section').forEach(
+//   (section) => observer.observe(section),
+// );
 
-document.querySelector('.nav-list').addEventListener('click', (event) => {
-  if (event.target.classList.contains('nav-list__item-link')) {
-    event.preventDefault();
+// document.querySelector('.nav-list').addEventListener('click', (event) => {
+//   if (event.target.classList.contains('nav-list__item-link')) {
+//     event.preventDefault();
 
-    // const id = event.target.getAttribute('href').replase('#', '');
-    // const id = getId(event,target);
-    // window.scrollTo({
-    //   top: document.getElementById(getId(event.target)).offsetTop,
-    //   behavior: 'smooth',
-    // });
-  };
-});
+//     // const id = event.target.getAttribute('href').replase('#', '');
+//     // const id = getId(event,target);
+//     // window.scrollTo({
+//     //   top: document.getElementById(getId(event.target)).offsetTop,
+//     //   behavior: 'smooth',
+//     // });
+//   };
+// });
+
+// !плавна прокрутка + Active Nav Anchor(робив сам)
+
+const activeClassNav = 'nav-list__item-link--active'; //! Активний клас! 
+const fixDoubleClasses = 400; //! Фікс накладання класів. Віднімає висоту тригера (де 0 - викл)
+
+addEventListener('scroll', funcWindowHeight);
+function funcWindowHeight() {
+  let arrHeightSections = [];
+  const anchors = document.querySelectorAll('a[href*="#"]')
+  
+    for (let anchor of anchors) {
+      anchor.addEventListener("click", function(event) {
+        event.preventDefault();
+        const blockID = anchor.getAttribute('href')
+      document.querySelector('' + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      })
+    })
+  
+    let hasSection = '' + anchor.hash.slice(1);
+    const allNavLinks = document.querySelector(`a[data-scroll-active-nav=${hasSection}]`) //* Секції
+    const allSections = document.querySelector(`section[id*=${hasSection}]`) //* Секції
+    const heightSections = allSections.getBoundingClientRect().height; //* Висота секції
+    const coordSections = allSections.getBoundingClientRect().top; //* координати секції
+    
+    arrHeightSections.push(parseInt(heightSections));
+    const activeHeight = fixDoubleClasses;
+    // const activeHeight = Math.min(...arrHeightSections) - fixDoubleClasses;
+
+    // console.log(activeHeight);
+    // console.log(' ');
+
+    if (activeHeight <= coordSections + heightSections && 
+        activeHeight >= coordSections) {
+      allNavLinks.classList.add(activeClassNav)
+    } else {
+      allNavLinks.classList.remove(activeClassNav)
+    }
+  }
+}
+
+//! NPM active-menu-link 
+// import ActiveMenuLink from "active-menu-link";
+// let options = {
+//   activeClass: "nav-list__item-link--active",
+//   scrollOffset: -250,
+//   default: 100
+//   // scrollDuration: 700
+// };
+
+// new ActiveMenuLink(".navbar", options);
+// // options.activeClass.setTimeout(500)
+
 
 //!typewriter
 var i = 0;
@@ -197,12 +252,25 @@ document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('form');
   form.addEventListener('submit', formSend);
 
+  const formAllInputs = document.querySelectorAll('.contact-me__content');
+  // console.log(formSendingAnimated);
+
   async function formSend(e) {
     e.preventDefault();
 
     let error = formValidate(form);
 
     let formData = new FormData(form);
+
+    // for (let i = 0; i < formAllInputs.length; i++) { //! Анімація 2 відправки форми кожного з лейблів
+    //   let listInputs = formAllInputs[i]
+    //   listInputs.classList.add('_sending-mail')
+
+    //   console.log(listInputs);
+    // }
+
+    // form.classList.add('_sending') //! вкл анімацію відправки форми
+
 
     // formData.append('image', formImage.files[0]); 
 
