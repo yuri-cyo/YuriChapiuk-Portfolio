@@ -90,14 +90,29 @@ function closeMenu() {
 // !плавна прокрутка + Active Nav Anchor(робив сам)
 
 const activeClassNav = 'nav-list__item-link--active'; //! Активний клас! 
-const fixDoubleClasses = 400; //! Фікс накладання класів. Віднімає висоту тригера (де 0 - викл)
+let windowHeight = window.innerHeight / 2; //! висота активного тригера (висота вікна подылена на ..)
+// console.log(windowHeight);
+// const fixDoubleClasses = 0; //! Фікс накладання класів. Віднімає висоту тригера (де 0 - викл) //! розкоментувати для автоматичної ависоти активного тригер (активний тригер - це мінімальна висота секції)
+
 
 addEventListener('scroll', funcWindowHeight);
 function funcWindowHeight() {
-  let arrHeightSections = [];
   const anchors = document.querySelectorAll('a[href*="#"]')
+  const sections = document.querySelectorAll('section[id*="section"]')
+  let heightSections;
+  let activeHeight;
+  let arrHeightSections = [];
   
-    for (let anchor of anchors) {
+  // for (let section of sections) { //! розкоментувати цикл для автоматичної висоти активного тригера (активний тригер - це мінімальна висота секції)
+  //   heightSections = section.getBoundingClientRect().height; //* Висота секції
+
+  //   arrHeightSections.push(parseInt(heightSections));
+  //   activeHeight = Math.min(...arrHeightSections) - fixDoubleClasses;
+  // }
+
+  activeHeight = windowHeight;
+  
+  for (let anchor of anchors) {
       anchor.addEventListener("click", function(event) {
         event.preventDefault();
         const blockID = anchor.getAttribute('href')
@@ -110,17 +125,12 @@ function funcWindowHeight() {
     let hasSection = '' + anchor.hash.slice(1);
     const allNavLinks = document.querySelector(`a[data-scroll-active-nav=${hasSection}]`) //* Секції
     const allSections = document.querySelector(`section[id*=${hasSection}]`) //* Секції
-    const heightSections = allSections.getBoundingClientRect().height; //* Висота секції
-    const coordSections = allSections.getBoundingClientRect().top; //* координати секції
-    
-    arrHeightSections.push(parseInt(heightSections));
-    const activeHeight = fixDoubleClasses;
-    // const activeHeight = Math.min(...arrHeightSections) - fixDoubleClasses;
+    const heightSection = allSections.getBoundingClientRect().height; //* Висота секції
+    const coordSections = allSections.getBoundingClientRect().top; //* координати 
 
-    // console.log(activeHeight);
-    // console.log(' ');
+    console.log(activeHeight);
 
-    if (activeHeight <= coordSections + heightSections && 
+    if (activeHeight <= coordSections + heightSection && 
         activeHeight >= coordSections) {
       allNavLinks.classList.add(activeClassNav)
     } else {
