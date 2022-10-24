@@ -90,13 +90,14 @@ function closeMenu() {
 // !плавна прокрутка + Active Nav Anchor(робив сам)
 
 const activeClassNav = 'nav-list__item-link--active'; //! Активний клас! 
-let windowHeight = window.innerHeight / 2; //! висота активного тригера (висота вікна подылена на ..)
 // console.log(windowHeight);
 // const fixDoubleClasses = 0; //! Фікс накладання класів. Віднімає висоту тригера (де 0 - викл) //! розкоментувати для автоматичної ависоти активного тригер (активний тригер - це мінімальна висота секції)
 
 
 addEventListener('scroll', funcWindowHeight);
+
 function funcWindowHeight() {
+  let windowHeight = window.innerHeight / 2; //! висота активного тригера (висота вікна подылена на ..)
   const anchors = document.querySelectorAll('a[href*="#"]')
   const sections = document.querySelectorAll('section[id*="section"]')
   let heightSections;
