@@ -133,7 +133,9 @@ a {
 	width: 100%;
 	// margin: 50px;
 	// padding: 40px;
-	@include adaptive-value("margin", 50, 12, 0);
+	@include adaptive-value("margin-bottom", 30, 15, 0);
+	@include adaptive-value("margin-left", 30, 15, 0);
+	@include adaptive-value("margin-right", 30, 15, 0);
 	@include adaptive-value("padding", 40, 12, 0);
 	@include adaptive-value("border-radius", 80, 30, 0);
 
@@ -684,8 +686,8 @@ a {
 @media only screen and (max-width: 1170px) {
 	.section {
 		padding-left: 0;
-		padding-top: 10px;
-		padding-bottom: 30px;
+		// padding-top: 10px;
+		// padding-bottom: 30px;
 		
 		.home-card {
 			align-items: flex-start;
@@ -782,7 +784,7 @@ a {
    // -moz-background-size: cover;
    // -o-background-size: cover;
    // background-size: cover;
-
+	margin-top: rem(20);
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -1136,7 +1138,8 @@ a {
 		flex-direction: column;
 		// width: 90%;
 		// margin: 0 auto;
-		@include adaptive-value("margin", 50, 12, 0);
+		// @include adaptive-value("margin-left", 50, 12, 0);
+		// @include adaptive-value("margin-right", 50, 12, 0);
 		@media (max-width: 770px){
 			x-direction: column;
 			width: 100%;
@@ -1713,6 +1716,8 @@ ion-icon {
 	color: $color-footer;
 	// display: flex;
 	justify-content: center;
+	// z-index: 100000000;
+	// position: relative;
 	
 	box-shadow: 2px 2px 7px 3px rgba(65, 65, 65, 0.451);
 	

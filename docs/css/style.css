@@ -1763,7 +1763,9 @@ a {
   border-radius: 80px;
   max-width: 80rem;
   width: 100%;
-  margin: calc(12px + 38 * ((100vw - 320px) / 1600 ));
+  margin-bottom: calc(15px + 15 * ((100vw - 320px) / 1600 ));
+  margin-left: calc(15px + 15 * ((100vw - 320px) / 1600 ));
+  margin-right: calc(15px + 15 * ((100vw - 320px) / 1600 ));
   padding: calc(12px + 28 * ((100vw - 320px) / 1600 ));
   border-radius: calc(30px + 50 * ((100vw - 320px) / 1600 ));
 }
@@ -2264,6 +2266,7 @@ a {
 }
 
 .about {
+  margin-top: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2605,7 +2608,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: calc(12px + 38 * ((100vw - 320px) / 1600 ));
 }
 
 .portfolio__title-subtitle-container {
@@ -3407,8 +3409,6 @@ ion-icon {
 
   .section {
     padding-left: 0;
-    padding-top: 10px;
-    padding-bottom: 30px;
   }
 
   .section .home-card {
