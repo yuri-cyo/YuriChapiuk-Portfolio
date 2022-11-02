@@ -1761,6 +1761,8 @@ a {
   -webkit-box-shadow: 2px 2px 5px rgba(109, 109, 109, 0.606), -2px -2px 5px rgba(255, 255, 255, 0.616);
           box-shadow: 2px 2px 5px rgba(109, 109, 109, 0.606), -2px -2px 5px rgba(255, 255, 255, 0.616);
   border-radius: 80px;
+  max-width: 80rem;
+  width: 100%;
   margin: calc(12px + 38 * ((100vw - 320px) / 1600 ));
   padding: calc(12px + 28 * ((100vw - 320px) / 1600 ));
   border-radius: calc(30px + 50 * ((100vw - 320px) / 1600 ));
@@ -3184,6 +3186,7 @@ ion-icon {
   margin: 0;
   padding: 0;
   border-radius: 0;
+  max-width: 100%;
   background-color: rgba(88, 82, 75, 0.6117647059);
   color: #ececec;
   -webkit-box-pack: center;
