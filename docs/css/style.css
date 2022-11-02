@@ -2603,7 +2603,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 1000px;
   margin: calc(12px + 38 * ((100vw - 320px) / 1600 ));
 }
 
@@ -2653,7 +2652,8 @@ a {
           justify-content: center;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 300px));
+  -ms-grid-columns: (minmax(270px, 300px))[3];
+  grid-template-columns: repeat(3, minmax(270px, 300px));
 }
 
 .portfolio-card__container {
@@ -3256,6 +3256,13 @@ ion-icon {
   color: #c9e7bf;
 }
 
+@media (max-width: 1435px) {
+  .portfolio-card {
+    -ms-grid-columns: (minmax(270px, 300px))[2];
+    grid-template-columns: repeat(2, minmax(270px, 300px));
+  }
+}
+
 @media only screen and (max-width: 1170px) {
   .conteiner__nav {
     -webkit-transition: 0.3s;
@@ -3474,6 +3481,18 @@ ion-icon {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 1.25rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .portfolio__container {
+    x-direction: column;
+    width: 100%;
+  }
+
+  .portfolio-card {
+    -ms-grid-columns: (minmax(270px, 300px))[1];
+    grid-template-columns: repeat(1, minmax(270px, 300px));
   }
 }
 

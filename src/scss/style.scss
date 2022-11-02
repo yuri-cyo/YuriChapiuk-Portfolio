@@ -31,6 +31,7 @@ $color-footer-hover: #c9e7bf;
 
 $box-shadow-in: 2px 2px 5px $shadow,
 						-2px -2px 5px $light;
+
 $box-shadow-out: 4px 4px 4px $shadow inset,
 						-4px -4px 4px $light inset;
 $box-shadow-out-hover: 2px 2px 2px $shadow inset,
@@ -1131,9 +1132,13 @@ a {
 	&__container {
 		display: flex;
 		flex-direction: column;
-		width: 1000px;
+		// width: 90%;
 		// margin: 0 auto;
 		@include adaptive-value("margin", 50, 12, 0);
+		@media (max-width: 770px){
+			x-direction: column;
+			width: 100%;
+		}
 	}
 
 	&__title-subtitle-container {
@@ -1184,7 +1189,13 @@ a {
 	justify-content: center;
 	// max-width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fit,  minmax(270px, 300px) );	
+	grid-template-columns: repeat(3,  minmax(270px, 300px) );	
+	@media (max-width: 1435px){
+		grid-template-columns: repeat(2,  minmax(270px, 300px) );	
+	}
+	@media (max-width: 770px){
+		grid-template-columns: repeat(1,  minmax(270px, 300px) );	
+	}
 	// grid-template-columns: repeat(3, 300px);
 	// grid-template-columns: repeat(2, 1fr);
 
