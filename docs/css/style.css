@@ -2394,34 +2394,6 @@ a {
   width: 0%;
 }
 
-.about__html-progress {
-  width: 80%;
-}
-
-.about__css-progress {
-  width: 60%;
-}
-
-.about__js-progress {
-  width: 30%;
-}
-
-.about__figma-progress {
-  width: 50%;
-}
-
-.about__photoshop-progress {
-  width: 40%;
-}
-
-.about__php-progress {
-  width: 1%;
-}
-
-.about__nodejs-progress {
-  width: 1%;
-}
-
 .educatin-work-container {
   display: -ms-grid;
   display: grid;
@@ -2569,6 +2541,13 @@ a {
   -webkit-box-shadow: 2px 2px 5px rgba(109, 109, 109, 0.606), -2px -2px 5px rgba(255, 255, 255, 0.616);
           box-shadow: 2px 2px 5px rgba(109, 109, 109, 0.606), -2px -2px 5px rgba(255, 255, 255, 0.616);
   border-radius: 1.5625rem;
+}
+
+.educatin__now,
+.work__now {
+  border: solid 1px #c9a220;
+  -webkit-box-shadow: inset 0 0 0.5em 0 #c9a220, 0 0 0.5em 0 #c9a220;
+          box-shadow: inset 0 0 0.5em 0 #c9a220, 0 0 0.5em 0 #c9a220;
 }
 
 .educatin__description,

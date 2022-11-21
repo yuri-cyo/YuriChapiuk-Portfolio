@@ -255,7 +255,22 @@ function getUserTime(t) {
 getUserTime (new Date());
 
 
-// //!  =================================== Form ====================================
+//!=================skills-percent=================
+const skills = document.querySelectorAll('[data-skills-percent]');
+const skillsBars = document.querySelectorAll('.about__progress');
+let countSkill = 0;
+
+for (let skill of skills) {
+  const percent = skill.dataset.skillsPercent;
+  // console.log(percent);
+    countSkill++;
+  skill.textContent = `${percent}%`;
+  skill.nextElementSibling.children[0].classList.add(`skill-${countSkill}`);
+  let skillScale = document.querySelector(`.skill-${countSkill}`);
+  skillScale.style.width = percent + '%';
+}
+
+//!  =================================== Form ====================================
 
 "use strict"
 

@@ -927,38 +927,16 @@ a {
 	
 	&__js {
 	}
+}
 	
 	//! ======% PROGRESS FRONTEND ================
-	&__html-progress {
-		
-		width: 80%;
-	}
-	
-	&__css-progress {
-		width: 60%;
-	}
-	&__js-progress {
-		width: 30%;
-	}
 
+	// js percent counting
 	//! ======% PROGRESS DESIGN ================
-	&__figma-progress {
-		width: 50%;
-	}
-	
-	&__photoshop-progress {
-		width: 40%;
-	}
+
 
 	//! ======% PROGRESS BECKEND ================
-	&__php-progress {
-		width: 1%;
-	}
 
-	&__nodejs-progress {
-		width: 1%;
-	}
-}
 
 .educatin-work-container {
 	display: grid;
@@ -1099,6 +1077,16 @@ a {
 			background-color: $bg;
 			box-shadow: $box-shadow-in;
 			border-radius: rem(25);
+			
+		}
+
+		&__now{
+			$color-education-now-border: #c9a220;
+			$color-education-now-shadow: #c9a220;
+			// #4eb869
+			// #c9a220
+			border: solid 1px $color-education-now-border;
+			box-shadow: inset 0 0 0.5em 0 $color-education-now-shadow, 0 0 0.5em 0 $color-education-now-shadow;
 			
 		}
 		

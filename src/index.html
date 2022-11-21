@@ -85,21 +85,21 @@
                     <h2>Frontend</h2>
                     <div class="about__html-container skill-container">
                       <span class="about__html">HTML</span>
-                      <span class="about__html-percent about__percent">80%</span>
+                      <span data-skills-percent="90" class="about__html-percent about__percent"></span>
                       <div class="about__skill-bar">
                         <span class="about__html-progress about__progress"></span>
                       </div>
                     </div>
                     <div class="about__css-container skill-container">
                       <span class="about__css">S(CSS)</span>
-                      <span class="about__css-percent about__percent">60%</span>
+                      <span data-skills-percent="75" class="about__css-percent about__percent"></span>
                       <div class="about__skill-bar">
                         <span class="about__css-progress about__progress"></span>
                       </div>
                     </div>
                     <div class="about__js-container skill-container">
                       <span class="about__js">JavaScript</span>
-                      <span class="about__js-percent about__percent">30%</span>
+                      <span data-skills-percent="40" class="about__js-percent about__percent"></span>
                       <div class="about__skill-bar">
                         <span class="about__js-progress about__progress"></span>
                       </div>
@@ -113,7 +113,7 @@
 
                     <div class="about__html-container skill-container">
                       <span class="about__figma">Figma</span>
-                      <span class="about__figma-percent about__percent">50%</span>
+                      <span data-skills-percent="75" class="about__figma-percent about__percent"></span>
                       <div class="about__skill-bar">
                         <span class="about__figma-progress about__progress"></span>
                       </div>
@@ -121,7 +121,7 @@
 
                     <div class="about__photoshop-container skill-container">
                       <span class="about__photoshop">Photoshop</span>
-                      <span class="about__photoshop-percent about__percent">40%</span>
+                      <span data-skills-percent="25" class="about__photoshop-percent about__percent"></span>
                       <div class="about__skill-bar">
                         <span class="about__photoshop-progress about__progress"></span>
                       </div>
@@ -222,7 +222,7 @@
                         <div class="educatin__decoration-dot"></div>
                         <div class="educatin__decoration-line last-line"></div>
                         <div class="educatin__date-container">
-                          <h3 class="educatin__data"><ion-icon name="calendar-outline"></ion-icon>08.2021 - Now</h3>
+                          <h3 class="educatin__data educatin__now"><ion-icon name="calendar-outline"></ion-icon>08.2021 - Now</h3>
                         </div>
                         <div class="educatin__title-container">
                           <h2 class="educatin__title">Self-Education</h2>
@@ -410,13 +410,13 @@
                         <div class="contact-me__content"
                           data-aos="fade-left"
                           data-aos-delay="0">
-                          <input placeholder="Name" type="text" id="name" class="contact-me__input feedback-input _req form_input">
+                          <input placeholder="Name" type="text" id="name" class="contact-me__input feedback-input _req form_input" required>
                         </div>
           
                         <div class="contact-me__content"
                           data-aos="fade-right"
                           data-aos-delay="0">
-                          <input placeholder="Email" type="email" id="formMessage" class="contact-me__input feedback-input _req _email form_input">
+                          <input placeholder="Email" type="email" id="formMessage" class="contact-me__input feedback-input _req _email form_input" required>
                         </div>
                       <!-- <div class="contact-me__content"
                           data-aos="fade-right"
@@ -432,7 +432,7 @@
                       <div class="button-send-mail-container"
                           data-aos="fade-down"
                           data-aos-delay="0">
-                          <button type="submit" class="button button-send-mail _icon-send button-submit">Send Message</button>
+                          <button type="button" class="button button-send-mail _icon-send button-submit">Send Message</button>
                       </div>
                     </form>
 
