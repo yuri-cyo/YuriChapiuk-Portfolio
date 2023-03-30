@@ -1,12 +1,72 @@
 // import { cli } from "webpack";
 import * as flsFunctions from "./modules/functions.js";
+import { DaysBetweenDates } from "./modules/functionality.js";
+
+import $ from "jquery";
+
+import { renderPortfolio } from "./modules/renderContent.js";
+renderPortfolio()
+import { emailJSformDataServiceId, emailJSformTemplateId, emailJSformUserId } from "./modules/keysEmailJS.js";
 
 flsFunctions.isWebp();
 
 
+// console.warn(renderPortfolio());
 // import Swiper, { Navigation, Pagination } from 'swiper';
 // const swiper = new Swiper();
 
+
+//! ========================== Language Swap ====================
+let $lang = document.documentElement.lang
+
+function fnLang(htmlLang) {
+  // const $lang = document.documentElement.lang = htmlLang;
+  $lang = htmlLang
+  let ua = 'uk-UA';
+  let en = 'en';
+
+  if ($lang == ua) {
+    document.querySelectorAll('.language-en').forEach(elem => elem.style.display = 'none')
+  }
+  if ($lang == en) {
+    document.querySelectorAll('.language-ua').forEach(elem => elem.style.display = 'none')
+  }
+}
+//!  htmlLang        'uk-UA'
+//!  htmlLang        'en'
+// fnLang('uk-UA');
+fnLang('en');
+
+function langValue() {
+  if ($lang === 'uk-UA') {
+    return 'uk-UA'
+  }
+  if ($lang === 'en') {
+    return 'en'
+  }
+}
+
+// console.log(langValue());
+// console.log(langValue() === 'uk-UA');
+
+
+//! ====================== \/ Count Between Dates \/ ==========================
+
+const dbd = new DaysBetweenDates('.dateLearnCountJS', {
+	startDate: '24.06.2021', // 24.06.2021
+	endDate: false,
+	includingFirstDay: true,
+	includingLastDay: true
+})
+
+
+if (langValue() === 'uk-UA') {
+  dbd.$el.innerHTML = `${dbd.countFinalAllD()}дн. (${dbd.calcYear}р. ${dbd.calcMonths}м. ${dbd.calcDays}дн.)`
+} else if (langValue() === 'en') {
+  dbd.$el.innerHTML = `${dbd.countFinalAllD()}d (${dbd.calcYear}yr ${dbd.calcMonths}mo ${dbd.calcDays}d)`
+}
+
+//! ====================== /\ Count Between Dates /\ ==========================
 
 
 //! AOS
@@ -24,7 +84,7 @@ const navMenu = document.querySelector('.conteiner__nav');
 const navLink = document.querySelectorAll('.nav-menu ul li');
 
 
-burgerButton.addEventListener('click', ()=>{
+burgerButton.addEventListener('click', (e)=>{
   navMenu.classList.toggle('nav__ative');
   burgerButton.classList.toggle('menu-icon__ative');
   document.body.classList.toggle('_lock')
@@ -39,55 +99,7 @@ function closeMenu() {
   
 }
 
-// !================ \/ Плавная прокрутка до якоря \/ =============
-// const anchors = document.querySelectorAll('a[href*="#"]')
-// for (let anchor of anchors) {
-//   anchor.addEventListener("click", function(event) {
-//     event.preventDefault();
-//     const blockID = anchor.getAttribute('href')
-//     document.querySelector('' + blockID).scrollIntoView({
-//       behavior: "smooth",
-//       block: "start"
-//     })
-//   })
-// }
-// !================ /\ Плавная прокрутка до якоря /\ =============
-
-//! Nav mark list & scroll smoth to section
-// const getId = (link) => link.getAttribute('href').replace('#','');
-
-// const observer = new IntersectionObserver((entries)=> {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       document.querySelectorAll('.nav-list__item-link').forEach((link) => {
-//         link.classList.toggle('nav-list__item-link--active', getId(link) === entry.target.id
-//         );
-//       });
-//     };
-//   });
-// }, { 
-//   threshold: 0.3,
-//   // threshold: 0.1,
-// });
-
-// document.querySelectorAll('.section').forEach(
-//   (section) => observer.observe(section),
-// );
-
-// document.querySelector('.nav-list').addEventListener('click', (event) => {
-//   if (event.target.classList.contains('nav-list__item-link')) {
-//     event.preventDefault();
-
-//     // const id = event.target.getAttribute('href').replase('#', '');
-//     // const id = getId(event,target);
-//     // window.scrollTo({
-//     //   top: document.getElementById(getId(event.target)).offsetTop,
-//     //   behavior: 'smooth',
-//     // });
-//   };
-// });
-
-// !плавна прокрутка + Active Nav Anchor(робив сам)
+// !плавна прокрутка + Active Nav Anchor
 
 const activeClassNav = 'nav-list__item-link--active'; //! Активний клас! 
 // console.log(windowHeight);
@@ -129,7 +141,7 @@ function funcWindowHeight() {
     const heightSection = allSections.getBoundingClientRect().height; //* Висота секції
     const coordSections = allSections.getBoundingClientRect().top; //* координати 
 
-    console.log(activeHeight);
+    // console.log(activeHeight);
 
     if (activeHeight <= coordSections + heightSection && 
         activeHeight >= coordSections) {
@@ -140,57 +152,30 @@ function funcWindowHeight() {
   }
 }
 
-//! NPM active-menu-link 
-// import ActiveMenuLink from "active-menu-link";
-// let options = {
-//   activeClass: "nav-list__item-link--active",
-//   scrollOffset: -250,
-//   default: 100
-//   // scrollDuration: 700
-// };
 
-// new ActiveMenuLink(".navbar", options);
-// // options.activeClass.setTimeout(500)
+// !typewriter
 
-
-//!typewriter
-var i = 0;
-// var A = 0;
-    var tag = document.getElementById("typewriter");
-    var html = document.getElementById("typewriter").innerHTML;
-    var attr = tag.setAttribute("data", html);
-    var txt = tag.getAttribute("data");
-    var speed = 120;
-    document.getElementById("typewriter").innerHTML = txt.slice(999);
-    function typeWriter() {
-      if (i <= txt.length) {
-        document.getElementById("typewriter").innerHTML = txt.slice(0 , i + 1);
-        i++;
-        
-        setTimeout(typeWriter, speed);
+  var i = 0;
+  // var A = 0;
+      var tag = document.getElementById("typewriter");
+      var html = document.getElementById("typewriter").innerHTML;
+      var attr = tag.setAttribute("data", html);
+      var txt = tag.getAttribute("data");
+      var speed = 120;
+      document.getElementById("typewriter").innerHTML = txt.slice(999);
+      function typeWriter() {
+        if (i <= txt.length) {
+          document.getElementById("typewriter").innerHTML = txt.slice(0 , i + 1);
+          i++;
+          
+          setTimeout(typeWriter, speed);
+        }
       }
-        //console.log(document.getElementById("text").innerHTML);
-    }
-
-// typeWriter();
-window.setTimeout(typeWriter, 1000);
+  window.setTimeout(typeWriter, 1000);
 
 
-// function deltxt() {
-//      if (A <= txt.length) {
-//          document.getElementById("text").innerHTML = txt.slice(0, -A);
-//          A++;
-//          setTimeout(deltxt, 50);
-//        }
-//     }
-//     var backward = speed * txt.length + 1000   ;
-//     // console.log(backward);
-//     setTimeout( function () {
-//      deltxt();
-//     },backward);
 
-
-//MENU mousemove
+//! MENU mousemove
 let marker = document.querySelector('#marker');
 let list = document.querySelectorAll('.nav li');
 
@@ -205,7 +190,7 @@ list.forEach(link => {
 	})
 })
 
-//MENU active class and hovered
+//! MENU active class and hovered
 	function activeLink() {
 		list.forEach((item) =>
 			item.classList.remove('active'));
@@ -218,42 +203,38 @@ list.forEach(link => {
 
 //! ============= Birthday calc date ===================
 
-// function addLeadingZero (d) {
-//   return (d < 10) ? '0' + d : d;
-// }
+export function birthdayDate(myBirthdayd, myBirthdayM, myBirthdayY) {
+  //! import {birthdayDate} from './libs/birthdayDate.js';
+  //! birthdayDate(2, 10, 1994);
 
-function getUserTime(t) {
-  let Y = t.getFullYear();
-  // let M = addLeadingZero(t.getMonth() + 1);
-  let M = t.getMonth() + 1;
-  let d = t.getDate();
+  function getUserTime(t) {
+    let Y = t.getFullYear();
+    // let M = addLeadingZero(t.getMonth() + 1);
+    let M = t.getMonth() + 1;
+    let d = t.getDate();
 
-  const myBirthdayY = 1994;
-  const myBirthdayM = 10;
-  const myBirthdayd = 2;
+    // const myBirthdayd = 2;
+    // const myBirthdayM = 10;
+    // const myBirthdayY = 1994;
 
-  // console.log(`без розрах ${myBirthday}`);
-
-  let myBirthday = (Y - myBirthdayY);
-  
-  if (M < myBirthdayM){
-    myBirthday -= 1;
-  }
-  
-  if (myBirthday === (Y - myBirthdayY)) {
-    if (d < myBirthdayd){
+    let myBirthday = (Y - myBirthdayY);
+    
+    if (M < myBirthdayM){
       myBirthday -= 1;
     }
+    
+    if (myBirthday === (Y - myBirthdayY)) {
+      if (d < myBirthdayd){
+        myBirthday -= 1;
+      }
+    }
+    document.querySelector('.birthday').innerHTML = myBirthday;
   }
-  document.querySelector('.birthday').innerHTML = myBirthday;
-  
-  // console.log(Y, M, d);
-  // console.log(`мені зараз ${myBirthday} років`);
-  // console.log(myBirthday);
+
+  getUserTime (new Date());
 }
 
-getUserTime (new Date());
-
+birthdayDate(2, 10, 1994);
 
 //!=================skills-percent=================
 const skills = document.querySelectorAll('[data-skills-percent]');
@@ -270,101 +251,115 @@ for (let skill of skills) {
   skillScale.style.width = percent + '%';
 }
 
-//!  =================================== Form ====================================
+//!  =================================== EmailJS ====================================
 
-"use strict"
-
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('form');
-  form.addEventListener('submit', formSend);
-
-  const formAllInputs = document.querySelectorAll('.contact-me__content');
-  // console.log(formSendingAnimated);
-
-  async function formSend(e) {
-    e.preventDefault();
-
-    let error = formValidate(form);
-
-    let formData = new FormData(form);
-
-    // for (let i = 0; i < formAllInputs.length; i++) { //! Анімація 2 відправки форми кожного з лейблів
-    //   let listInputs = formAllInputs[i]
-    //   listInputs.classList.add('_sending-mail')
-
-    //   console.log(listInputs);
-    // }
-
-    // form.classList.add('_sending') //! вкл анімацію відправки форми
-
-
-    // formData.append('image', formImage.files[0]); 
-
-    if (error === 0) {
-
-      form.classList.add('_sending');  //! клас для css анімації процеса відправки форми
-
-      let response = await fetch('sendmail.php', {
-        method: 'POST',
-        body: formData
-      });
-      if (response.ok) {
-        let result = await response.json(); 
-        alert(result.message);
-        formPreview.innerHTML = '';
-        form.reset();
-        form.classList.remove('_sending');
-      } else {
-        alert('Error');
-        form.classList.remove('_sending');
-      }
-
-    } else {
-      console.log('Заповніть обовязкові поля');
-  //     console.log('Заповніть обовязкові поля');
-    }
+function sendMail() {
+  let params =  {
+    from_name : document.getElementById("fullName").value,
+    email_id : document.getElementById("email_id").value,
+    message : document.getElementById("message").value
   }
+  emailjs.send(emailJSformDataServiceId, emailJSformTemplateId, params, emailJSformUserId).then(function (res) {
+    alert("Seccess! " + res.status);
+  })
+}
 
-  function formValidate(form) {
-    let error = 0;
-    let formReq = document.querySelectorAll('._req');
+$('#myForm').on('submit', function(event) {
+  event.preventDefault(); // prevent reload
+  var formData = new FormData(this);
+  formData.append('service_id', emailJSformDataServiceId);
+  formData.append('template_id', emailJSformTemplateId);
+  formData.append('user_id', emailJSformUserId);
+  // emailJSformDataServiceId();
+  // emailJSformTemplateId();
+  // emailJSformUserId();
 
-    for (let index = 0; index < formReq.length; index++) {
-      const input = formReq[index];
-      formRemoveError(input);
+  // formData.append('service_id', 'service');
+  // formData.append('template_id', 'template');
+  // formData.append('user_id', 'DJj8PbJ96');
 
-      if(input.classList.contains('_email')){
-        if(emailTest(input)){
-            formAddError(input);
-            error++;
-          }
-        } else if (input.getAttribute('type') === 'checkbox' && input.checked === false){
-            formAddError(input);
-            error++;
-        } else {
-            if (input.value === ''){
-                formAddError(input);
-                error++;
-        }
-      }
+function clearForm(){
+  $('#myForm').trigger('reset');
+}
+
+var sendButton = $(".button-send-mail");
+var form = $(".input-textarea-parent");
+var buttonTextDefoult = sendButton.text();
+
+function buttonDefoult() {
+  sendButton.text(buttonTextDefoult);
+  sendButton.addClass('_icon-send ');
+  sendButton.fadeTo(0, 1)
+  
+}
+
+function sendingForm(message){
+  var sendMessage = 'Sent successfully';
+  var errorMessage = 'Error  ';
+  var loadMessage = 'Sending';
+  form.fadeTo(200, 0.2);
+  // sendButton.fadeOut(100).text(message).fadeIn(100);
+  sendButton.text(message);
+
+
+  if (message === errorMessage) {
+    sendButton.fadeTo(0, 1);
+    sendButton.removeClass('button');
+    sendButton.addClass('button-error');
+    sendButton.text(message).removeClass('_icon-send').html(message +'<ion-icon name="bug"></ion-icon>');
+    // sendButton.text(message + '<ion-icon name="bug-outline"></ion-icon>');
+  };
+
+  if (message === loadMessage) {
+    sendButton.removeClass('_icon-send').fadeTo(0, 0.5).html(message +'<ion-icon name="reload-sharp"></ion-icon>');
+    return
+  };
+  if (message === sendMessage) {
+    sendButton.fadeTo(0, 1);
+    sendButton.removeClass('_icon-send').html(message +'<ion-icon name="checkmark-done-sharp"></ion-icon>');
+  };
+
+
+
+  setTimeout(()=> {
+    if (message === errorMessage) {
+      sendButton.removeClass('button-error');
+      sendButton.addClass('button');
     }
-    return error;
-  }
-  function formAddError(input) {
-    input.parentElement.classList.add('_error');
-    input.classList.add('_error');
-
-    // setTimeout(() => {
-    //   input.parentElement.classList.remove('_error');
-    // }, 5000);
+    if (message === errorMessage) {
+      // sendButton.removeClass('button-error');
+      sendButton.addClass('_icon-send');
+    }
     
-  }
-  function formRemoveError(input) {
-    input.parentElement.classList.remove('_error');
-    input.classList.remove('_error');
-  }
-  // Функція місця email
-  function emailTest(input) {
-    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-  }
+    
+    // sendButton.fadeOut(100).fadeIn(100).text(buttonTextDefoult);
+    // sendButton.text(buttonTextDefoult);
+    buttonDefoult();
+    form.fadeTo(200, 1);
+    sendButton.fadeTo(0, 1)
+
+  }, 4000)
+  // console.log(message);
+  // sendButton.show(2000).text(buttonTextDefoult);
+  // sendButton[0].text();
+}
+
+sendingForm('Sending');
+
+  $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+      type: 'POST',
+      data: formData,
+      contentType: false, // auto-detection
+      processData: false // no need to parse formData to string
+  }).done(function() {
+      clearForm();
+      sendingForm('Sent successfully');
+      // alert('Your mail is sent!');
+  }).fail(function(error) {
+    // alert('Oops...');
+      clearForm();
+      sendingForm('Error  ');
+      console.log('Oops... ' + JSON.stringify(error));
+  });
 });
+

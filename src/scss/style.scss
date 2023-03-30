@@ -10,6 +10,9 @@
 $bg: rgb(239, 238, 232);
 $bg-second:#e1e1e1;
 $bg-glass: rgba(240, 240, 240, 0.761);
+// $bg-glass: rgba(110, 110, 110, 0.426);
+$backdrop-filter-car-glass: 10px;
+
 $shadow: rgba(109, 109, 109, 0.606);
 $light: rgba(255, 255, 255, 0.616);
 $color-mark: #3c9051;
@@ -18,6 +21,7 @@ $bg-out-scroll: rgb(76, 83, 97);
 $bg-button-second: #c9a220;
 $bg-button-text-second: #8f7316;
 $bg-mark-card: #c9a220;
+$bg-card-portfolio: rgb(235, 236, 232);
 
 // $clr-neon: hsl(317 100% 54%);
 // $clr-bg: hsl(323 21% 16%);
@@ -46,6 +50,14 @@ $box-shadow-active: 2px 2px 2px $shadow,
 							-2px -2px 2px $light;
 $box-shadow-focus: 2px 2px 2px $shadow inset,
 							-2px -2px 2px $light inset;
+
+// .language-en {
+// 	display: none;
+// }
+
+// .language-ua {
+// 	display: none;
+// }
 
 * {
 	box-sizing: border-box;
@@ -107,6 +119,7 @@ body._lock {
 a {
 	text-decoration: none;
 	color: inherit;
+	text-align: center;
 }
 
 .conteiner__nav {
@@ -126,7 +139,9 @@ a {
 
 .card-glass {
 	background-color: $bg-glass;
-	backdrop-filter: blur(10px);
+	// backdrop-filter: blur(10px);
+	// backdrop-filter: $backdrop-filter-car-glass;
+	backdrop-filter: blur($backdrop-filter-car-glass);
 	box-shadow: $box-shadow-in;
 	border-radius: 80px;
 	max-width: rem(1280);
@@ -136,7 +151,7 @@ a {
 	@include adaptive-value("margin-bottom", 30, 15, 0);
 	@include adaptive-value("margin-left", 30, 15, 0);
 	@include adaptive-value("margin-right", 30, 15, 0);
-	@include adaptive-value("padding", 40, 12, 0);
+	@include adaptive-value("padding", 40, 30, 0);
 	@include adaptive-value("border-radius", 80, 30, 0);
 
 }
@@ -164,7 +179,7 @@ a {
 			
 			img {
 				animation: float 6s ease-in-out infinite;
-				border: rem(5) solid $color-mark;
+				border: rem(5) solid $bg;
 				height: calc(100% - 10000px);
 				border-radius: 100px;
 				width: 100%;
@@ -482,7 +497,7 @@ a {
 		// box-shadow: $box-shadow-in;
 
 			.home-title {
-				
+				text-align: center;
 				h1 {
 					@include adaptiv-font(95, 45);
 					font-weight: bold;
@@ -617,6 +632,21 @@ a {
 	}
 }
 
+.dateLearnCountJS {
+	display: block;
+	// justify-content:center;
+	// box-shadow: $box-shadow-out;
+	// background-color: $bg;
+	padding: rem(10);
+	// border-radius: rem(100);
+	margin-top: rem(5);
+	font-weight: 700;
+	letter-spacing: rem(4);
+	// text-decoration: underline;
+	// border-bottom: solid rem(3) ;
+	color: #23255c;
+}
+
 
 #typewriter::after{
 	content: "";
@@ -700,6 +730,7 @@ a {
 			&__container-description {
 				.home-title {
 					h1 {
+						
 						
 						// @include adaptiv-font(20, 60);
 						// font-size: 70px;
@@ -819,6 +850,14 @@ a {
 	&__subtitle {
 		// @include adaptiv-font(20, 18);
 		font-weight: 500;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem
+
+		// p {
+
+		// }
+		
 	}
 	
 	//! ======= skills =====
@@ -1081,12 +1120,13 @@ a {
 		}
 
 		&__now{
-			$color-education-now-border: #c9a220;
-			$color-education-now-shadow: #c9a220;
+			// $color-education-now-border: #c9a220;
+			// $color-education-now-shadow: #c9a220;
 			// #4eb869
 			// #c9a220
-			border: solid 1px $color-education-now-border;
-			box-shadow: inset 0 0 0.5em 0 $color-education-now-shadow, 0 0 0.5em 0 $color-education-now-shadow;
+			// border: solid 5px $color-mark;
+			// background-color: $bg
+			// box-shadow: inset 0 0 0.5em 0 $color-education-now-shadow, 0 0 0.5em 0 $color-education-now-shadow;
 			
 		}
 		
@@ -1124,6 +1164,7 @@ a {
 	&__container {
 		display: flex;
 		flex-direction: column;
+		
 		// width: 90%;
 		// margin: 0 auto;
 		// @include adaptive-value("margin-left", 50, 12, 0);
@@ -1199,7 +1240,7 @@ a {
 		// overflow: hidden;
 		// max-width: 300px;
 		min-width: 250px;
-
+		background-color: $bg-card-portfolio;
 		// aspect-ratio: 3 / 4;
 		border-radius: rem(20);
 		box-shadow: $box-shadow-hover;
@@ -1241,7 +1282,7 @@ a {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: flex-end;
+		justify-self: flex-end;
 		// background-color: $bg;
 
 		// background: linear-gradient(180deg, rgba(226, 225, 225, 0.9) 0.05%, rgba(89, 89, 89, 0.8) 100%);
@@ -1262,6 +1303,26 @@ a {
 		&:hover {
 			// display: flex;
 		}
+		p {
+			font-size: rem(14);
+			font-weight: 500;
+			max-height: rem(150);
+			padding-left: rem(10);
+			padding-right: rem(10);
+			overflow: hidden;
+			height: rem(125);
+			position: relative;
+			&::after{
+				content:'';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: rem(50);
+				background: linear-gradient(360deg, $bg-card-portfolio, rgba(255, 255, 255, 0) 100%);
+
+			}
+		}
 	}
 	
 	// &__container:hover {
@@ -1280,13 +1341,16 @@ a {
 		font-size: 24px;
 		font-weight: bold;
 		text-shadow: 0px 0px 13px #FFFFFF;
+		text-align: center;
 	}
 
 	&__buttons-container {
-		padding: 10px;
+		padding: rem(20) rem(10) rem(20) rem(10);
 		display: flex;
-		align-items: flex-end;
-		gap: 10px;
+
+		// align-items: flex-end;
+		// justify-self: flex-end;
+		column-gap: 10px;
 	}
 	
 	&__button {
@@ -1317,26 +1381,31 @@ a {
 		}
 	}
 	&__button-right {
-		// border: solid 2px $bg;
-		// color: #ffff;
-		// background-color: #c85b48;
-		// transition: all 0.2s;
+		// border: solid  5px #c94520;
+		color: #ffff;
+		// padding: rem(7.5);
+		background-color: #c85b48;
+		transition: all 0.2s;
+		// text-shadow: 0 0 10px #2e201c;
 		
 		//! ===\/ NEONE \/ ===
-		background-color: #eab4a4;
-		border: solid 1px #c93920;
-		color: #8f2e16;
-		// text-shadow: 0 0 1em $bg, 0 0 1em $bg;
-		text-align: center;
-		box-shadow: inset 0 0 0.5em 0 #c94520, 0 0 0.5em 0 #c94520;
-		// transition: all 0.2s;
+		// background-color: #eab4a4;
+		// border: solid 1px #c93920;
+		// color: #8f2e16;
+		// // text-shadow: 0 0 1em $bg, 0 0 1em $bg;
+		// text-align: center;
+		// box-shadow: inset 0 0 0.5em 0 #c94520, 0 0 0.5em 0 #c94520;
 		//! ===/\ NEONE /\ ===
 
 
 		
 		&:hover {
+			background-color: #9c4737;
 			transform: translateY(-5px);
+			transition: all 0.2s ease 0s;
+			color: #ffff;
 			ion-icon {
+				color: #ffff;
 				// color: #ffff;
 				// transform: translateY(-5px);
 				// transition: all 0.2s;
@@ -1348,11 +1417,11 @@ a {
 						// transition: all 0.2s;
 			}
 			//! ===\/ NEONE \/ ===
-			background-color: #c93920;
-			color: #ffd3c6;
-			// text-shadow: 0 0 1em #43150c, 0 0 1em #43150c;
-			box-shadow: inset 0 0 1em 0 #c94520, 0 0 1em 0 #c94520;
-			transition: all 0.2s;
+			// background-color: #c93920;
+			// color: #ffd3c6;
+			// // text-shadow: 0 0 1em #43150c, 0 0 1em #43150c;
+			// box-shadow: inset 0 0 1em 0 #c94520, 0 0 1em 0 #c94520;
+			// transition: all 0.2s;
 			//! ===/\ NEONE /\ ===
 		}
 	}
@@ -1392,9 +1461,9 @@ ion-icon {
 
 	&__title-subtitle {
 		@include adaptiv-font(24, 20);
-		&:hover {
-			color: $color-mark;
-		}
+		// &:hover {
+		// 	color: $color-mark;
+		// }
 	}
 
 	&__form-container {
@@ -1462,6 +1531,7 @@ ion-icon {
 
 	&__contact-info-container {
 		padding-right: rem(20);
+		text-align: start;
 	}
 
 	&__contact-info-title {
@@ -1543,19 +1613,23 @@ ion-icon {
 
 	&__content {
 		// transition: all .5s ease 0s;
-		// padding: rem(18.5) rem(12);
+		// // padding: rem(18.5) rem(12);
 		// margin: rem(10);
 		// background-color: $bg;
-		// border-radius: rem(20);
+		border-radius: rem(20);
 		// box-shadow: $box-shadow-out;
-		// background: none;
+		// // background: none;
 		// color: $text;
 		// transition: all 0.2s;
+		// overflow: hidden;
 
 		// &:focus {
-		// 	box-shadow: $box-shadow-out;
-		// 	transition: all 0.2s;
+		// 	// box-shadow: $box-shadow-out-hover;
+		// 	// transition: all 0.2s;
 		// }
+		background-color: $bg;
+		position: relative;
+		
 	}
 	
 	&__label {
@@ -1565,12 +1639,10 @@ ion-icon {
 	
 	&__input {
 		background-color: $bg;
+		background: none;
 		border-radius: rem(20);
 		box-shadow: $box-shadow-out;
 		color: $text;
-		// background: none;
-		
-		// font-size: 22px;
 		@include adaptiv-font(20, 16);
 		font-family: 'Montserrat';
 		width: 100%;
@@ -1579,24 +1651,166 @@ ion-icon {
 		padding: rem(13);
 		@include adaptive-value("height", 90, 70, 0);
 		transition: all 0.2s;
-
+		z-index: 2;
+		position: relative;
 		
 		&:focus {
+			// background-color: #367c47;
 			box-shadow: $box-shadow-out-hover;
 			transition: all 0.2s;
+
+			& ~ .form-label {
+				// top: rem(-12);
+				// transform: translateY(calc(-100% + 20px));
+				top: 0;
+				// @include adaptiv-font(12, 10);
+				font-size: rem(12);
+				background-color: $bg;
+				padding: rem(5);
+				box-shadow: $box-shadow-in;
+				border-radius: rem(10);
+				z-index: 2;
+				// color: #8f2e16;
+			}
+		}
+
+		&:not(:placeholder-shown) ~ .form-label{
+			// transform: translateY(calc(-100% + 20px));
+				top: 0;
+				// @include adaptiv-font(12, 10);
+				font-size: rem(12);
+				background-color: $bg;
+				padding: rem(5);
+				box-shadow: $box-shadow-in;
+				border-radius: rem(10);
+				z-index: 2;
 		}
 		
 	}
 	
 }
 
-.contact-me__input._error {
+.form-label {
+	position: absolute;
+	left: rem(20);
+	top: 50%;
+	transform: translateY(-50%);
+	
+	transition: 0.2s;
+	z-index: 1;
+	
+}
+
+
+.form-textarea-label {
+	top: 17%;
+	// transform: translateY(50%);
+}
+// .textarea-parent {
+// 	box-shadow: $box-shadow-out-hover;
+// }
+// input, textarea, select {
+// 	-webkit-appearance: none;
+// 	}
+
+.error {
 	box-shadow: $box-shadow-out;
 	// transition: all 3s;
 	animation-name: inputError;
 	animation-duration: 5s;
 	box-shadow: 4px 4px 4px rgb(237, 89, 89) inset,
 						-4px -4px 4px rgb(228, 147, 147) inset;
+}
+
+#formMessage-error {
+	position: absolute;
+	top: rem(10);
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: none;
+	color: rgb(220, 58, 58);
+	font-size: rem(14);
+}
+
+.status {
+	span {
+		padding: rem(20);
+
+		position: absolute;
+		top: -130%;
+		left: 50%;
+		font-weight: 700;
+		// @include adaptiv-font(200, 100);
+		font-size: rem(100);
+		// transform: scale(.2);
+		animation-name: statusError;
+		transform: translateX(-50%);
+		// transform: translateY(-50%);
+		transition: all 0.3s ease 0s;
+		color: #b80909;
+		animation-duration: 3s;
+
+
+	@keyframes statusError {
+		0% {
+		}
+		1% {
+			transform: translateX(calc(-50% + 0rem));
+			
+		}
+		3% {
+						transform: translateX(calc(-50% + 1rem));
+		}
+		5% {
+						transform: translateX(calc(-50%));
+		}
+		7% {
+						transform: translateX(calc(-50% + 1rem));
+		}
+		9% {
+						transform: translateX(calc(-50%));
+		}
+		11% {
+						transform: translateX(calc(-50% + 1rem));
+		}
+		13% {
+						transform: translateX(calc(-50%));
+		}
+		15% {
+						transform: translateX(calc(-50% + 1rem));
+		}
+		17% {
+						transform: translateX(calc(-50% + 0rem));
+		}
+	}
+
+		&::before{
+			content:'Error';
+			font-size: rem(20);
+			transform: rotate(-54deg);
+			position: absolute;
+			left: rem(8);
+			top: rem(50);
+			// backdrop-filter: blur(-10);
+		}
+	}
+}
+
+.form-send-message {
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	height: 100%;
+
+	img {
+		max-width: rem(200);
+		color: $color-mark;
+	}
+
+	p {
+		font-size: rem(30);
+	}
 }
 
 @keyframes inputError {
@@ -1639,13 +1853,18 @@ ion-icon {
 
 .input-message {
 	height: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	// max-height: 100%;
+	// min-height: 200px;
 }
+
 
 .button-send-mail-container {
 	display: flex;
 	justify-content: center;
-	align-items: flex-end;
-	height: 100%;
+	// align-items: flex-end;
+	// height: 100%;
 	
 	.button:hover {
 		background-color: #4eb869;
@@ -1664,6 +1883,7 @@ ion-icon {
 .button-send-mail {
 	display: flex;
 	align-items: center;
+	align-self: flex-end;
 	margin-bottom: rem(20);
 	@include adaptive-value("height", 90, 70, 0);
 	// background-color: $color-mark;
@@ -1678,17 +1898,68 @@ ion-icon {
 	font-weight: 600;
 	
 	ion-icon {
-		padding-left: 10px;
+		padding-left: rem(10);
 		display: flex;
 		align-self: center;
 	}
 
-	input[type="submit"] {
-		display: none;
-	}
+	// input[type="submit"] {
+	// 	display: none;
+	// }
 }
 
+.button-error {
+	background-color: #eab4a4;
+	border: solid 1px #c93920;
+	color: #8f2e16;
+	text-align: center;
+	box-shadow: inset 0 0 0.5em 0 #c94520, 0 0 0.5em 0 #c94520;
 
+	transition: box-shadow .2s;
+	cursor: auto;
+	box-sizing: border-box;
+	@include adaptiv-font(32, 22);
+	padding: 20px;
+	border-radius: 20px;
+
+	ion-icon {
+		padding-left: rem(10);
+	}
+	
+	// &:hover {
+	// 	transform: translateY(-5px);
+	// 	background-color: #c93920;
+	// 	color: #ffd3c6;
+	// 	box-shadow: inset 0 0 1em 0 #c94520, 0 0 1em 0 #c94520;
+	// 	transition: all 0.2s;
+	// }
+}
+
+.button-load{
+	background-color: #e8dec1;
+	border: solid 1px #c9a220;
+	color: #8f7316;
+	text-align: center;
+	box-shadow: inset 0 0 0.5em 0 #c9a220, 0 0 0.5em 0 #c9a220;
+	position: relative;
+	z-index: 1;
+	font-family: "Montserrat";
+	font-weight: 600;
+	cursor: wait;
+	ion-icon {
+		padding-left: rem(10);
+	}
+
+	&:hover{
+		box-shadow: none;
+		background: none;
+		background-color: #c9a220;
+		color: #fff1c6;
+		text-shadow: 0 0 1em #43360c, 0 0 1em #43360c;
+		box-shadow: inset 0 0 1em 0 #c9a220, 0 0 1em 0 #c9a220;
+		transition: all 0.2s;
+	} 
+}
 
 
 
