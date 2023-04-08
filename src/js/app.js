@@ -270,6 +270,7 @@ $('#myForm').on('submit', function(event) {
   formData.append('service_id', emailJSformDataServiceId);
   formData.append('template_id', emailJSformTemplateId);
   formData.append('user_id', emailJSformUserId);
+
   // emailJSformDataServiceId();
   // emailJSformTemplateId();
   // emailJSformUserId();
@@ -283,19 +284,33 @@ function clearForm(){
 }
 
 var sendButton = $(".button-send-mail");
+var iconSend = $(".sent-icon");
 var form = $(".input-textarea-parent");
+var sentIcon = $(".sent-icon");
 var buttonTextDefoult = sendButton.text();
+
+var emailMessageClass = '_icon-email-message'
+var emailSendingClass = '_icon-sent'
+var emailErrorClass = '_icon-mail-error'
+var emailSuccessClass = '_icon-done'
+// .append($('<span class="">', {
+//   text: 'Hello World!'
+// }));
 
 function buttonDefoult() {
   sendButton.text(buttonTextDefoult);
-  sendButton.addClass('_icon-send ');
-  sendButton.fadeTo(0, 1)
+  sendButton.append(sentIcon)
+  sentIcon.removeClass('_icon-done')
+  sentIcon.removeClass(emailErrorClass)
+  sentIcon.addClass(emailMessageClass)
+  iconSend.fadeTo(0, 1)
+
   
 }
 
 function sendingForm(message){
   var sendMessage = 'Sent successfully';
-  var errorMessage = 'Error  ';
+  var errorMessage = 'Error 404';
   var loadMessage = 'Sending';
   form.fadeTo(200, 0.2);
   // sendButton.fadeOut(100).text(message).fadeIn(100);
@@ -306,17 +321,34 @@ function sendingForm(message){
     sendButton.fadeTo(0, 1);
     sendButton.removeClass('button');
     sendButton.addClass('button-error');
-    sendButton.text(message).removeClass('_icon-send').html(message +'<ion-icon name="bug"></ion-icon>');
-    // sendButton.text(message + '<ion-icon name="bug-outline"></ion-icon>');
+    sendButton.text(message);
+
+    sentIcon.removeClass(emailSuccessClass)
+    // sentIcon.removeClass('_icon-sent')
+
+    sendButton.append(sentIcon)
+    sentIcon.removeClass(emailMessageClass)
+    sentIcon.removeClass(emailSendingClass)
+    sentIcon.addClass(emailErrorClass)
+    // sentIcon.addClass('_icon-error')
+    iconSend.fadeTo(0, 1)
   };
 
   if (message === loadMessage) {
-    sendButton.removeClass('_icon-send').fadeTo(0, 0.5).html(message +'<ion-icon name="reload-sharp"></ion-icon>');
+    sendButton.fadeTo(0, 0.5);
+    // sentIcon.removeClass('_icon-sent')
+    sendButton.append(sentIcon)
+    sentIcon.removeClass(emailMessageClass)
+    sentIcon.addClass(emailSendingClass)
     return
   };
   if (message === sendMessage) {
     sendButton.fadeTo(0, 1);
-    sendButton.removeClass('_icon-send').html(message +'<ion-icon name="checkmark-done-sharp"></ion-icon>');
+    sendButton.removeClass(emailMessageClass);
+    sendButton.append(sentIcon)
+    sentIcon.removeClass('_icon-sent')
+    sentIcon.addClass(emailSuccessClass)
+    
   };
 
 
@@ -328,7 +360,7 @@ function sendingForm(message){
     }
     if (message === errorMessage) {
       // sendButton.removeClass('button-error');
-      sendButton.addClass('_icon-send');
+      // sendButton.addClass('_icon-send');
     }
     
     
@@ -358,7 +390,7 @@ sendingForm('Sending');
   }).fail(function(error) {
     // alert('Oops...');
       clearForm();
-      sendingForm('Error  ');
+      sendingForm('Error 404');
       console.log('Oops... ' + JSON.stringify(error));
   });
 });

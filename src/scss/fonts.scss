@@ -6,64 +6,121 @@
 	font-style: normal;
 }
 
-
-
 [class^="_icon-"], [class*=" _icon-"] {
 	/* use !important to prevent issues with browser extensions that change fonts */
-	// font-family: 'icomoon' !important;
-	// font-family: 'Montserrat' !important;
+	font-family: 'icomoon' !important;
 	speak: never;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
- 
+	
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	line-height: 115%;
  }
  
- ._icon-hire:before {
-	content: "\e904";
-	font-family: 'icomoon' !important;
-	padding-right: 10px;
+ ._icon-home:before {
+	content: "\e900";
+ }
+ ._icon-person:before {
+	content: "\e901";
+ }
+ ._icon-code:before {
+	content: "\e902";
+ }
+ ._icon-email:before {
+	content: "\e903";
  }
  ._icon-download:before {
-	content: "\e903";
-	font-family: 'icomoon' !important;
-	padding-right: 10px;
+	content: "\e904";
  }
- ._icon-github:before {
-	content: "\e900";
-	font-family: 'icomoon' !important;
+ ._icon-hire:before {
+	content: "\e905";
  }
  ._icon-linkedin:before {
-	content: "\e901";
-	font-family: 'icomoon' !important;
+	content: "\e906";
+ }
+ ._icon-github:before {
+	content: "\e907";
+ }
+ ._icon-codepen:before {
+	content: "\e91b";
  }
  ._icon-telegram:before {
-	content: "\e902";
-	font-family: 'icomoon' !important;
-	// padding-right: 10px;
+	content: "\e908";
  }
-
-//  ._icon-send:before {
-// 	content: "\e909";
-//  }
- ._icon-send::after {
+ ._icon-instagram-bold:before {
 	content: "\e909";
-	padding-left: 10px;
-	font-family: 'icomoon' !important;
  }
-
- ._icon-location-dot-solid:before {
-	content: "\e906";
-	// padding-right: 10px;
-	font-family: 'icomoon' !important;
+ ._icon-facebook-bold:before {
+	content: "\e90a";
  }
-
- ._icon-mail-solid:before {
-	content: "\e905";
-	font-family: 'icomoon' !important;
+ ._icon-calendar:before {
+	content: "\e90b";
+ }
+ ._icon-link:before {
+	content: "\e90d";
+ }
+ ._icon-location:before {
+	content: "\e90c";
+ }
+ ._icon-html:before {
+	content: "\e90e";
+ }
+ ._icon-css:before {
+	content: "\e90f";
+ }
+ ._icon-js:before {
+	content: "\e910";
+ }
+ ._icon-vue:before {
+	content: "\e911";
+ }
+ ._icon-react:before {
+	content: "\e912";
+ }
+ ._icon-nodejs:before {
+	content: "\e913";
+ }
+ ._icon-figma:before {
+	content: "\e914";
+ }
+ ._icon-figma-bold:before {
+	content: "\e91c";
+ }
+ ._icon-photoshop:before {
+	content: "\e91f";
+ }
+ ._icon-email-bold:before {
+	content: "\e916";
+ }
+ ._icon-send:before {
+	content: "\e91d";
+ }
+ ._icon-email-message:before {
+	content: "\e920";
+ }
+ ._icon-mail-error:before {
+	content: "\e915";
+ }
+ ._icon-sent:before {
+	content: "\e921";
+ }
+ ._icon-done:before {
+	content: "\e91e";
+ }
+ ._icon-location-bold:before {
+	content: "\e917";
+ }
+ ._icon-telegram-bold:before {
+	content: "\e918";
+ }
+ ._icon-phone-bold:before {
+	content: "\e919";
+ }
+ ._icon-call-outline:before {
+	content: "\e91a";
  }

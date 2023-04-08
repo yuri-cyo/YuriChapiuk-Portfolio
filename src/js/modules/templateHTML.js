@@ -32,21 +32,51 @@ export class RenderContent {
 		`
 	}
 
+	langsPercent(item, className) {
+		if (item) {
+			return `<div class="portfolio-card__lang portfolio-card__html-lang "><span class=${className}></span>${item}%</div>`
+		} else {
+			return ''
+		}
+	}
+	descriptionText(text) {
+		if (text) {
+			return text
+		} else {
+			return ''
+		}
+	}
+	
 	portfolioCards() {
 		this.$portfolioCards = document.querySelector('.portfolio-card')
 		const portfolioCardsHtml = this.portfolioItems.map(item => `
-
+		
 		<div class="portfolio-card__container">
-				<div class="portfolio-card__img-container">
-					<img src=${item.imageUrl} alt=${item.title}>
-				</div>
-					<div class="portfolio-card__description-container">
-					<h3 class="portfolio-card__title">${item.title}</h3>
-					<div class="portfolio-card__buttons-container">
-						<a target="_blank" class="button portfolio-card__button portfolio-card__button-left" href=${item.urlGitHub}>${this.btnicon.iconGitHub}${this.btnicon.textBtnGitHub}</a>
-						<a target="_blank" class="button portfolio-card__button portfolio-card__button-right" href=${item.urlVisit}>${this.btnicon.iconVisit}${this.btnicon.textBntVisit}</a>
+			<a target="_blank" class="" 
+			href=${item.urlVisit}>
+					<div class="portfolio-card__img-container">
+						<img src=${item.imageUrl} alt=${item.title}>
 					</div>
-				</div>
+					<div class="portfolio-card__info-container">
+						<div class="portfolio-card__tittle-parent">
+							<img class="portfolio-card__icon" src=${item.icon} alt="favicon">
+							<div class="portfolio-card__text-wrapper">
+								<h3 class="portfolio-card__title">${item.title}</h3>
+								<p class="portfolio-card__description">${this.descriptionText(item.description)}</p>
+							</div>
+						</div>
+						<div class="portfolio-card__buttons-container">
+							<div class="portfolio-card__languages">
+								${this.langsPercent(item.langHtml, "_icon-html")}
+								${this.langsPercent(item.langCss, "_icon-css")}
+								${this.langsPercent(item.langJs, "_icon-js")}
+							</div>
+							<a target="_blank" class="button portfolio-card__button portfolio-card__button-git" 
+								href=${item.urlGitHub}>${this.btnicon.iconGitHub}${this.btnicon.textBtnGitHub}
+							</a>
+						</div>
+					</div>
+			</a>
 		</div>
 
 	`).join('');

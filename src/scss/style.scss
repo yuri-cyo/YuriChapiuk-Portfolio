@@ -71,6 +71,13 @@ $box-shadow-focus: 2px 2px 2px $shadow inset,
 	box-sizing: border-box;
 }
 
+@media (max-width: 380px) {
+body {
+	min-width: 380px;
+	background: #cedecc;
+	}
+}
+
 //! =============== Scroll =============
 
 ::-webkit-scrollbar {
@@ -255,7 +262,7 @@ a {
 			background-color: $bg;
 			// transition: all .3s;
 			
-			ion-icon {
+			span {
 				padding-left: 10px;
 			}
 		}
@@ -264,13 +271,16 @@ a {
 
 .button-nav {
 			box-shadow: $box-shadow-in;
-			transition: box-shadow .2s;
+			transition: all .2s;
 			cursor: pointer;
 
 			&:hover {
 				box-shadow: $box-shadow-hover;
 				transition: box-shadow .2s;
 				color: $color-mark;
+				p {
+					color: inherit;
+				}
 			}
 
 			&:active {
@@ -279,7 +289,6 @@ a {
 
 			&:hover :nth-child(1) {
 				color: $color-mark;
-				transition: ease 0.3s;
 			}
 		}
 
@@ -923,10 +932,6 @@ a {
 	&__html-container {
 	}
 	
-	&__html {
-		padding-left: 6px;
-	}
-
 	&__percent {
 		justify-self: flex-end;
 		// @include adaptiv-font(24, 20);
@@ -935,9 +940,6 @@ a {
 
 	&__skill-bar {
 		grid-column: 1 / 3; 
-		// grid-row: 1 / 3; 
-		// grid-area: 1 / 2;
-		// background-color:#b9b9b9;
 		box-shadow: $box-shadow-out;
 		border-radius: 10px;
 		padding: 6px;
@@ -1134,6 +1136,7 @@ a {
 			padding: rem(10);
 			padding: 20px;
 			display: flex;
+			gap: rem(5);
 			//align-items: flex-start;
 			//justify-content: flex-start;
 
@@ -1146,6 +1149,11 @@ a {
 		.last-line {
 			height: calc(100% - 55px);
 		}
+}
+
+.icon-center {
+	display: flex;
+	align-self: center;
 }
 
 
@@ -1214,217 +1222,171 @@ a {
 
 .portfolio-card {
 	margin-top: 20px;
-	
-	// gap: 40px;
 	@include adaptive-value("gap", 50, 30, 0);
-	// padding: 20px;
 	@include adaptive-value("padding", 20, 0, 0);
-	
 	justify-content: center;
-	// max-width: 100%;
 	display: grid;
-	grid-template-columns: repeat(3,  minmax(270px, 300px) );	
+	grid-template-columns: repeat(3,  minmax(270px, 300px) );
+
 	@media (max-width: 1435px){
 		grid-template-columns: repeat(2,  minmax(270px, 300px) );	
 	}
+
 	@media (max-width: 770px){
 		grid-template-columns: repeat(1,  minmax(270px, 300px) );	
 	}
-	// grid-template-columns: repeat(3, 300px);
-	// grid-template-columns: repeat(2, 1fr);
-
-	// display: flex;
-	// flex-wrap: wrap;
 
 	&__container {
-		// overflow: hidden;
-		// max-width: 300px;
 		min-width: 250px;
-		background-color: $bg-card-portfolio;
-		// aspect-ratio: 3 / 4;
 		border-radius: rem(20);
-		box-shadow: $box-shadow-hover;
-		transition: all .2s;
-		// position: relative;
+		// background-color: $bg-card-portfolio;
+		// box-shadow: $box-shadow-hover;
+		transition: all 0.3s ease 0s;
 		
 		&:hover {
-			box-shadow: $box-shadow-active;
-			transition: all .2s;
-			transform: translateY(10px);
-
-			.portfolio-card__description-container {
-
+			.portfolio-card__img-container img {
+				transform: scale(1.02);
+				transition: all 0.3s ease 0s;
 			}
+			// box-shadow: $box-shadow-active;
+			// box-shadow: 12px 12px 13px $shadow,
+			// -12px -12px 13px $light;;
+
+			// transition: all .2s;
 		}
 		
 	}
 	
 	&__img-container {
-		aspect-ratio: 3 / 3;
+		aspect-ratio: 1 / 1;
+		overflow: hidden;
+		border-radius: 20px;
 		
 		img {
-			border-radius: 20px;
+			transition: all 0.3s ease 0s;
 			width: 100%;
 			height: 100%;
+
 			object-position: top;
 			&:hover {
 			}
 		}
 	}
 	
-	&__description-container {
-		// background-color: rgba(39, 39, 39, 0.826);
-		// background: linear-gradient(180deg, rgba(254, 254, 254, 0) 0.05%, rgba(0, 0, 0, 0.809) 63.42%);
-		// background: linear-gradient(180deg, rgba(129, 128, 128, 0.9) 0.05%, rgba(0, 0, 0, 0.8) 100%);
+	&__info-container {
 		width: 100%;
-		// height: 20%;
 		border-radius: 20px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		// align-items: s;
 		justify-self: flex-end;
-		// background-color: $bg;
-
-		// background: linear-gradient(180deg, rgba(226, 225, 225, 0.9) 0.05%, rgba(89, 89, 89, 0.8) 100%);
-		// backdrop-filter: blur(1px);
-		// box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.49);
-		// box-shadow: $box-shadow-in;
-		// transform: translateX(-50%);
-		// left: 50%;
-		// bottom: 0%;
-		// position: absolute;
-
-		// border: solid 5px $bg;
-		// padding: 7px;
-		// display: none;
 		transition: all .3s;
 		opacity: 1;
-		
-		&:hover {
-			// display: flex;
-		}
-		p {
-			font-size: rem(14);
-			font-weight: 500;
-			max-height: rem(150);
-			padding-left: rem(10);
-			padding-right: rem(10);
-			overflow: hidden;
-			height: rem(125);
-			position: relative;
-			&::after{
-				content:'';
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				height: rem(50);
-				background: linear-gradient(360deg, $bg-card-portfolio, rgba(255, 255, 255, 0) 100%);
-
-			}
-		}
+		margin-top: rem(10);
 	}
-	
-	// &__container:hover {
-	// 	.portfolio-card__description-container {
-	// 		opacity: 1;
-	// 		transition: opacity .3s;
 
-	// 	}
-	// }
+	&__tittle-parent {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__icon {
+		display: flex;
+		width: rem(36);
+		height: rem(36);
+		// border-radius: rem(16);
+		margin-right: rem(10);
+	}
+
+	&__text-wrapper {
+		
+	}
 	
 	&__title {
 		// color: #ffff;
 		color: #242424;
 		// color: #000000;
-		padding: 10px;
-		font-size: 24px;
-		font-weight: bold;
+		// padding: 10px;
+		font-size: rem(20);
+		// font-weight: bold;
 		text-shadow: 0px 0px 13px #FFFFFF;
-		text-align: center;
+		text-align: start;
+	}
+
+	&__description {
+		font-size: rem(12);
+		text-align: start;
+		color: rgb(117, 117, 117);
+		min-height: 3.7em;
+		word-wrap: break-word;
 	}
 
 	&__buttons-container {
-		padding: rem(20) rem(10) rem(20) rem(10);
 		display: flex;
+		// flex-direction: ;
 
+		gap: rem(7);
+		// padding-top: rem(10);
+		width: 100%;
+		justify-content: space-between;
+		// padding-left: rem(46);
+		align-items: center;
+		// padding: rem(20) rem(0) rem(20) rem(0);
 		// align-items: flex-end;
+
 		// justify-self: flex-end;
-		column-gap: 10px;
+		// column-gap: 10px;
+	}
+
+	&__languages {
+		span {
+			font-size: rem(32);
+		}
+		font-size: rem(14);
+		display: flex;
+		gap: rem(25);
+		width: 100%;
+		justify-content: space-around;
+		// flex-direction: column;
+	}
+
+	&__lang {
+		display: flex;
+		flex-direction: column;
 	}
 	
 	&__button {
-		font-size: rem(18);
-		width: 120px;
-		padding: 10px;
+		width: 75px;
+		height: 75px;
+		// width: 100%;
+		font-size: rem(14);
+		// width: 120px;
+		padding: rem(8);
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		
 
-
-		ion-icon {
-			margin-right: 5px;
-			font-size: rem(28);
+		span{
+			font-size: rem(36);
 		}
+		
 	}
 
-	&__button-left {
+	&__button-git {
 		border: solid 2px $bg;
 		// color: $color-mark;
 		transition: all 0.2s;
+		display: flex;
+		// gap: rem(5);
 
 		&:hover {
 			color: black;
-			transform: translateY(-5px);
+			// transform: translateY(-1px);
 			transition: all 0.2s;
 		}
 	}
-	&__button-right {
-		// border: solid  5px #c94520;
-		color: #ffff;
-		// padding: rem(7.5);
-		background-color: #c85b48;
-		transition: all 0.2s;
-		// text-shadow: 0 0 10px #2e201c;
-		
-		//! ===\/ NEONE \/ ===
-		// background-color: #eab4a4;
-		// border: solid 1px #c93920;
-		// color: #8f2e16;
-		// // text-shadow: 0 0 1em $bg, 0 0 1em $bg;
-		// text-align: center;
-		// box-shadow: inset 0 0 0.5em 0 #c94520, 0 0 0.5em 0 #c94520;
-		//! ===/\ NEONE /\ ===
-
-
-		
-		&:hover {
-			background-color: #9c4737;
-			transform: translateY(-5px);
-			transition: all 0.2s ease 0s;
-			color: #ffff;
-			ion-icon {
-				color: #ffff;
-				// color: #ffff;
-				// transform: translateY(-5px);
-				// transition: all 0.2s;
 	
-				// background-color: #e3c5bd;
-						// color: #ffb8a3;
-						// text-shadow: 0 0 1em #43150c, 0 0 1em #43150c;
-						// box-shadow: inset 0 0 1em 0 #b8674e, 0 0 1em 0 #b8674e;
-						// transition: all 0.2s;
-			}
-			//! ===\/ NEONE \/ ===
-			// background-color: #c93920;
-			// color: #ffd3c6;
-			// // text-shadow: 0 0 1em #43150c, 0 0 1em #43150c;
-			// box-shadow: inset 0 0 1em 0 #c94520, 0 0 1em 0 #c94520;
-			// transition: all 0.2s;
-			//! ===/\ NEONE /\ ===
-		}
-	}
 }
 
 
@@ -1882,6 +1844,7 @@ ion-icon {
 
 .button-send-mail {
 	display: flex;
+	gap: rem(10);
 	align-items: center;
 	align-self: flex-end;
 	margin-bottom: rem(20);
@@ -1897,10 +1860,8 @@ ion-icon {
 	font-family: "Montserrat";
 	font-weight: 600;
 	
-	ion-icon {
-		padding-left: rem(10);
-		display: flex;
-		align-self: center;
+	span {
+		font-size: 1.5em;
 	}
 
 	// input[type="submit"] {
@@ -2044,4 +2005,8 @@ ion-icon {
 
 
 
-
+@media (max-width: 380px) { 
+	.wrapper .img-fone {
+		background: none;
+		}	
+	}
