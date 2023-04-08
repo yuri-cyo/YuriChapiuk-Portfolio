@@ -71,7 +71,7 @@ export class RenderContent {
 								${this.langsPercent(item.langCss, "_icon-css")}
 								${this.langsPercent(item.langJs, "_icon-js")}
 							</div>
-							<a target="_blank" class="button portfolio-card__button portfolio-card__button-git" 
+							<a target="_blank" class="portfolio-card__button portfolio-card__button-git" 
 								href=${item.urlGitHub}>${this.btnicon.iconGitHub}${this.btnicon.textBtnGitHub}
 							</a>
 						</div>

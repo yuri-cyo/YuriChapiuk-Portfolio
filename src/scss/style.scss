@@ -279,7 +279,7 @@ a {
 				transition: box-shadow .2s;
 				color: $color-mark;
 				p {
-					color: inherit;
+					color: $color-mark;
 				}
 			}
 
@@ -1240,15 +1240,17 @@ a {
 		min-width: 250px;
 		border-radius: rem(20);
 		// background-color: $bg-card-portfolio;
-		// box-shadow: $box-shadow-hover;
+		box-shadow: $box-shadow-in;
 		transition: all 0.3s ease 0s;
+		// border: 1px solid $bg-second;
+		background-color: #45454514;
 		
 		&:hover {
 			.portfolio-card__img-container img {
 				transform: scale(1.02);
 				transition: all 0.3s ease 0s;
 			}
-			// box-shadow: $box-shadow-active;
+			box-shadow: $box-shadow-active;
 			// box-shadow: 12px 12px 13px $shadow,
 			// -12px -12px 13px $light;;
 
@@ -1288,6 +1290,7 @@ a {
 	&__tittle-parent {
 		display: flex;
 		flex-direction: row;
+		padding: 0 rem(10);
 	}
 
 	&__icon {
@@ -1309,7 +1312,7 @@ a {
 		// padding: 10px;
 		font-size: rem(20);
 		// font-weight: bold;
-		text-shadow: 0px 0px 13px #FFFFFF;
+		// text-shadow: 0px 0px 13px #FFFFFF;
 		text-align: start;
 	}
 
@@ -1317,18 +1320,19 @@ a {
 		font-size: rem(12);
 		text-align: start;
 		color: rgb(117, 117, 117);
-		min-height: 3.7em;
+		min-height: 4em;
 		word-wrap: break-word;
 	}
 
 	&__buttons-container {
-		display: flex;
+		// display: flex;
 		// flex-direction: ;
 
 		gap: rem(7);
 		// padding-top: rem(10);
-		width: 100%;
-		justify-content: space-between;
+		// width: 100%;
+		// justify-content: space-between;
+		padding: 0 rem(10) rem(10) rem(10);
 		// padding-left: rem(46);
 		align-items: center;
 		// padding: rem(20) rem(0) rem(20) rem(0);
@@ -1344,9 +1348,12 @@ a {
 		}
 		font-size: rem(14);
 		display: flex;
-		gap: rem(25);
+		// gap: rem(25);
+		// width: 160px;
 		width: 100%;
-		justify-content: space-around;
+		justify-content: space-evenly;
+		padding-bottom: rem(10);
+		// min-width: 100%;
 		// flex-direction: column;
 	}
 
@@ -1356,32 +1363,41 @@ a {
 	}
 	
 	&__button {
-		width: 75px;
-		height: 75px;
+		// width: 75px;
+		// height: 75px;
+		border-radius: rem(10);
 		// width: 100%;
 		font-size: rem(14);
 		// width: 120px;
-		padding: rem(8);
+		padding: rem(3);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		background-color: rgba(0, 0, 0, 0.107);
+		border: 1px solid rgba(26, 26, 26, 0.134);
+
+		&:hover {
+			background-color: #282828e2;
+			color: #d0d0d0;
+		}
 
 		span{
-			font-size: rem(36);
+			font-size: rem(32);
 		}
 		
 	}
 
 	&__button-git {
-		border: solid 2px $bg;
+		
 		// color: $color-mark;
 		transition: all 0.2s;
 		display: flex;
-		// gap: rem(5);
+		flex-direction: row;
+		gap: rem(5);
 
 		&:hover {
-			color: black;
+			// color: black;
 			// transform: translateY(-1px);
 			transition: all 0.2s;
 		}
