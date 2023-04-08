@@ -2,4 +2,4 @@ node_modules
 dist
 PHPMailer
 sendmail.php
-src\js\modules\keysEmailJS.js 
+src\js\modules\keysEmailJS.js
