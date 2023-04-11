@@ -12,8 +12,8 @@ export function renderPortfolio() {
 			icon: 'img/portfolio/favicon/favicon-DaysBetweenDates.svg',
 			description: 'Date calculator for calculating the number of days between two specified dates',
 			imageUrl: 'img/portfolio/DaysBetweenDates2.png',
-			urlGitHub: 'https://github.com/Scarbor0/Days-Between-Dates/',
-			urlVisit: 'https://scarbor0.github.io/Days-Between-Dates/',
+			urlGitHub: 'https://github.com/yuri-cyo/Days-Between-Dates/',
+			urlVisit: 'https://yuri-cyo.github.io/Days-Between-Dates/',
 			langHtml: '2.7',
 			langCss: '41.9',
 			langJs: '54.9'
@@ -25,8 +25,8 @@ export function renderPortfolio() {
 			icon: 'img/portfolio/favicon/favicon-farm-vest.svg',
 			description: 'Landing page website, with scrolling animations and animations relative to the mouse position',
 			imageUrl: 'img/portfolio/FarmVest.jpg',
-			urlGitHub: 'https://github.com/Scarbor0/FarmVest',
-			urlVisit: 'https://scarbor0.github.io/FarmVest/',
+			urlGitHub: 'https://github.com/yuri-cyo/FarmVest/',
+			urlVisit: 'https://yuri-cyo.github.io/FarmVest/',
 			langHtml: '4.9',
 			langCss: '47.8',
 			langJs: '46.9'
@@ -38,8 +38,8 @@ export function renderPortfolio() {
 			icon: 'img/portfolio/favicon/favicon-focus.svg',
 			description: 'Landing page website, using swiper.js',
 			imageUrl: 'img/portfolio/website-1.png',
-			urlGitHub: 'https://github.com/Scarbor0/Task-for-Ideil-Focus-.git',
-			urlVisit: 'https://scarbor0.github.io/Task-for-Ideil-Focus-/',
+			urlGitHub: 'https://github.com/yuri-cyo/Task-for-Ideil-Focus-/tree/master',
+			urlVisit: 'https://yuri-cyo.github.io/Task-for-Ideil-Focus-/',
 			langHtml: '59.6',
 			langCss: '34.8',
 			langJs: '5.6'
@@ -50,8 +50,8 @@ export function renderPortfolio() {
 			icon: 'img/portfolio/favicon/favicon-instrumental.svg',
 			description: 'Landing page website, using swiper.js',
 			imageUrl: 'img/portfolio/website-2.png',
-			urlGitHub: 'https://github.com/Scarbor0/Instrumental-V2.0',
-			urlVisit: 'https://scarbor0.github.io/Instrumental-V2.0/',
+			urlGitHub: 'https://github.com/yuri-cyo/Instrumental-V2.0/tree/master',
+			urlVisit: 'https://yuri-cyo.github.io/Instrumental-V2.0/',
 			langHtml: '5.1',
 			langCss: '45.7',
 			langJs: '49.2'
