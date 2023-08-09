@@ -7,7 +7,33 @@ export function renderPortfolio() {
 			iconGitHub: '<span class="_icon-github"></span>'
 	}, [
 		{
-			//! Card 1
+			//! Card 6
+			title: 'Simple List Products',
+			icon: 'img/portfolio/favicon/favicon-Simple-List-Products.svg',
+			description: "This app automates store product management, using Electron.js and Vue 3 for the interface.",
+			imageUrl: 'img/portfolio/Simple-List-Products.png',
+			urlGitHub: 'https://github.com/yuri-cyo/Simple-List-Products',
+			urlVisit: 'https://github.com/yuri-cyo/Simple-List-Products',
+			langCss: '12.2',
+			langJs: '8.1',
+			langVue: '79.7',
+			// langCss: '<div class="portfolio-card__lang portfolio-card__html-lang "><span class="_icon-css"></span>40%</div>',
+		},
+		{
+			//! Card 5
+			title: 'iCalcM+',
+			icon: 'img/portfolio/favicon/favicon-iCalcM+.png',
+			description: 'Calculator in iOS style with M+ function (in development)',
+			imageUrl: 'img/portfolio/iCalcM+Scroeen.png',
+			urlGitHub: 'https://github.com/yuri-cyo/ICalcJS',
+			urlVisit: 'https://yuri-cyo.github.io/ICalcJS/',
+			langHtml: '1.3',
+			langCss: '41.1',
+			langJs: '57.6'
+			// langCss: '<div class="portfolio-card__lang portfolio-card__html-lang "><span class="_icon-css"></span>40%</div>',
+		},
+		{
+			//! Card 4
 			title: 'Days Between Dates',
 			icon: 'img/portfolio/favicon/favicon-DaysBetweenDates.svg',
 			description: 'Date calculator for calculating the number of days between two specified dates',
@@ -20,7 +46,7 @@ export function renderPortfolio() {
 			// langCss: '<div class="portfolio-card__lang portfolio-card__html-lang "><span class="_icon-css"></span>40%</div>',
 		},
 		{
-			//! Card 2
+			//! Card 3
 			title: 'Farm Vest',
 			icon: 'img/portfolio/favicon/favicon-farm-vest.svg',
 			description: 'Landing page website, with scrolling animations and animations relative to the mouse position',
@@ -33,7 +59,7 @@ export function renderPortfolio() {
 		
 		},
 		{
-			//! Card 3
+			//! Card 2
 			title: 'Focus',
 			icon: 'img/portfolio/favicon/favicon-focus.svg',
 			description: 'Landing page website, using swiper.js',
@@ -45,7 +71,7 @@ export function renderPortfolio() {
 			langJs: '5.6'
 		},
 		{
-			//! Card 4
+			//! Card 1
 			title: 'Instrumental',
 			icon: 'img/portfolio/favicon/favicon-instrumental.svg',
 			description: 'Landing page website, using swiper.js',
@@ -55,7 +81,7 @@ export function renderPortfolio() {
 			langHtml: '5.1',
 			langCss: '45.7',
 			langJs: '49.2'
-		}
+		},
 	])
 
 	renderContent.htmlRender()

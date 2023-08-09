@@ -70,6 +70,7 @@ export class RenderContent {
 								${this.langsPercent(item.langHtml, "_icon-html")}
 								${this.langsPercent(item.langCss, "_icon-css")}
 								${this.langsPercent(item.langJs, "_icon-js")}
+								${this.langsPercent(item.langVue, "_icon-vue")}
 							</div>
 							<a target="_blank" class="portfolio-card__button portfolio-card__button-git" 
 								href=${item.urlGitHub}>${this.btnicon.iconGitHub}${this.btnicon.textBtnGitHub}

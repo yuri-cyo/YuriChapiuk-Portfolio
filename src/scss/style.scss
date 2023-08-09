@@ -1297,8 +1297,9 @@ a {
 		display: flex;
 		width: rem(36);
 		height: rem(36);
-		// border-radius: rem(16);
+		border-radius: rem(7);
 		margin-right: rem(10);
+		border: 1px solid #ffff
 	}
 
 	&__text-wrapper {
