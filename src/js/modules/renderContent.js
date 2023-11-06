@@ -25,8 +25,8 @@ export function renderPortfolio() {
 			icon: 'img/portfolio/favicon/favicon-iCalcM+.png',
 			description: 'Calculator in iOS style with M+ function (in development)',
 			imageUrl: 'img/portfolio/iCalcM+Scroeen.png',
-			urlGitHub: 'https://github.com/yuri-cyo/ICalcJS',
-			urlVisit: 'https://yuri-cyo.github.io/ICalcJS/',
+			urlGitHub: 'https://github.com/yuri-cyo/iCalcHistoryTS',
+			urlVisit: 'https://yuri-cyo.github.io/iCalcHistoryTS/',
 			langHtml: '1.3',
 			langCss: '41.1',
 			langJs: '57.6'

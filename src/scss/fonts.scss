@@ -81,6 +81,11 @@
 	text-shadow: 0 0 10px #59dda1;
 	color: #11291e;
  }
+ ._icon-ts:before {
+  content: "\e922";
+	text-shadow: 0 0 10px #3474bd;
+	color: #2b5b92;
+}
  ._icon-react:before {
 	content: "\e912";
  }
