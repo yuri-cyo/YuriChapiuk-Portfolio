@@ -8,6 +8,19 @@ export function renderPortfolio() {
 	}, [
 		{
 			//! Card 6
+			title: 'iCalcHishoryM+',
+			icon: 'img/portfolio/favicon/favicon-iCalcM+.png',
+			description: 'A modern iOS-style calculator with M+ memory and calculation history (in development)',
+			imageUrl: 'img/portfolio/iCalcM+Scroeen.png',
+			urlGitHub: 'https://github.com/yuri-cyo/iCalcHistoryTS',
+			urlVisit: 'https://yuri-cyo.github.io/iCalcHistoryTS/',
+			langHtml: '5.9',
+			langCss: '35.5',
+			langTS: '58.6'
+			// langCss: '<div class="portfolio-card__lang portfolio-card__html-lang "><span class="_icon-css"></span>40%</div>',
+		},
+		{
+			//! Card 5
 			title: 'Simple List Products',
 			icon: 'img/portfolio/favicon/favicon-Simple-List-Products.svg',
 			description: "This app automates store product management, using Electron.js and Vue 3 for the interface.",
@@ -17,19 +30,6 @@ export function renderPortfolio() {
 			langCss: '12.2',
 			langJs: '8.1',
 			langVue: '79.7',
-			// langCss: '<div class="portfolio-card__lang portfolio-card__html-lang "><span class="_icon-css"></span>40%</div>',
-		},
-		{
-			//! Card 5
-			title: 'iCalcM+',
-			icon: 'img/portfolio/favicon/favicon-iCalcM+.png',
-			description: 'Calculator in iOS style with M+ function (in development)',
-			imageUrl: 'img/portfolio/iCalcM+Scroeen.png',
-			urlGitHub: 'https://github.com/yuri-cyo/iCalcHistoryTS',
-			urlVisit: 'https://yuri-cyo.github.io/iCalcHistoryTS/',
-			langHtml: '1.3',
-			langCss: '41.1',
-			langJs: '57.6'
 			// langCss: '<div class="portfolio-card__lang portfolio-card__html-lang "><span class="_icon-css"></span>40%</div>',
 		},
 		{
@@ -86,5 +86,20 @@ export function renderPortfolio() {
 
 	renderContent.htmlRender()
 	renderContent.portfolioCards()
+
+	function portfoliosBannerCount() {
+		const $portfoliosMenu = document.querySelector('.menu-lit-portfolio')
+		// renderContent.portfolioItems
+		let countPortfolios = 0
+		for (let key in renderContent.portfolioItems) {
+			countPortfolios += 1
+		}
+		$portfoliosMenu.dataset.bunner = countPortfolios
+		if (!countPortfolios) {
+			// $portfoliosMenu.style.display = 'none'
+			$portfoliosMenu.classList.remove('menu-lit-portfolio')
+		}
+	}
+	portfoliosBannerCount()
 
 }
