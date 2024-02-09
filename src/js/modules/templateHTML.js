@@ -26,6 +26,7 @@ export class RenderContent {
 						My recent works</h3>
 				</div>
 			</div>
+			
 			<div class="portfolio-card"
 			</div>
 		</div>
