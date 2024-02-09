@@ -67,21 +67,24 @@
  ._icon-location:before {
 	content: "\e90c";
  }
- ._icon-html:before {
+ ._icon-HTML:before {
 	content: "\e90e";
  }
- ._icon-css:before {
+ ._icon-SCSS:before {
 	content: "\e90f";
  }
- ._icon-js:before {
+ ._icon-CSS:before {
+	content: "\e90f";
+ }
+ ._icon-JavaScript:before {
 	content: "\e910";
  }
- ._icon-vue:before {
+ ._icon-Vue:before {
 	content: "\e911";
 	text-shadow: 0 0 10px #59dda1;
 	color: #11291e;
  }
- ._icon-ts:before {
+ ._icon-TypeScript:before {
   content: "\e922";
 	text-shadow: 0 0 10px #3474bd;
 	color: #2b5b92;
@@ -130,4 +133,7 @@
  }
  ._icon-call-outline:before {
 	content: "\e91a";
+ }
+ ._icon-PHP:before {
+	content: "\e923";
  }

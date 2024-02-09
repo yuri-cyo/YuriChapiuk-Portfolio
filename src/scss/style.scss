@@ -54,6 +54,7 @@ $box-shadow-active: 2px 2px 2px $shadow,
 $box-shadow-focus: 2px 2px 2px $shadow inset,
 							-2px -2px 2px $light inset;
 
+$box-shadow-green-light: inset 0 0 0.5em 0 $color-mark, 0 0 0.5em 0 $color-mark;
 // .language-en {
 // 	display: none;
 // }
@@ -79,6 +80,11 @@ body {
 	min-width: 380px;
 	background: #cedecc;
 	}
+}
+button {
+	outline: none;
+	border: none;
+	background: none;
 }
 
 //! =============== Scroll =============
@@ -135,12 +141,13 @@ a {
 .conteiner__nav {
 	position: fixed;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	width: 260px;
 	height: 100%;
-	justify-content: center;
+	// justify-content: center;
 	z-index: 99999;
 	overflow-x: auto;
+	// flex: 1 1 auto;
 
 	background-color: $bg-glass;
 	backdrop-filter: blur(10px);
@@ -167,16 +174,29 @@ a {
 }
 
 .nav-menu {
+	// display: flex;
+	// flex-direction: column;
+	// width: 100%;
+	// justify-content: space-between;
+	// padding: 0 20px 0 20px;
+	// flex: 1 1 auto;
+
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	height: 100%;
+	justify-content: flex-start; /* Розташовує елементи зверху */
 	padding: 0 20px 0 20px;
+	width: 100%;
+	// gap: 20px;
+	@include adaptive-value("gap", 40, 12, 0);
+	overflow-y: hidden;
+
 
 	.container__avatar-name {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 40px;
+		// margin-bottom: 40px;
 
 		.nav__avatar {
 			box-sizing: content-box;
@@ -213,7 +233,7 @@ a {
 		}
 
 		.nav__name {
-			padding: 10px 10px 0 10px;
+			padding: 5px 10px 0 10px;
 			border-top: 2px solid $color-mark-second;
 			margin: 0 auto;
 		}
@@ -229,16 +249,57 @@ a {
 	}
 
 		.nav-list__item-link--active {
-			transition: box-shadow .2s;
-			border: solid 5px $color-mark;
-			box-shadow:$box-shadow-out;
-			transition: border .3s;
-			
+			position: relative;
+			transition: all 0.3s ease 0s;
+			box-shadow: 2px 2px 5px #8de9a453, -2px -2px 5px $light;
 			&:hover {
-				box-shadow:$box-shadow-out-hover;
+				box-shadow: 8px 8px 10px #f4f1cc,
+				-8px -8px 10px $light;
+				transition: all 0.3s ease 0s;
+				span, p {
+					color: #80780f;
+					font-weight: 500;
+					transition: all 0.1s ease 0s;
+				}
+				&::before {
+						box-shadow: inset 0 0 .5em .1em #b0a615, 0 0 0.5em .1em #b0a615;
+						transition: all .3s ease;
+				}
+			}
+			&::before {
+				content: '';
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 100vh;
+				position: absolute;
+				transition: all .2s;
+				border: solid 2px #ffffff;
+				// box-shadow:$box-shadow-out;
+				box-shadow: inset 0 0 .5em .1em #15b03c, 0 0 0.5em .1em #15b03c;
+				transition: all .3s ease;
+				z-index: 0;
+				span, p {
+					color: #0e7428;
+					font-weight: 500;
+					transition: all 0.1s ease 0s;
+				}
+				
+				&::hover {
+					box-shadow: inset 0 0 .5em .1em #b0a615, 0 0 0.5em .1em #b0a615;
+					transition: all .3s ease;
+					span, p {
+						color: #80780f;
+						font-weight: 500;
+						transition: all 0.1s ease 0s;
+					}
+				}
 			}
 		}
 }
+
+
 
 .menu-lit-portfolio{
 	position: relative;
@@ -263,6 +324,7 @@ a {
 	.nav-list {
 		display: flex;
 		flex-direction: column;
+		justify-self: flex-start;
 		gap: 20px;
 		
 
@@ -283,16 +345,88 @@ a {
 			border-radius: 100px;
 			// border-radius: 1rem;
 			background-color: $bg;
-			// transition: all .3s;
+			border: solid 2px transparent;
+			transition: all .3s ease;
 			
 			span {
 				padding-left: 10px;
+				white-space: nowrap;
 			}
 		}
 
 	}
 
+	.nav-lang {
+		// background-color: $bg;
+		box-shadow: $box-shadow-out;
+		margin-top: auto;
+		// display: inline-flex;
+		display: flex;
+		align-self: center;
+		justify-content: end;
+		margin-top: auto;
+		margin-bottom: 20px;
+		border-radius: 100vh;
+		position: relative;
+		cursor: pointer;
+		// transition: all 0.3s ease 0s;
+		border: 2px transparent solid;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border: 2px solid #ffffffbc;
+			box-shadow: inset 0 0 .5em .1em #b0a615, 0 0 0.5em .1em #b0a615;
 
+			opacity: 0;
+			transition: all 0.2s ease 0s;
+			border-radius: 100vh;
+			z-index: 2;
+		}
+		&:hover {
+			// box-shadow:  0 0 0.5em 0 inset #3c9051, 0 0 0.5em 0 #3c9051;
+			// box-shadow: $box-shadow-out-hover;
+			transition: all 0.3s ease 0s;
+			&::before {
+				opacity: 1;
+				transition: all 0.2s ease 0s;
+			}
+			span {
+				// color: $color-mark;
+				// @include adaptiv-font(21, 19);
+
+			}
+		}
+		span {
+			padding: 10px 15px;
+			z-index: 10;
+			@include adaptiv-font(20, 18);
+			color: $text;
+			transition: all 0.3s ease 0s;
+			// font-weight: 600;
+		}
+		.active-lang {
+			z-index: 5;
+			position: absolute;
+			border-radius: 100vh;
+			box-shadow: 2px 2px 2px rgba(106, 106, 106, 0.948),
+			-2px -2px 2px rgba(133, 133, 133, 0.377);
+			// box-shadow: -4px -4px 4px $light, 4px 4px 4px $shadow;
+			
+			// background-color: rgb(223, 222, 218);
+			background-color: $bg;
+			width: 50%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			transition: all 0.3s ease 0s;
+
+		}
+	}
 
 .button-nav {
 			box-shadow: $box-shadow-in;
@@ -302,18 +436,14 @@ a {
 			&:hover {
 				box-shadow: $box-shadow-hover;
 				transition: box-shadow .2s;
-				color: $color-mark;
-				p {
-					color: $color-mark;
-				}
+				// p, span {
+				// 	color: $color-mark;
+				// 	transition: all 0.3s ease 0s;
+				// }
 			}
 
 			&:active {
 				box-shadow: $box-shadow-active;
-			}
-
-			&:hover :nth-child(1) {
-				color: $color-mark;
 			}
 		}
 
@@ -521,7 +651,7 @@ a {
 		align-items: center;
 		justify-content: center;
 		// gap: rem(45);
-		@include adaptive-value("gap", 40, 12, 0);
+		@include adaptive-value("gap", 20, 5, 0);
 		// background-color: $bg-glass;
 		padding-left: calc(18%);
 		margin-right: 0;
@@ -536,6 +666,7 @@ a {
 					@include adaptiv-font(95, 45);
 					font-weight: bold;
 					color: $text;
+					// white-space: nowrap;
 				}
 			}
 	
@@ -622,7 +753,7 @@ a {
 				color: #367c47;
 				// text-shadow: 0px 0px 10px $bg;
 				text-align: center;
-				box-shadow: inset 0 0 0.5em 0 $color-mark, 0 0 0.5em 0 $color-mark;
+				box-shadow: $box-shadow-green-light;
 				// transition: all 0.2s;
 				//! ===/\ NEONE /\ ===
 				// background-color: #4eb869;
@@ -651,7 +782,7 @@ a {
 			.home-social-network {
 				display: flex;
 				justify-content: space-around;
-				// gap: 30px;
+				gap: rem(20);
 		
 				&__social-icon {
 					background-color: $bg;
@@ -671,11 +802,14 @@ a {
 	// justify-content:center;
 	// box-shadow: $box-shadow-out;
 	// background-color: $bg;
-	padding: rem(10);
+	// padding: rem(10);
+	margin-bottom: 10px;
 	// border-radius: rem(100);
-	margin-top: rem(5);
-	font-weight: 700;
-	letter-spacing: rem(4);
+	// margin-top: rem(5);
+	font-weight: 600;
+	@include adaptiv-font(42, 26);
+	
+	// letter-spacing: rem(4);
 	// text-decoration: underline;
 	// border-bottom: solid rem(3) ;
 	color: #23255c;
@@ -816,7 +950,7 @@ a {
 
 		.home-card__container-description {
 			padding: calc(30% + 20px) 20px 40px 20px;
-			gap: rem(20);
+			gap: rem(10);
 			// border-radius: rem(50);
 
 			.description-buttons-container {
@@ -833,7 +967,7 @@ a {
 		gap: 12px;
 
 		&__item-link {
-			height: rem(50);
+			height: rem(46);
 		}
 	}
 
@@ -920,7 +1054,7 @@ a {
 	
 	@media only screen and (max-width: 720px){
 		.about__skills-container,
-		.educatin-work-container {
+		.education-work-container {
 			grid-template-columns: repeat(1, minmax(200px, 100%));
 			justify-content: center;
 
@@ -1004,7 +1138,7 @@ a {
 	//! ======% PROGRESS BECKEND ================
 
 
-.educatin-work-container {
+.education-work-container {
 	display: grid;
 		// margin-top: 80px;
 		grid-template-columns: repeat(2, minmax(200px, 50%));
@@ -1029,7 +1163,7 @@ a {
 
 
 
-.educatin,
+.education,
 .work {
 	flex: 0 0 50%;
 	min-width: 250px;
@@ -1111,7 +1245,6 @@ a {
 			
 			&__data {
 			display: flex;
-			justify-content: center;
 			align-content: center;
 			box-shadow: $box-shadow-in;
 			padding: 10px 20px;
@@ -1120,7 +1253,6 @@ a {
 			font-weight: 400;
 			color: #4d4d4d;
 			gap: 10px;
-
 		}
 		
 		&__title-container {
@@ -1139,11 +1271,13 @@ a {
 		}
 
 		&__description-container {
+			display: flex;
+			// text-align: center;
 			margin-bottom: 40px;
 			background-color: $bg;
 			box-shadow: $box-shadow-in;
 			border-radius: rem(25);
-			
+			// align-items: center;
 		}
 
 		&__now{
@@ -1902,7 +2036,7 @@ ion-icon {
 	font-family: "Montserrat";
 	font-weight: 600;
 	
-	span {
+	.sent-icon {
 		font-size: 1.5em;
 	}
 

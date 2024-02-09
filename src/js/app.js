@@ -5,66 +5,17 @@ import { DaysBetweenDates } from "./modules/functionality.js";
 import $ from "jquery";
 
 import { renderPortfolio } from "./modules/renderContent.js";
-renderPortfolio()
-import { emailJSformDataServiceId, emailJSformTemplateId, emailJSformUserId } from "./modules/keysEmailJS.js";
+// renderPortfolio()
+import { emailJSformDataServiceId, emailJSformTemplateId, emailJSformUserId } from "./modules/Tokens.js";
+import { translationsArr } from "./modules/translationsСontent.js";
+
+if (typeof process !== 'undefined' && process.release.name === 'node') {
+  console.log('Node.js доступний.');
+} else {
+  console.log('Node.js не знайдений або не підтримується в цьому середовищі.');
+}
 
 flsFunctions.isWebp();
-
-
-// console.warn(renderPortfolio());
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// const swiper = new Swiper();
-
-
-//! ========================== Language Swap ====================
-let $lang = document.documentElement.lang
-
-function fnLang(htmlLang) {
-  // const $lang = document.documentElement.lang = htmlLang;
-  $lang = htmlLang
-  let ua = 'uk-UA';
-  let en = 'en';
-
-  if ($lang == ua) {
-    document.querySelectorAll('.language-en').forEach(elem => elem.style.display = 'none')
-  }
-  if ($lang == en) {
-    document.querySelectorAll('.language-ua').forEach(elem => elem.style.display = 'none')
-  }
-}
-//!  htmlLang        'uk-UA'
-//!  htmlLang        'en'
-// fnLang('uk-UA');
-fnLang('en');
-
-function langValue() {
-  if ($lang === 'uk-UA') {
-    return 'uk-UA'
-  }
-  if ($lang === 'en') {
-    return 'en'
-  }
-}
-
-// console.log(langValue());
-// console.log(langValue() === 'uk-UA');
-
-
-//! ====================== \/ Count Between Dates \/ ==========================
-
-const dbd = new DaysBetweenDates('.dateLearnCountJS', {
-	startDate: '24.06.2021', // 24.06.2021
-	endDate: false,
-	includingFirstDay: true,
-	includingLastDay: true
-})
-
-
-if (langValue() === 'uk-UA') {
-  dbd.$el.innerHTML = `${dbd.countFinalAllD()}дн. (${dbd.calcYear}р. ${dbd.calcMonths}м. ${dbd.calcDays}дн.)`
-} else if (langValue() === 'en') {
-  dbd.$el.innerHTML = `${dbd.countFinalAllD()}d (${dbd.calcYear}yr ${dbd.calcMonths}mo ${dbd.calcDays}d)`
-}
 
 //! ====================== /\ Count Between Dates /\ ==========================
 
@@ -75,7 +26,6 @@ import AOS from 'aos';
 AOS.init({
   disable: 'phone',
 });
-
 
 //! Menu burger
 
@@ -155,13 +105,13 @@ function funcWindowHeight() {
 
 // !typewriter
 
-  var i = 0;
-  // var A = 0;
-      var tag = document.getElementById("typewriter");
-      var html = document.getElementById("typewriter").innerHTML;
-      var attr = tag.setAttribute("data", html);
-      var txt = tag.getAttribute("data");
-      var speed = 120;
+  let i = 0;
+  // let A = 0;
+      let tag = document.getElementById("typewriter");
+      let html = document.getElementById("typewriter").innerHTML;
+      let attr = tag.setAttribute("data", html);
+      let txt = tag.getAttribute("data");
+      let speed = 120;
       document.getElementById("typewriter").innerHTML = txt.slice(999);
       function typeWriter() {
         if (i <= txt.length) {
@@ -201,40 +151,7 @@ list.forEach(link => {
 	item.addEventListener('click', activeLink)); // mousemove or click
 
 
-//! ============= Birthday calc date ===================
 
-export function birthdayDate(myBirthdayd, myBirthdayM, myBirthdayY) {
-  //! import {birthdayDate} from './libs/birthdayDate.js';
-  //! birthdayDate(2, 10, 1994);
-
-  function getUserTime(t) {
-    let Y = t.getFullYear();
-    // let M = addLeadingZero(t.getMonth() + 1);
-    let M = t.getMonth() + 1;
-    let d = t.getDate();
-
-    // const myBirthdayd = 2;
-    // const myBirthdayM = 10;
-    // const myBirthdayY = 1994;
-
-    let myBirthday = (Y - myBirthdayY);
-    
-    if (M < myBirthdayM){
-      myBirthday -= 1;
-    }
-    
-    if (myBirthday === (Y - myBirthdayY)) {
-      if (d < myBirthdayd){
-        myBirthday -= 1;
-      }
-    }
-    document.querySelector('.birthday').innerHTML = myBirthday;
-  }
-
-  getUserTime (new Date());
-}
-
-birthdayDate(2, 10, 1994);
 
 //!=================skills-percent=================
 const skills = document.querySelectorAll('[data-skills-percent]');
@@ -394,4 +311,146 @@ sendingForm('Sending');
       console.log('Oops... ' + JSON.stringify(error));
   });
 });
+
+
+
+// ! ===================== Btn-Lang =======================
+const langBtn = document.querySelector('[data-lang]')
+const activeLang = langBtn.querySelector('.active-lang')
+
+const langTitleEn = langBtn.querySelector('.lang-title-en')
+const langTitleUa = langBtn.querySelector('.lang-title-ua')
+
+const colorDefaultEn = langTitleEn.style.color
+const colorDefaultUa = langTitleUa.style.color
+
+const colorInactive = '#727272'
+
+const allLang = ['en', 'ua']
+
+styleDefaultLang()
+
+langBtn.addEventListener('click', styleSwitchLang)
+
+function changeURLLang() {
+  let lang = langBtn.dataset.lang
+  location.href = window.location.pathname + '#' + lang;
+  let selectHashLang = window.location.hash.substring(1)
+
+  document.querySelector('title').innerHTML = translationsArr['tittle'][selectHashLang]
+  // document.querySelector('.lng-menu-name').innerHTML = translationsArr['menu-name'][selectHashLang]
+  for (let key in translationsArr) {
+    if (document.querySelector(`.lng-${key}`)) {
+      document.querySelector(`.lng-${key}`).innerHTML = translationsArr[key][selectHashLang]
+    } else {
+      continue
+    }
+  }
+  birthdayDate(2, 10, 1994)
+  
+  console.log('selectHashLang', selectHashLang);
+  
+  // location.reload();
+}
+changeURLLang()
+
+function styleSwitchLang() {
+
+  if (langBtn.dataset.lang === 'en') {
+    langBtn.dataset.lang = 'ua'
+    activeLang.style.transform = 'translateX(100%)'
+
+    langTitleEn.style.color = colorInactive
+    langTitleUa.style.color = colorDefaultUa
+    countBetweenDates('дн.', 'міс.', 'р.')
+    changeURLLang()
+
+  } else if (langBtn.dataset.lang === 'ua') {
+    langBtn.dataset.lang = 'en'
+    activeLang.style.transform = 'translateX(0%)'
+
+    langTitleUa.style.color = colorInactive
+    langTitleEn.style.color = colorDefaultEn
+    countBetweenDates('d', 'mo', 'yr')
+    changeURLLang()
+  }
+}
+function styleDefaultLang() {
+  let selectHashLang = window.location.hash.substring(1)
+
+  if (!allLang.includes(selectHashLang)) {
+    location.href = window.location.pathname + '#eng';
+  } else {
+    langBtn.dataset.lang = selectHashLang
+  }
+  if (langBtn.dataset.lang === 'ua') {
+    // langBtn.dataset.lang = 'ua'
+    activeLang.style.transform = 'translateX(100%)'
+    
+
+    langTitleEn.style.color = colorInactive
+    langTitleUa.style.color = colorDefaultUa
+    countBetweenDates('дн.', 'міс.', 'р.')
+
+  } 
+  else if (langBtn.dataset.lang === 'en') {
+    // langBtn.dataset.lang = 'en'
+    activeLang.style.transform = 'translateX(0%)'
+
+    langTitleUa.style.color = colorInactive
+    langTitleEn.style.color = colorDefaultEn
+    countBetweenDates('d', 'mo', 'yr')
+  }
+}
+renderPortfolio()
+//! ====================== \/ Count Between Dates \/ ==========================
+
+function countBetweenDates(day, month, year) {
+  const dbd = new DaysBetweenDates('.dateLearnCountJS', {
+    startDate: '24.06.2021', // 24.06.2021
+    endDate: false,
+    includingFirstDay: true,
+    includingLastDay: true
+  })
+  
+  dbd.$el.innerHTML = `${dbd.countFinalAllD()}${day} (${dbd.calcYear}${year} ${dbd.calcMonths}${month} ${dbd.calcDays}${day})`
+}
+
+//! ============= Birthday calc date ===================
+
+export function birthdayDate(myBirthdayd, myBirthdayM, myBirthdayY) {
+  //! import {birthdayDate} from './libs/birthdayDate.js';
+  //! birthdayDate(2, 10, 1994);
+
+  function getUserTime(t) {
+    let Y = t.getFullYear();
+    // let M = addLeadingZero(t.getMonth() + 1);
+    let M = t.getMonth() + 1;
+    let d = t.getDate();
+
+    // const myBirthdayd = 2;
+    // const myBirthdayM = 10;
+    // const myBirthdayY = 1994;
+
+    let myBirthday = (Y - myBirthdayY);
+    
+    if (M < myBirthdayM){
+      myBirthday -= 1;
+    }
+    
+    if (myBirthday === (Y - myBirthdayY)) {
+      if (d < myBirthdayd){
+        myBirthday -= 1;
+      }
+    }
+    if (document.querySelector('.birthday')) {
+      document.querySelector('.birthday').innerHTML = myBirthday;
+
+    }
+  }
+
+  getUserTime (new Date());
+}
+
+birthdayDate(2, 10, 1994);
 
