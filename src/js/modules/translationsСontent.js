@@ -59,8 +59,8 @@ export const translationsArr = {
     "ua": "Я вивчаю front-end веб-розробку:"
   },
   "btn-download-cv": {
-    "en": "Download CV",
-    "ua": "Завантажити CV"
+    "en": "View CV",
+    "ua": "Переглянути CV"
   },
   "btn-hire-me": {
     "en": "Hire Me",

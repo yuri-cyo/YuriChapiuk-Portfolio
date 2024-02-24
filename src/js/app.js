@@ -33,21 +33,37 @@ const burgerButton = document.querySelector('.menu__icon');
 const navMenu = document.querySelector('.conteiner__nav');
 const navLink = document.querySelectorAll('.nav-menu ul li');
 
+function removeMenu() {
+  navMenu.classList.remove('nav__ative')
+  burgerButton.classList.remove('menu-icon__ative');
+  // document.body.classList.remove('_lock') //! block scroll-x on body
+}
+function addMenu() {
+  navMenu.classList.add('nav__ative')
+  burgerButton.classList.add('menu-icon__ative');
+  // document.body.classList.add('_lock') //! block scroll-x on body
+}
 
-burgerButton.addEventListener('click', (e)=>{
-  navMenu.classList.toggle('nav__ative');
-  burgerButton.classList.toggle('menu-icon__ative');
-  document.body.classList.toggle('_lock')
+document.addEventListener('click', e => {
+  
+  if (e.target.closest('.nav__ative')){
+    addMenu()
+  }
+  if (e.target.closest('.menu__icon') && !e.target.closest('.menu-icon__ative')) {
+      addMenu()
+    } else if(
+      e.target.closest('.nav-menu ul li')
+      ||
+      e.target.closest('.container__avatar-name')
+      ||
+      e.target.closest('.nav-fone')
+      ||
+      e.target.closest('.menu-icon__ative')
+      ) {
+      removeMenu()
+    }
 });
 
-// navLink.addEventListener('click', closeMenu);
-navLink.forEach(n => n.addEventListener('click', closeMenu));
-
-function closeMenu() {
-  navMenu.classList.remove('nav__ative');
-  burgerButton.classList.remove('menu-icon__ative');
-  
-}
 
 // !плавна прокрутка + Active Nav Anchor
 

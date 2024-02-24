@@ -7,9 +7,11 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,italic,500,600,700,800,900&display=swap);
 
-$bg: rgb(239, 238, 232);
+$bg: rgb(239, 238, 232);//! {{Light}}
+// $bg: rgba(102, 102, 102, 0.761);
 $bg-second:#e1e1e1;
-$bg-glass: rgba(240, 240, 240, 0.761);
+$bg-glass: rgba(240, 240, 240, 0.761); //! {{Light}}
+// $bg-glass: rgba(67, 67, 67, 0.761);
 // $bg-glass: rgba(110, 110, 110, 0.426);
 $backdrop-filter-car-glass: 10px;
 
@@ -28,7 +30,8 @@ $bg-card-portfolio: rgb(235, 236, 232);
 
 // $clr-neon: hsl(317 100% 54%);
 // $clr-bg: hsl(323 21% 16%);
-$text: rgb(19, 19, 19);
+$text: rgb(19, 19, 19);//! {{Light}}
+// $text: rgb(250, 250, 250);
 $color-text-contacts: #4d4d4d;
 $color-footer: #ececec;
 $color-footer-hover: #c9e7bf;
@@ -104,11 +107,6 @@ button {
 	border-radius: 10px;
 }
 
-
-img {
-	object-fit: cover;
-}
-
 body,
 h1,
 h2,
@@ -124,12 +122,21 @@ li {
 	font-weight: 500;
 }
 
+img {
+	object-fit: cover;
+}
+
 h1 {
 	font-weight: 600;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 body._lock {
-	// overflow: hidden;
+	overflow-y: hidden;
+	// padding-right: 10px;
 }
 
 a {
@@ -137,23 +144,6 @@ a {
 	color: inherit;
 	text-align: center;
 }
-
-.conteiner__nav {
-	position: fixed;
-	display: flex;
-	flex-direction: column;
-	width: 260px;
-	height: 100%;
-	// justify-content: center;
-	z-index: 99999;
-	overflow-x: auto;
-	// flex: 1 1 auto;
-
-	background-color: $bg-glass;
-	backdrop-filter: blur(10px);
-	box-shadow: $box-shadow-in;
-}
-
 .card-glass {
 	background-color: $bg-glass;
 	// backdrop-filter: blur(10px);
@@ -173,7 +163,38 @@ a {
 
 }
 
+.conteiner__nav {
+	position: fixed;
+	display: flex;
+	// flex-direction: column;
+	width: 100%;
+	height: 100%;
+	// justify-content: center;
+	z-index: 99999;
+	// overflow-x: hidden;
+	transition: all 0.3s ease 0s;
+	// flex: 1 1 auto;
+}
+
+.nav-fone {
+	flex: 1 1 auto;
+	height: 100%;
+}
+
+.conteiner__nav {
+	width: auto;
+	@media only screen and (max-width: 1170px) {
+		width: 100%;
+	}
+}
+
 .nav-menu {
+	box-shadow: $box-shadow-active;
+	background-color: $bg-glass;
+	backdrop-filter: blur(10px);
+	box-shadow: $box-shadow-in;
+	width: 260px;
+	height: 100%;
 	// display: flex;
 	// flex-direction: column;
 	// width: 100%;
@@ -186,11 +207,20 @@ a {
 	height: 100%;
 	justify-content: flex-start; /* Розташовує елементи зверху */
 	padding: 0 20px 0 20px;
-	width: 100%;
+	// width: 100%;
 	// gap: 20px;
 	@include adaptive-value("gap", 40, 12, 0);
-	overflow-y: hidden;
+	overflow: hidden;
+	position: relative;
 
+	// &::before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	right: -20px;
+	// 	width: 100px;
+	// 	height: 100px;
+	// 	background-color: #0e7428;
+	// }
 
 	.container__avatar-name {
 		display: flex;
@@ -457,7 +487,7 @@ a {
 	.conteiner__nav {
 		transition: 0.3s;
 		left: -100%;
-		box-shadow: $box-shadow-active;
+		// box-shadow: $box-shadow-active;
 	}
 
 	.nav__dividing-line {
@@ -567,9 +597,13 @@ a {
 
 	.img-fone{
 	position: fixed;
-	height: 100vh;
-	width: 100vw;
-		background: url(@img/home.svg);
+	// height: 100vh;
+	// width: 100vw;
+	height: 100%;
+	width: 100%;
+		// background: url(@img/home.webp);
+		// background: url(@img/home.svg);
+		background: url(@img/home.png);
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -1720,7 +1754,7 @@ ion-icon {
 			height: calc(100% + (12px * 2));
 			top: -12px;
 			left: -12px;
-			background: url(@img/loading.gif) center center no-repeat;
+			// background: url(@img/loading.gif) center center no-repeat;
 			backdrop-filter: blur(4px);
 			border-radius: rem(20);
 			

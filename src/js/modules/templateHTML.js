@@ -40,7 +40,7 @@ export class RenderContent {
 			return ''
 		}
 	}
-	async langsPercent2(urlRepo) {
+	async langsPercent(urlRepo) {
 		try {
 				const pattern = /github\.com\/([^\/]+\/[^\/]+)/;
 				const res = urlRepo.match(pattern);
@@ -69,7 +69,6 @@ export class RenderContent {
 
 				const urlApi = await fetch(`https://api.github.com/repos/${repository}/languages`, requestOptions)
 				const result = await urlApi.json()
-				// console.log(repository, result); // Виведе "yuri-cyo/Task-for-Ideil-Focus-"
 
 				const keysResult = Object.keys(result)
 				let sumAllCode = keysResult.reduce((sum, elem) => {
@@ -79,78 +78,27 @@ export class RenderContent {
 				keysResult.forEach(elem => {
 					if (typeof result[elem] === 'number') {
 						const percentCode = Math.round(result[elem] / sumAllCode * 100 * 10) / 10
-						console.log(repository);
 						rs += langsPercentRender(elem, percentCode)
 					}
 				})
-			console.log('rsrsrsrsrs', rs);
 			return rs
 		} catch (error) {
-			console.error('Помилка у функції langsPercent2:', error);
-			return ''; // Повернення порожнього рядка у випадку помилки
+			console.error('Помилка у функції langsPercent:', error);
+			return '';
 		}
 	}
 
 	descriptionText(arr) {
 		let selectHashLang = window.location.hash.substring(1)
 		if (selectHashLang) {
-			// console.log('arr[selectHashLang]', arr[selectHashLang]);
 			if (arr[selectHashLang]) {
 				return arr[selectHashLang]
 			} else {
 				return ''
 			}
-
 		} 
 	}
 	
-	// 	async portfolioCards1() {
-	// 		const elementToRemove = document.querySelector('.portfolio-card');
-	// 		elementToRemove.querySelectorAll('.portfolio-card__container').forEach(element => {
-	// 			element.remove()
-	// 		});
-	// 		if (['ua', 'en'].includes(window.location.hash.substring(1))) {
-	// 			this.$portfolioCards = document.querySelector('.portfolio-card')
-				
-	// 			const portfolioCardsHtml = this.portfolioItems.map(item => {
-
-	// 				const lng = await this.langsPercent2(item.urlGitHub)
-	// 			return `
-				
-	// 			<div class="portfolio-card__container">
-	// 			<a target="_blank" class="" 
-	// 			href=${item.urlVisit}>
-	// 					<div class="portfolio-card__img-container">
-	// 						<img src=${item.imageUrl} alt=${item.title}>
-	// 					</div>
-	// 					<div class="portfolio-card__info-container">
-	// 						<div class="portfolio-card__tittle-parent">
-	// 							<img class="portfolio-card__icon" src=${item.icon} alt="favicon">
-	// 							<div class="portfolio-card__text-wrapper">
-	// 								<h3 class="portfolio-card__title">${item.title}</h3>
-	// 								<p class="portfolio-card__description">${this.descriptionText(item.description)}</p>
-	// 							</div>
-	// 						</div>
-	// 						<div class="portfolio-card__buttons-container">
-	// 							<div class="portfolio-card__languages">
-	// 								${lng}
-
-
-								
-	// 							</div>
-	// 							<a target="_blank" class="portfolio-card__button portfolio-card__button-git" 
-	// 								href=${item.urlGitHub}>${this.btnicon.iconGitHub}${this.btnicon.textBtnGitHub}
-	// 							</a>
-	// 						</div>
-	// 					</div>
-	// 			</a>
-	// 		</div>
-	
-	// 	`}).join('');
-	// 		this.$portfolioCards.insertAdjacentHTML('beforeend', portfolioCardsHtml)
-	// 		// console.error('qeqweqweqew', this.portfolioItems);
-	// 	}
-	// }
 
 	async portfolioCards() {
     const elementToRemove = document.querySelector('.portfolio-card');
@@ -162,7 +110,7 @@ export class RenderContent {
         this.$portfolioCards = document.querySelector('.portfolio-card');
         
         const portfolioCardsHtml = await Promise.all(this.portfolioItems.map(async (item) => {
-            const lng = await this.langsPercent2(item.urlGitHub);
+            const lng = await this.langsPercent(item.urlGitHub);
             return `
                 <div class="portfolio-card__container">
 				<a target="_blank" class="" 
