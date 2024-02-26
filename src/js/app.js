@@ -67,7 +67,7 @@ document.addEventListener('click', e => {
 
 // !плавна прокрутка + Active Nav Anchor
 
-const activeClassNav = 'nav-list__item-link--active'; //! Активний клас! 
+const activeClassNav = 'btn-neon'; //! Активний клас! 
 // console.log(windowHeight);
 // const fixDoubleClasses = 0; //! Фікс накладання класів. Віднімає висоту тригера (де 0 - викл) //! розкоментувати для автоматичної ависоти активного тригер (активний тригер - це мінімальна висота секції)
 
@@ -111,9 +111,9 @@ function funcWindowHeight() {
 
     if (activeHeight <= coordSections + heightSection && 
         activeHeight >= coordSections) {
-      allNavLinks.classList.add(activeClassNav)
+      allNavLinks.classList.add(activeClassNav, `${activeClassNav}-blue`)
     } else {
-      allNavLinks.classList.remove(activeClassNav)
+      allNavLinks.classList.remove(activeClassNav, `${activeClassNav}-blue`)
     }
   }
 }
@@ -216,7 +216,7 @@ function clearForm(){
   $('#myForm').trigger('reset');
 }
 
-var sendButton = $(".button-send-mail");
+var sendButton = $(".btn-sent");
 var iconSend = $(".sent-icon");
 var form = $(".input-textarea-parent");
 var sentIcon = $(".sent-icon");
@@ -269,6 +269,7 @@ function sendingForm(message){
 
   if (message === loadMessage) {
     sendButton.fadeTo(0, 0.5);
+    sendButton.css('cursor', 'wait');
     // sentIcon.removeClass('_icon-sent')
     sendButton.append(sentIcon)
     sentIcon.removeClass(emailMessageClass)
@@ -277,6 +278,7 @@ function sendingForm(message){
   };
   if (message === sendMessage) {
     sendButton.fadeTo(0, 1);
+    sendButton.css('cursor', 'pointer');
     sendButton.removeClass(emailMessageClass);
     sendButton.append(sentIcon)
     sentIcon.removeClass('_icon-sent')
@@ -340,7 +342,7 @@ const langTitleUa = langBtn.querySelector('.lang-title-ua')
 const colorDefaultEn = langTitleEn.style.color
 const colorDefaultUa = langTitleUa.style.color
 
-const colorInactive = '#727272'
+const colorInactive = 'rgb(218, 218, 218)'
 
 const allLang = ['en', 'ua']
 
