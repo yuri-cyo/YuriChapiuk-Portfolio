@@ -12,17 +12,20 @@
                   <img src="@img/main.jpg" alt="home">
                 </div>
                 <div class="home-card__container-description card-glass">
-                    <div class="home-title">
-                      <h1 class="lng-my-name-is" 
-                      data-aos="fade-right"
-                      data-aos-delay="150">
-                        Hi, I'm Yuriy</h1>
-                    </div>
-                    <div class="home-speciality-container"
-                      data-aos="fade-left"
-                      data-aos-delay="250"
-                      >
-                      <span class="home__subtitle" id="typewriter">Fronted developer</span>
+                    <div>
+                      <div class="home-title">
+                        <h1 class="lng-my-name-is" 
+                        data-aos="fade-right"
+                        data-aos-delay="150">
+                          Hi, I'm Yuriy</h1>
+                      </div>
+                      <hr>
+                      <div class="home-speciality-container"
+                        data-aos="fade-left"
+                        data-aos-delay="250"
+                        >
+                        <span class="home__subtitle" id="typewriter">Freelancer | Fronted developer</span>
+                      </div>
                     </div>
                     <p class="home-description lng-i-study"
                       data-aos="fade-right"
@@ -91,9 +94,18 @@
                       data-aos="fade-left"
                       data-aos-delay="350">
                     <h2>Frontend</h2>
+                    <div class="about__react-container skill-container">
+                      <span class="about__vue">
+                        <span class="_icon-react"></span> React (Gatsby)
+                      </span>
+                      <span data-skills-percent="50" class="about__vue-percent about__percent"></span>
+                      <div class="about__skill-bar">
+                        <span class="about__vue-progress about__progress"></span>
+                      </div>
+                    </div>
                     <div class="about__vue-container skill-container">
                       <span class="about__vue">
-                        <span class="_icon-ts"></span> TypeScript</span>
+                        <span class="_icon-TypeScript"></span> TypeScript</span>
                       <span data-skills-percent="20" class="about__vue-percent about__percent"></span>
                       <div class="about__skill-bar">
                         <span class="about__vue-progress about__progress"></span>
@@ -101,7 +113,7 @@
                     </div>
                     <div class="about__vue-container skill-container">
                       <span class="about__vue">
-                        <span class="_icon-vue"></span> Vue.js</span>
+                        <span class="_icon-Vue"></span> Vue.js</span>
                       <span data-skills-percent="30" class="about__vue-percent about__percent"></span>
                       <div class="about__skill-bar">
                         <span class="about__vue-progress about__progress"></span>
@@ -109,14 +121,14 @@
                     </div>
                     <div class="about__js-container skill-container">
                       <span class="about__js">
-                        <span class="_icon-js"></span> JavaScript</span>
+                        <span class="_icon-JavaScript"></span> JavaScript</span>
                       <span data-skills-percent="70" class="about__js-percent about__percent"></span>
                       <div class="about__skill-bar">
                         <span class="about__js-progress about__progress"></span>
                       </div>
                     </div>
                     <div class="about__html-container skill-container">
-                      <span class="about__html"><span class="_icon-html"></span> HTML</span>
+                      <span class="about__html"><span class="_icon-HTML"></span> HTML</span>
                       <span data-skills-percent="90" class="about__html-percent about__percent"></span>
                       <div class="about__skill-bar">
                         <span class="about__html-progress about__progress"></span>
@@ -124,7 +136,7 @@
                     </div>
                     <div class="about__css-container skill-container">
                       <span class="about__css">
-                        <span class="_icon-css"></span> S(CSS)</span>
+                        <span class="_icon-SCSS"></span> S(CSS)</span>
                       <span data-skills-percent="85" class="about__css-percent about__percent"></span>
                       <div class="about__skill-bar">
                         <span class="about__css-progress about__progress"></span>
@@ -228,26 +240,6 @@
                       </div>
 
                       <div class="education__content-container"
-                          data-aos="fade-left"
-                          data-aos-delay="250">
-                        <div class="education__decoration-dot"></div>
-                        <div class="education__decoration-line"></div>
-                        <div class="education__date-container">
-                          <h3 class="education__data"><span class="_icon-calendar icon-center"></span>24.06.2021</h3>
-                        </div>
-                        <div class="education__title-container">
-                          <h2 class="education__title lng-courses">Marathon from
-                            GoIT - Frontend Web Developer</h2>
-                        </div>
-                        <div class="education__description-container education__description">
-                          <span class="_icon-location"></span>
-                          <p class="lng-place-study">
-                            Remote
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="education__content-container"
                           data-aos="fade-right"
                           data-aos-delay="300">
                         <div class="education__decoration-dot"></div>
@@ -285,7 +277,7 @@
                         <div class="education__decoration-dot"></div>
                         <div class="education__decoration-line last-line"></div>
                         <div class="work__date-container">
-                          <!-- <h3 class="education__data"><ion-icon name="calendar-outline"></ion-icon>2023 - Now</h3> -->
+                          <h3 class="education__data"><span class="_icon-calendar icon-center"></span>01.04.2024</h3>
                         </div>
                         <div class="work__title-container">
                           <h2 class="work__title lng-work-experience">No work experience in web development...yet...</h2>
@@ -293,7 +285,7 @@
                         <div class="work__description-container work__description">
                           <span class="_icon-location"></span>
                           <p class="lng-work-experience-description">
-                            A place of work will appear in the future ;)
+                            Working remotely from home
                           </p>
                         </div>
                       </div>
@@ -329,6 +321,19 @@
 
                     <div data-aos="fade-right"
                           data-aos-delay="250">
+                      <a class="contact-me__contact button" href="tel:+380637947515">
+                        <div class="contact-me__contact-logo">
+                          <span class="_icon-phone-bold" ></span>
+                        </div>
+                        <div class="contact-me__contact-info-container">
+                          <!-- <h3 class="contact-me__contact-info-title">Tel:</h3> -->
+                          <span class="contact-me__contact-info-subtitle" >+380 (63) 79 47 515</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div data-aos="fade-right"
+                          data-aos-delay="250">
                       <a target="_blank" class="contact-me__contact button" href="https://t.me/Scarbor0">
                         <div class="contact-me__contact-logo">
                           <span class="_icon-telegram" ></span>
@@ -356,7 +361,8 @@
                     
                     <div data-aos="fade-right"
                           data-aos-delay="350">
-                      <a target="_blank" href="https://goo.gl/maps/VgXDmhkCCaoUxLsR7" class="contact-me__contact button">
+                      <!-- <a target="_blank" href="https://goo.gl/maps/VgXDmhkCCaoUxLsR7" class="contact-me__contact button"> //! Novovolynsk / Нововолинськ -->
+                      <a target="_blank" href="https://maps.app.goo.gl/63rh5ZCNBumSm6us8" class="contact-me__contact button"> 
                         <div class="contact-me__contact-logo ">
                           <!-- <ion-icon name="location-outline"></ion-icon> -->
                           <span class="_icon-location-bold"></span>
@@ -372,6 +378,7 @@
                       data-aos="fade-right"
                       data-aos-delay="400">
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20201.207927954696!2d24.155441517690097!3d50.73568835017716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4724f3c1612915c5%3A0xfd93e2ab9d7c451c!2z0J3QvtCy0L7QstC-0LvRi9C90YHQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1sru!2sua!4v1657826084495!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40850.09056527711!2d30.858403054680693!3d50.21477876608473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ed1cea9cc269%3A0xdc656e4470c0c9c3!2z0JLQvtGA0L7QvdGM0LrRltCyLCDQmtC40ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCAwODM1Mg!5e0!3m2!1suk!2sua!4v1714311177464!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                     </div>
                     
 
@@ -413,32 +420,7 @@
                           <div class="status"></div>
                       </div>
                     </form>
-
                     
-
-                    <!-- <form action="#" class="form" id="form">
-                      <p><input type="text" name="name" class="feedback-input _req form_input" placeholder="Имя" id="name"></p>
-                      <p><input type="email" name="email" class="feedback-input _req _email form_input" placeholder="Почта" id="email"></p>
-                      <p><textarea name="text" id="comment" placeholder="Ваш отзыв" class="feedback-input"></textarea></p>
-                      <div class="form_item">
-                          <div class="form_label">Прикрепить фото</div>
-                          <div class="file">
-                              <div class="file_item">
-                                  <input id="formimage" accept=".jpg, .png, .gif" type="file" name="image" class="file_input">
-                                  <div class="file_button">Выбрать</div>
-                              </div>
-                              <div class="file_preview"></div>
-                          </div>
-                          <div class="form_item">
-                              <div class="checkbox">
-                                  <input id="formAgreement" checked type="checkbox" name="Agreement" class="checkbox_input _req">
-                                  <label for="formAgreement" class="checkbox_label">Я даю своё согласие на обработку персональных данных</label>
-                              </div>
-                          </div>
-                      </div>
-                      <input type="submit" value="Отправить" class="button-submit">
-                      <div class="ease"></div>
-                  </form> -->
 
                 </div>
               </div>

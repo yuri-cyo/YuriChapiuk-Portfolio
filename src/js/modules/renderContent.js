@@ -9,6 +9,40 @@ export function renderPortfolio() {
 			iconGitHub: '<span class="_icon-github"></span>'
 	}, [
 		{
+			//! Card 8
+			title: 'kab-weston',
+			icon: 'img/portfolio/favicon/favicon-kab-weston.png',
+			description: {
+				'en': "An online store built with React, Firebase, and FireCMS. Dynamic price recalculation based on product configurations. Orders are sent via email. The site features product filters and sorting",
+				'ua': "Інтернет-магазин на React з Firebase і FireCMS. Динамічне перерахування цін за конфігураціями товарів. Замовлення надходять на пошту. Є фільтри та сортування товарів"
+			},
+			imageUrl: 'img/portfolio/kab-weston.png',
+			// urlGitHub: 'https://www.termoblok.pp.ua/',
+			urlVisit: 'https://kab-weston.pp.ua/catalog/',
+			class: 'project-freelance-card',
+			btnName: {
+				'en': "View",
+				'ua': "Переглянути"
+			},
+		},
+		{
+			//! Card 7
+			title: 'Termoblok',
+			icon: 'img/portfolio/favicon/favicon-Termoblok.png',
+			description: {
+				'en': "My debut in the commercial sphere and my first freelance project. Created a simple single-page internet shop with the functionality of sending email newsletters",
+				'ua': "Мій дебют у комерційній сфері та перший фріланс-проект. Створив простий односторінковий інтернет-магазин із можливістю відправки електронних листів"
+			},
+			imageUrl: 'img/portfolio/termoblok.png',
+			// urlGitHub: 'https://www.termoblok.pp.ua/',
+			urlVisit: 'https://www.termoblok.pp.ua/',
+			class: 'project-freelance-card',
+			btnName: {
+				'en': "View",
+				'ua': "Переглянути"
+			},
+		},
+		{
 			//! Card 6
 			title: 'iCalcHishoryM+',
 			icon: 'img/portfolio/favicon/favicon-iCalcM+.png',

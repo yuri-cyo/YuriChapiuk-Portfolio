@@ -126,17 +126,9 @@ export const translationsArr = {
     "en": "Lutsk National Technical University",
     "ua": "Луцький національний університет"
   },
-  "courses": {
-    "en": "Marathon from GoIT - Frontend Web Developer",
-    "ua": "Марафон від GoIT - Frontend Web Developer"
-  },
-  "place-study": {
-    "en": "Remote",
-    "ua": "Віддалено"
-  },
   "date-self-education": {
-    "en": "07.2021 - Present",
-    "ua": "07.2021 - по сьогоднішній день"
+    "en": `<span class="_icon-calendar icon-center"></span>07.2021 - to present`,
+    "ua": `<span class="_icon-calendar icon-center"></span>07.2021 - по сьогоднішній день`
   },
   "what-a-study": {
     "en": "Self-Education",
@@ -154,12 +146,12 @@ export const translationsArr = {
     "ua": "Робота"
   },
   "work-experience": {
-    "en": "No work experience in web development",
-    "ua": "Без досвіду роботи в <nobr>веб-розробці</nobr>"
+    "en": "Freelancer since <nobr>April 1, 2024.</nobr>",
+    "ua": "Фрілансер з <nobr>1 квітня 2024р.</nobr>"
   },
   "work-experience-description": {
-    "en": "A place of work will appear in the future ;)",
-    "ua": "Місце роботи з'явиться в майбутньому;)"
+    "en": "Working remotely from home",
+    "ua": "Працюю віддалено з дому"
   },
 
   //! ======= My portfolio ======
@@ -193,6 +185,10 @@ export const translationsArr = {
     "en": "Ukraine - Novovolynsk",
     "ua": "Україна - Нововолинськ"
   },
+  // "location": {
+  //   "en": "Ukraine - Voronkiv",
+  //   "ua": "Україна - Вороньків"
+  // },
   "form-name": {
     "en": "Name",
     "ua": "Ім'я"

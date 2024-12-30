@@ -33,19 +33,19 @@ export class RenderContent {
 		`
 	}
 
-	langsPercent(item, className) {
-		if (item) {
-			return `<div class="portfolio-card__lang portfolio-card__html-lang "><span class=${className}></span>${item}%</div>`
-		} else {
-			return ''
-		}
-	}
+	// langsPercent(item, className) {
+	// 	if (item) {
+	// 		return `<div class="portfolio-card__lang portfolio-card__html-lang "><span class=${className}></span>${item}%</div>`
+	// 	} else {
+	// 		return ''
+	// 	}
+	// }
 	async langsPercent(urlRepo) {
 		try {
 				const pattern = /github\.com\/([^\/]+\/[^\/]+)/;
 				const res = urlRepo.match(pattern);
 				const repository = res[1];
-			
+
 				let rs = ``
 
 				function langsPercentRender(icon, percent) {
@@ -75,6 +75,8 @@ export class RenderContent {
 					return sum + result[elem]
 				},0)
 
+				// if (keysResult) return // ! ==========
+
 				keysResult.forEach(elem => {
 					if (typeof result[elem] === 'number') {
 						const percentCode = Math.round(result[elem] / sumAllCode * 100 * 10) / 10
@@ -103,17 +105,37 @@ export class RenderContent {
 	async portfolioCards() {
     const elementToRemove = document.querySelector('.portfolio-card');
     elementToRemove.querySelectorAll('.portfolio-card__container').forEach(element => {
-        element.remove();
+			element.remove();
     });
-
+		
+		
     if (['ua', 'en'].includes(window.location.hash.substring(1))) {
-        this.$portfolioCards = document.querySelector('.portfolio-card');
-        
-        const portfolioCardsHtml = await Promise.all(this.portfolioItems.map(async (item) => {
-            const lng = await this.langsPercent(item.urlGitHub);
+			this.$portfolioCards = document.querySelector('.portfolio-card');
+			
+			const portfolioCardsHtml = await Promise.all(this.portfolioItems.map(async (item) => {
+				// const lngBtnName = await this.langsPercent(item.btnName);
+				
+				let lng = '<span class="freelance-mark"><span class="_icon-hire"></span>Freelance Project</span>'
+				let classProject = ''
+				let gitBtn = `${this.btnicon.iconGitHub}${this.btnicon.textBtnGitHub}`
+				let urlGitHub = item.urlGitHub
+				
+				if (item.class) {
+					classProject = item.class
+				}
+				if (item.btnName) {
+					gitBtn = `<span class="_icon-link"></span>${item.btnName[window.location.hash.substring(1)]}`
+				}
+				if (!item.urlGitHub) {
+					urlGitHub = item.urlVisit
+				}
+				if (item.urlGitHub) {
+					lng = await this.langsPercent(item.urlGitHub)
+				}
+
             return `
-                <div class="portfolio-card__container">
-				<a target="_blank" class="" 
+                <div class="portfolio-card__container ${classProject}">
+				<a target="_blank"" 
 				href=${item.urlVisit}>
 						<div class="portfolio-card__img-container">
 							<img src=${item.imageUrl} alt=${item.title}>
@@ -131,7 +153,7 @@ export class RenderContent {
 									${lng}
 								</div>
 								<a target="_blank" class="portfolio-card__button portfolio-card__button-git" 
-									href=${item.urlGitHub}>${this.btnicon.iconGitHub}${this.btnicon.textBtnGitHub}
+									href=${urlGitHub}>${gitBtn}
 								</a>
 							</div>
 						</div>

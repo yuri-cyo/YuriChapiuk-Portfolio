@@ -111,9 +111,9 @@ function funcWindowHeight() {
 
     if (activeHeight <= coordSections + heightSection && 
         activeHeight >= coordSections) {
-      allNavLinks.classList.add(activeClassNav, `${activeClassNav}-blue`)
+      allNavLinks.classList.add(activeClassNav, `${activeClassNav}`)
     } else {
-      allNavLinks.classList.remove(activeClassNav, `${activeClassNav}-blue`)
+      allNavLinks.classList.remove(activeClassNav, `${activeClassNav}`)
     }
   }
 }
