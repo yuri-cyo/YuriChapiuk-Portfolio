@@ -1,0 +1,63 @@
+.goods {
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    gap: 23px;
+  }
+
+  &__card {
+    width: 300px;
+    height: 420px;
+    border: 1px solid $border-color-header;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__card-img-box {
+    text-align: center;
+    height: 215px;
+    width: 100%;
+    position: relative;
+    
+  }
+
+  &__size-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 3px;
+    background-color: $mark;
+    color: #ffff;
+    padding: 5px 10px;
+    border-radius: 100px;
+    font-size: .875rem;
+  }
+  
+  &__card-size-icon {
+    font-size: 18px;
+    padding-right: 5px;
+  }
+
+  &__card-title {
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: 800;
+    height: 3.2rem;
+    border-bottom: 1px solid $border-color-header;
+  }
+
+  &__card-text {
+    padding-top: 5px;
+    font-size: .875rem;
+    max-width: 100%;
+  }
+  &__card-btn {
+    margin-top: auto;
+  }
+}

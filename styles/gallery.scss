@@ -1,0 +1,45 @@
+.gallery {
+  background-color: $block-color;
+  padding-bottom: 1.25rem;
+  .title {
+    color: $title-bold;
+    font-size: 1.625rem;
+    padding: .625rem;
+    @media (max-width: $brakepoint-2) {
+      font-size: 1.25rem;
+    }
+    @media (max-width: $brakepoint-3) {
+      font-size: 18px;
+    }
+  }
+  &__folder-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 10.625rem);
+    gap: .3125rem;
+    justify-content: center;
+
+    @media (max-width: $brakepoint-2) {
+      grid-template-columns: repeat(auto-fit, 6.875rem);
+    }
+    @media (max-width: $brakepoint-3) {
+      grid-template-columns: repeat(auto-fit, 5rem);
+    }
+
+  }
+  &__img-box {
+    img {
+      border-radius: .625rem;
+      object-fit: cover;
+      width: 100%;
+      box-shadow: $card-shadow;
+      height: 100%;
+      transition: all 0.3s ease 0s;
+      border: .125rem solid transparent;
+      &:hover {
+        transform: scale(1.015);
+        transition: all 0.3s ease 0s;
+        border-color: #ffff;
+      }
+    }
+  }
+}

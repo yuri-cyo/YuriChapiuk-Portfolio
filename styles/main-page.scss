@@ -1,0 +1,143 @@
+.main-container {
+  max-width: $main-container;
+  margin: 0 auto;
+  padding: 0 $pd-container;
+
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  
+    @media (max-width: $brakepoint-1_2) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .main-content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+  .main-title__box {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: $title-bold;
+    @media (max-width: 68.75rem) {
+      top: calc($header-height + $pd-container);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      text-shadow: 
+        .125rem .125rem 0rem #fff, 
+        -0.125rem .125rem 0rem #fff, 
+        .125rem -0.125rem 0rem #fff, 
+        -0.125rem -0.125rem 0rem #fff;
+    }
+    
+    h1 {
+      font-size: 65px;
+      @media (max-width: $brakepoint-3) {
+        font-size: 50px;
+      }
+      @media (max-width: 400px) {
+        font-size: 40px;
+      }
+  }
+  span {
+    font-size: 30px;
+    text-align: end;
+    @media (max-width: 400px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.main-img-box {
+  display: flex;
+  @media (max-width: $brakepoint-1) {
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: 68.75rem) {
+    width: 100%;
+    order: -1;
+    justify-content: center;
+  }
+  img {
+    border-radius: 440px 440px 440px 50px;
+    max-width: 517px;
+    object-fit: cover;
+    max-width: 100%;
+    
+    @media (max-width: 68.75rem) {
+      max-height: 25rem;
+    }
+    @media (max-width: $brakepoint-3) {
+      max-height: 18.75rem;
+    }
+  }
+}
+
+.achievement {
+  display: grid;
+  gap: .625rem;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  @media (max-width: $brakepoint-1) {
+    grid-template-columns: repeat(4, 9.375rem);
+    justify-content: center;
+  }
+  @media (max-width: 43.75rem) {
+    grid-template-columns: repeat(2, 9.375rem);
+  }
+  &__icon {
+    text-align: center;
+    font-size: 32px;
+  }
+  
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    height: 150px;
+    width: 150px;
+    border-radius: 30px;
+    background-color: $block-color;
+    color: $title-bold;
+    box-shadow: .125rem .125rem .5rem 0 rgba(0, 0, 0, 0.21), inset .0625rem .0625rem .25rem 0 rgba(255, 255, 255, 0.26);
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+  }
+
+  &__card-text {
+    display: flex;
+    font-size: 16px;
+    text-align: center;
+    color: $title-bold;
+  }
+}
+.main-form {
+  
+  &__title-box {
+    @media (max-width: $brakepoint-1_2) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    padding-bottom: 10px;
+  }
+  }
+
+.form-send {
+  display: flex;
+  gap: .625rem;
+}

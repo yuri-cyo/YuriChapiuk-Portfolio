@@ -1,0 +1,59 @@
+.footer {
+  text-align: center;
+  background-color: #E7E9EB;
+  padding: 30px 0;
+  text-align: center;
+
+  &__social {
+    display: flex;
+    justify-content:center;align-items: center;
+
+    a, button {
+      color: $border-color-button;
+      &:hover {
+        background-color: #656565;
+      }
+    }
+  }
+
+  &__content-box {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__btn-phone {
+    background-color: transparent;
+    align-self: center;
+    border: 1px solid $border-color-button;
+    color: $border-color-button;
+    &:hover {
+      background-color: #656565;
+    }
+  }
+}
+
+.license-year-dev-info {
+  font-size: .875rem;
+  p {
+    display: inline-block;
+  }  
+}
+
+.developed {
+  display: inline;
+  justify-content:center;
+  align-items: center;
+  padding: 3px 6px;
+  border-radius: 15px;
+  border: none !important;
+  &__name {
+    display: none;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+

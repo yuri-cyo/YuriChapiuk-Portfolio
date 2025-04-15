@@ -1,0 +1,107 @@
+.card-picture {
+
+  &__card {
+    max-width: 300px;
+    width: 100%;
+    max-height: 300px;
+    height: 100%;
+    box-shadow: $card-shadow;
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+    img {
+      // width: 100%;
+      height: 100%;
+      aspect-ratio: 1/1;
+
+    }
+  }
+
+  &__btn-info {
+    padding-left: 15px;
+    position: absolute; 
+    border-radius: 100px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -100%);
+    transition: all 0.1s ease 0s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: all 0.1s ease 0s;
+    }
+  }
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute; 
+    left: 0;
+    bottom: 0;
+    margin: 15px;
+    width: calc(100% - 30px);
+    color: #fff;
+  }
+  
+  &__card-text-box {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__card-title {
+    display: inline-block;
+    background-color: $mark;
+    padding: 3px 10px;
+    font-size: 1rem;
+    border-radius: 100px;
+  }
+}
+
+.profit__card {
+  cursor: pointer;
+}
+
+// ! =============== First-card ===========
+
+.first {
+
+  &__card {
+    max-height: 480px;
+    height: 490px;
+    background-color: $block-color;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+  &__title {
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+
+  &__img-box {
+    display: flex;
+    justify-content:center;
+    img {
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 20px;
+      box-shadow: $card-shadow;
+
+    }
+  }
+}
+
+.building-card__title {
+  background-color: $mark-second;
+}
+

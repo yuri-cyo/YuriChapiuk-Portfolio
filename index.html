@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- @@include('html/head.html',{ "title":"Yuriy Chapyuk" }) -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="icon shortcut" type="image/svg+xml" href="/img/favicon.png" />
+
+    <meta
+      name="keywords"
+      content="Юрій Чапюк, Yuriy Chapyuk, freelancer, front-end web development, web development"
+    />
+
+    <meta
+      property="og:title"
+      content="Юрій Чапюк | Yuriy Chapyuk - Frontend Developer"
+    />
+    <meta property="og:description" content="Portfolio" />
+    <meta property="og:image" content="/img/main.jpg" />
+    <meta property="og:url" content="https://yuri-chapyuk.com.ua/" />
+
+    <link
+      rel="preload"
+      as="font"
+      href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2"
+      crossorigin
+    />
+    <link rel="preload" as="image" href="/img/fone.svg" />
+
+    <title>Yuriy Chapyuk</title>
+  </head>
+  <body>
+    <!-- @@include('html/header.html',{}) -->
+    <header>
+      <div data-menu="icon" class="menu__icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="conteiner__nav">
+        <nav class="nav-menu">
+          <div class="container__avatar-name">
+            <div class="nav__avatar">
+              <a href="#section-1">
+                <img src="/img/ava.png" alt="ava" />
+              </a>
+            </div>
+            <div class="nav__name">
+              <a href="#section-1">
+                <h1 class="lng-menu-name">Yuriy Chapyuk</h1>
+                <span>Freelancer | Fronted developer</span>
+              </a>
+            </div>
+          </div>
+          <!-- <div class="wrapper__nav-list"> -->
+          <nav class="navbar">
+            <ul class="nav-list">
+              <!-- <div id="marker"></div> -->
+              <li class="nav-list__item">
+                <a
+                  href="#section-1"
+                  data-scroll-active-nav="section-1"
+                  class="nav-list__item-link button-nav nav-list__item-link--active"
+                >
+                  <span class="_icon-home"></span>
+                  <p class="lng-menu-home">Home</p>
+                </a>
+              </li>
+
+              <li class="nav-list__item">
+                <a
+                  href="#section-2"
+                  data-scroll-active-nav="section-2"
+                  class="nav-list__item-link button-nav"
+                >
+                  <span class="_icon-person"></span>
+                  <p class="lng-menu-about">About Me</p>
+                </a>
+              </li>
+
+              <li class="nav-list__item">
+                <a
+                  href="#section-3"
+                  data-scroll-active-nav="section-3"
+                  class="nav-list__item-link button-nav menu-lit-portfolio"
+                >
+                  <span class="_icon-code"></span>
+                  <p class="lng-menu-portfolio">Portfolio</p>
+                </a>
+              </li>
+
+              <li class="nav-list__item">
+                <a
+                  href="#section-4"
+                  data-scroll-active-nav="section-4"
+                  class="nav-list__item-link button-nav"
+                >
+                  <span class="_icon-email"></span>
+                  <p class="lng-menu-contact-me">Contact Me</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button class="nav-lang" data-lang="en">
+            <span class="lang-title-en">EN</span>
+            <span class="lang-title-ua">UA</span>
+            <span class="active-lang"></span>
+          </button>
+        </nav>
+        <div class="nav-fone"></div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="img-fone"></div>
+      <section class="home section" id="section-1">
+        <div class="home-card">
+          <div class="home-card__container-img">
+            <img src="/img/main.jpg" alt="home" />
+          </div>
+          <div class="home-card__container-description card-glass">
+            <div>
+              <div class="home-title">
+                <h1
+                  class="lng-my-name-is"
+                  data-aos="fade-right"
+                  data-aos-delay="150"
+                >
+                  Hi, I'm Yuriy
+                </h1>
+              </div>
+              <hr />
+              <div
+                class="home-speciality-container"
+                data-aos="fade-left"
+                data-aos-delay="250"
+              >
+                <span class="home__subtitle" id="typewriter"
+                  >Freelancer | Fronted developer</span
+                >
+              </div>
+            </div>
+            <p
+              class="home-description lng-i-study"
+              data-aos="fade-right"
+              data-aos-delay="350"
+            >
+              I am learning front-end web development:
+            </p>
+            <span class="dateLearnCountJS"></span>
+            <div
+              data-aos="fade-left"
+              data-aos-delay="450"
+              class="description-buttons-container"
+            >
+              <a
+                class="button btn-neon"
+                target="_blank"
+                href="https://docs.google.com/document/d/13L8_jrOFlDVDnfiO3JNKzAUjHAsSrjKp3Y_3OHAJrtc/edit?usp=sharing"
+              >
+                <span class="_icon-download"></span>
+                <span class="lng-btn-download-cv">CV</span>
+              </a>
+              <a class="button btn-neon btn-neon-blue" href="#section-4">
+                <span class="_icon-hire"></span>
+                <span class="lng-btn-hire-me">Hire Me</span>
+              </a>
+
+              <div
+                class="home-social-network"
+                data-aos="fade-up"
+                data-aos-delay="650"
+              >
+                <a
+                  target="_blank"
+                  class="social-network__social-icon button btn-round _icon-linkedin"
+                  href="https://www.linkedin.com/in/%D1%8E%D1%80%D1%96%D0%B9-%D1%87%D0%B0%D0%BF%D1%8E%D0%BA-438277234/"
+                ></a>
+
+                <a
+                  target="_blank"
+                  class="social-network__social-icon button btn-round _icon-github"
+                  href="https://github.com/yuri-cyo"
+                ></a>
+
+                <a
+                  target="_blank"
+                  class="social-network__social-icon button btn-round _icon-telegram"
+                  href="https://t.me/Scarbor0"
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- !============================= About Me ========================== -->
+      <section class="about section" id="section-2">
+        <div class="about__card-description-container card-glass">
+          <div class="about__title-container">
+            <h2
+              class="about__title lng-about-me-section"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              About Me
+            </h2>
+          </div>
+          <div
+            class="about__subtitle-container about__subtitle lng-about-me-description"
+            data-aos="fade-right"
+            data-aos-delay="150"
+          ></div>
+          <div class="about__name-skills-container">
+            <h2
+              class="about__name-skills lng-skills-section"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
+              Skills
+            </h2>
+          </div>
+          <!-- !============================= Scils ========================== -->
+
+          <div class="about__skills-container">
+            <div
+              class="about__skills-frontend-container skills-direction"
+              data-aos="fade-left"
+              data-aos-delay="350"
+            >
+              <h2>Frontend</h2>
+              <div class="about__react-container skill-container">
+                <span class="about__vue">
+                  <span class="_icon-react"></span> React (Gatsby)
+                </span>
+                <span
+                  data-skills-percent="50"
+                  class="about__vue-percent about__percent"
+                ></span>
+                <div class="about__skill-bar">
+                  <span class="about__vue-progress about__progress"></span>
+                </div>
+              </div>
+              <div class="about__vue-container skill-container">
+                <span class="about__vue">
+                  <span class="_icon-TypeScript"></span> TypeScript</span
+                >
+                <span
+                  data-skills-percent="20"
+                  class="about__vue-percent about__percent"
+                ></span>
+                <div class="about__skill-bar">
+                  <span class="about__vue-progress about__progress"></span>
+                </div>
+              </div>
+              <div class="about__vue-container skill-container">
+                <span class="about__vue">
+                  <span class="_icon-Vue"></span> Vue.js</span
+                >
+                <span
+                  data-skills-percent="30"
+                  class="about__vue-percent about__percent"
+                ></span>
+                <div class="about__skill-bar">
+                  <span class="about__vue-progress about__progress"></span>
+                </div>
+              </div>
+              <div class="about__js-container skill-container">
+                <span class="about__js">
+                  <span class="_icon-JavaScript"></span> JavaScript</span
+                >
+                <span
+                  data-skills-percent="70"
+                  class="about__js-percent about__percent"
+                ></span>
+                <div class="about__skill-bar">
+                  <span class="about__js-progress about__progress"></span>
+                </div>
+              </div>
+              <div class="about__html-container skill-container">
+                <span class="about__html"
+                  ><span class="_icon-HTML"></span> HTML</span
+                >
+                <span
+                  data-skills-percent="90"
+                  class="about__html-percent about__percent"
+                ></span>
+                <div class="about__skill-bar">
+                  <span class="about__html-progress about__progress"></span>
+                </div>
+              </div>
+              <div class="about__css-container skill-container">
+                <span class="about__css">
+                  <span class="_icon-SCSS"></span> S(CSS)</span
+                >
+                <span
+                  data-skills-percent="85"
+                  class="about__css-percent about__percent"
+                ></span>
+                <div class="about__skill-bar">
+                  <span class="about__css-progress about__progress"></span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="about__skills-design-container skills-direction"
+              data-aos="fade-right"
+              data-aos-delay="450"
+            >
+              <h2>Design</h2>
+
+              <div class="about__html-container skill-container">
+                <span class="about__figma">
+                  <span class="_icon-figma"></span> Figma</span
+                >
+                <span
+                  data-skills-percent="75"
+                  class="about__figma-percent about__percent"
+                ></span>
+                <div class="about__skill-bar">
+                  <span class="about__figma-progress about__progress"></span>
+                </div>
+              </div>
+
+              <div class="about__photoshop-container skill-container">
+                <span class="about__photoshop">
+                  <span class="_icon-photoshop"></span> Photoshop</span
+                >
+                <span
+                  data-skills-percent="25"
+                  class="about__photoshop-percent about__percent"
+                ></span>
+                <div class="about__skill-bar">
+                  <span
+                    class="about__photoshop-progress about__progress"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="about__skills-backend-container skills-direction">
+                    <h2>Backend</h2>
+                    <div class="about__php-container skill-container">
+                      <span class="about__php">PHP</span>
+                      <span class="about__php-percent about__percent">1%</span>
+                      <div class="about__skill-bar">
+                        <span class="about__php-progress about__progress"></span>
+                      </div>
+                    </div>
+                    <div class="about__nodejs-container skill-container">
+                      <span class="about__nodejs">Node JS</span>
+                      <span class="about__nodejs-percent about__percent">1%</span>
+                      <div class="about__skill-bar">
+                        <span class="about__nodejs-progress about__progress"></span>
+                      </div>
+                    </div>
+                    
+                  </div> -->
+          </div>
+          <!-- !============================= education-work ========================== -->
+          <div class="education-work-container section-block">
+            <div class="education">
+              <div class="education__name-container">
+                <h2
+                  class="education__name lng-education-section"
+                  data-aos="fade-up"
+                  data-aos-delay="50"
+                >
+                  Education
+                </h2>
+              </div>
+
+              <div
+                class="education__content-container"
+                data-aos="fade-left"
+                data-aos-delay="150"
+              >
+                <div class="education__decoration-dot"></div>
+                <div class="education__decoration-line"></div>
+                <div class="education__date-container">
+                  <h3 class="education__data">
+                    <span class="_icon-calendar icon-center"></span>2010-2014
+                  </h3>
+                </div>
+                <div class="education__title-container">
+                  <h2 class="education__title lng-specialty-in-college">
+                    Electrical Equipment, Junior Specialist
+                  </h2>
+                </div>
+                <div
+                  class="education__description-container education__description"
+                >
+                  <span class="_icon-location"></span>
+                  <p class="lng-college-name">
+                    Novovolynsk Electromechanical College
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="education__content-container"
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
+                <div class="education__decoration-dot"></div>
+                <div class="education__decoration-line"></div>
+                <div class="education__date-container">
+                  <h3 class="education__data">
+                    <span class="_icon-calendar icon-center"></span>2014-2016
+                  </h3>
+                </div>
+                <div class="education__title-container">
+                  <h2 class="education__title lng-specialty-in-university">
+                    Electrical Engineering and Electrical Technology, Bachelor
+                  </h2>
+                </div>
+                <div
+                  class="education__description-container education__description"
+                >
+                  <span class="_icon-location"></span>
+                  <p class="lng-university-name">
+                    Lutsk National Technical University
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="education__content-container"
+                data-aos="fade-right"
+                data-aos-delay="300"
+              >
+                <div class="education__decoration-dot"></div>
+                <div class="education__decoration-line last-line"></div>
+                <div class="education__date-container">
+                  <h3 class="education__data lng-date-self-education">
+                    <span class="_icon-calendar icon-center"></span>07.2021 -
+                    Present
+                  </h3>
+                </div>
+                <div class="education__title-container">
+                  <h2 class="education__title lng-what-a-study">
+                    Self-Education
+                  </h2>
+                </div>
+                <div
+                  class="education__description-container education__description"
+                >
+                  <span class="_icon-location"></span>
+                  <p class="lng-where-a-study">At Home</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="work">
+              <div class="work__name-container">
+                <h2
+                  class="work__name lng-work-section"
+                  data-aos="fade-up"
+                  data-aos-delay="150"
+                >
+                  Work
+                </h2>
+              </div>
+
+              <div
+                class="work__content-container"
+                data-aos="fade-right"
+                data-aos-delay="150"
+              >
+                <div class="education__decoration-dot"></div>
+                <div class="education__decoration-line last-line"></div>
+                <div class="work__date-container">
+                  <h3 class="education__data">
+                    <span class="_icon-calendar icon-center"></span>01.04.2024
+                  </h3>
+                </div>
+                <div class="work__title-container">
+                  <h2 class="work__title lng-work-experience">
+                    No work experience in web development...yet...
+                  </h2>
+                </div>
+                <div class="work__description-container work__description">
+                  <span class="_icon-location"></span>
+                  <p class="lng-work-experience-description">
+                    Working remotely from home
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio section" id="section-3">
+        <!-- GENERATE CONTENT IN JS -->
+      </section>
+
+      <section class="contact-me section" id="section-4">
+        <div class="contact-me__container card-glass">
+          <div class="contact-me__title-subtitle-container">
+            <h2
+              class="contact-me__title lng-contact-me-section"
+              data-aos="fade-down"
+              data-aos-delay="50"
+            >
+              Contact Me
+            </h2>
+            <h3
+              class="contact-me__title-subtitle lng-contact-me-section-description"
+            >
+              Get In Touch
+            </h3>
+          </div>
+
+          <div class="contact-me__form-container">
+            <div class="contact-me__phone-etc-container">
+              <div data-aos="fade-right" data-aos-delay="250">
+                <a class="contact-me__contact button" href="tel:+380637947515">
+                  <div class="contact-me__contact-logo">
+                    <span class="_icon-phone-bold"></span>
+                  </div>
+                  <div class="contact-me__contact-info-container">
+                    <!-- <h3 class="contact-me__contact-info-title">Tel:</h3> -->
+                    <span class="contact-me__contact-info-subtitle"
+                      >+380 (63) 79 47 515</span
+                    >
+                  </div>
+                </a>
+              </div>
+
+              <div data-aos="fade-right" data-aos-delay="250">
+                <a
+                  target="_blank"
+                  class="contact-me__contact button"
+                  href="https://t.me/Scarbor0"
+                >
+                  <div class="contact-me__contact-logo">
+                    <span class="_icon-telegram"></span>
+                  </div>
+                  <div class="contact-me__contact-info-container">
+                    <h3 class="contact-me__contact-info-title">Telegram</h3>
+                    <span class="contact-me__contact-info-subtitle"
+                      >Scarbor0</span
+                    >
+                  </div>
+                </a>
+              </div>
+
+              <div data-aos="fade-right" data-aos-delay="300">
+                <a
+                  href="mailto:yurachapyuk@gmail.com"
+                  class="contact-me__contact button"
+                >
+                  <div class="contact-me__contact-logo">
+                    <!-- <ion-icon name="mail-outline"></ion-icon> -->
+                    <span class="_icon-email-bold"></span>
+                  </div>
+                  <div class="contact-me__contact-info-container">
+                    <h3 class="contact-me__contact-info-title">Email</h3>
+                    <span class="contact-me__contact-info-subtitle"
+                      >Yurachapyuk@gmail.com</span
+                    >
+                  </div>
+                </a>
+              </div>
+
+              <div data-aos="fade-right" data-aos-delay="350">
+                <!-- <a target="_blank" href="https://goo.gl/maps/VgXDmhkCCaoUxLsR7" class="contact-me__contact button"> //! Novovolynsk / Нововолинськ -->
+                <a
+                  target="_blank"
+                  href="https://maps.app.goo.gl/63rh5ZCNBumSm6us8"
+                  class="contact-me__contact button"
+                >
+                  <div class="contact-me__contact-logo">
+                    <!-- <ion-icon name="location-outline"></ion-icon> -->
+                    <span class="_icon-location-bold"></span>
+                  </div>
+                  <div class="contact-me__contact-info-container">
+                    <h3
+                      class="contact-me__contact-info-title lng-btn-my-location-description"
+                    >
+                      My Location
+                    </h3>
+                    <!-- <span class="contact-me__contact-info-subtitle">Novovolynsk</span> -->
+                    <span class="contact-me__contact-info-subtitle lng-location"
+                      >Ukraine - Novovolynsk</span
+                    >
+                  </div>
+                </a>
+              </div>
+              <div
+                class="contact-me__map-container"
+                data-aos="fade-right"
+                data-aos-delay="400"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20201.207927954696!2d24.155441517690097!3d50.73568835017716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4724f3c1612915c5%3A0xfd93e2ab9d7c451c!2z0J3QvtCy0L7QstC-0LvRi9C90YHQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1sru!2sua!4v1657826084495!5m2!1sru!2sua"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40850.09056527711!2d30.858403054680693!3d50.21477876608473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ed1cea9cc269%3A0xdc656e4470c0c9c3!2z0JLQvtGA0L7QvdGM0LrRltCyLCDQmtC40ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCAwODM1Mg!5e0!3m2!1suk!2sua!4v1714311177464!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+              </div>
+            </div>
+
+            <form id="myForm" class="contact-me__form form__body">
+              <div
+                class="contact-me__content input-textarea-parent"
+                data-aos="fade-left"
+                data-aos-delay="0"
+              >
+                <input
+                  placeholder=" "
+                  type="text"
+                  name="from_name"
+                  id="user_name"
+                  class="contact-me__input feedback-input _req form_input"
+                  required
+                />
+                <label class="form-label lng-form-name">Name</label>
+              </div>
+
+              <div
+                class="contact-me__content input-textarea-parent"
+                data-aos="fade-right"
+                data-aos-delay="0"
+              >
+                <input
+                  placeholder=" "
+                  type="email"
+                  name="email_id"
+                  id="user_email"
+                  class="contact-me__input feedback-input _req _email form_input"
+                  required
+                />
+                <label class="form-label">Email</label>
+              </div>
+              <!-- <div class="contact-me__content"
+                          data-aos="fade-right"
+                          data-aos-delay="0">
+                        <input placeholder="Subject" type="text" class="contact-me__input _req">
+                      </div> -->
+
+              <div
+                class="contact-me__content input-textarea-parent"
+                data-aos="fade-right"
+                data-aos-delay="0"
+              >
+                <textarea
+                  placeholder=" "
+                  name="message"
+                  id="message"
+                  cols="0"
+                  rows="7"
+                  class="contact-me__input input-message _req feedback-input"
+                ></textarea>
+                <label class="form-label form-textarea-label lng-form-message"
+                  >Message</label
+                >
+              </div>
+              <div class="button-send-mail-container">
+                <button type="submit" class="button btn-sent btn-neon">
+                  <span
+                    class="_icon-email-message icon-center sent-icon"
+                  ></span>
+                  <span class="lng-form-send-message">Send Message</span>
+                </button>
+                <!-- <img class="load-svg" src="/img/icon/load.svg" alt="load"> -->
+                <div class="status"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- @@include('html/footer.html',{}) -->
+    <footer class="footer card-glass">
+      <div class="footer__container section">
+        <a href="#section-1" class="footer__iam-container">
+          <h2 class="footer__iam-title lng-footer-my-name">Yuriy Chapyuk</h2>
+          <span class="footer__iam-subtitle">Frontend Developer</span>
+        </a>
+        <div class="footer__container-social">
+          <a
+            target="_blank"
+            class="footer__social button _icon-linkedin"
+            href="https://www.linkedin.com/in/%D1%8E%D1%80%D1%96%D0%B9-%D1%87%D0%B0%D0%BF%D1%8E%D0%BA-438277234/"
+          ></a>
+          <a
+            target="_blank"
+            class="footer__social button _icon-github"
+            href="https://github.com/yuri-cyo"
+          ></a>
+          <a
+            target="_blank"
+            class="footer__social button _icon-telegram"
+            href="https://t.me/Scarbor0"
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

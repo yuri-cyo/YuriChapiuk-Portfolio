@@ -1,0 +1,111 @@
+.input {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px;
+  border: 1px solid rgb(9, 21, 73);
+  font-size: 1.125rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  cursor: pointer;
+  gap: 7px;
+  padding: 0 10px;
+  border-radius: 10px;
+  font-size: 1.125rem;
+  font-weight: 500;
+
+  a, span {
+    white-space: nowrap;
+
+  }
+}
+
+.btn-nav {
+  height: 100% ;
+  padding: 0 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: $fs-nav;
+  height: $header-height - 10px;
+  color: $header-color;
+  font-weight: 600;
+  transition: all 0.3s ease 0s;
+
+  .icon {
+    font-size: 22px;
+  }
+  &:hover {
+    background-color: $header-color;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+
+.btn-solid {
+  background-color: $header-color;
+  color: #fff;
+  height: 40px;
+  font-weight: 500;
+  font-size: 1.25rem;
+    @media (max-width: 1200px) {
+      font-size: 1rem;
+    }
+    
+    &:hover {
+      background-color: $header-color-hover;
+    }
+  }
+  .btn-phone__icon {
+    font-size: 1.5rem
+    // @media (max-width: 550px) {
+    // }
+
+  }
+
+._icon-language {
+  font-size: 1.5rem
+}
+
+.block-hover {
+  &:hover {
+    transform: translateY(-3px) scale(103%);
+    transition: all 0.3s ease 0s;
+  }
+}
+
+.languageButton {
+  gap: 0 !important;
+}
+
+// ! ======= card =======
+
+.cards {
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    gap: 23px;
+  }
+
+  &__card {
+    width: 300px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+  }
+}

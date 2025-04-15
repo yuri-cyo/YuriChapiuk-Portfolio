@@ -1,0 +1,653 @@
+{
+  "main-title": {
+    "uk": "Термоблоки",
+    "en": "Thermoblocks",
+    "pl": "Bloki styropianowe",
+    "de": "Wärmeblöcke"
+  },
+  "main-subtitle": {
+    "uk": "по ціні від виробника",
+    "en": "at manufacturer's price",
+    "pl": "w cenie podanej przez producenta ",
+    "de": "zum Herstellerpreis"
+  },
+  "achievement-card-1": {
+    "uk": "Не потребує додаткового утеплення",
+    "en": "Does not require additional insulation",
+    "pl": "Nie wymaga dodatkowego ocieplenia",
+    "de": "Benötigt keine zusätzliche Isolierung"
+  },
+  "achievement-card-2": {
+    "uk": "До 50% зниження вартості будівництва",
+    "en": "Up to 50% reduction in construction cost",
+    "pl": "Do 50% obniżki kosztów budowy",
+    "de": "Bis zu 50% Reduktion der Baukosten"
+  },
+  "achievement-card-3": {
+    "uk": "Будівництво вище на 1 метр щодня",
+    "en": "Construction rises by 1 meter every day",
+    "pl": "Budowa wzrasta o 1 metr każdego dnia",
+    "de": "Der Bau steigt jeden Tag um 1 Meter"
+  },
+  "achievement-card-4": {
+    "uk": "Доставка по Україні та Європі",
+    "en": "Delivery across Ukraine and Europe",
+    "pl": "Dostawa na terenie Ukrainy i Europy",
+    "de": "Lieferung in der Ukraine und Europa"
+  },
+  "main-form-title": {
+    "uk": "<b>Залиште заявку</b>, і ми <b>безкоштовно</b> розрахуємо кількість термоблоків та матеріалів для вашої споруди",
+    "en": "<b>Leave a request</b>, and we will <b>calculate for free</b> the number of thermoblocks and materials for your building",
+    "pl": "<b>Złóż zamówienie</b>, a my <b>bezpłatnie</b> obliczymy ilość Bloki styropianowe i materiałów dla twojej konstrukcji",
+    "de": "<b>Hinterlassen Sie eine Anfrage</b>, und wir <b>berechnen kostenlos</b> die Anzahl der Thermoblöcke und Materialien für Ihr Gebäude"
+  },
+  "our-company": {
+    "uk": "Наша компанія",
+    "en": "Our company",
+    "pl": "Nasza firma",
+    "de": "Unser Unternehmen"
+  },
+  "company-card-title-1": {
+    "uk": "№1 на ринку з",
+    "en": "No.1 on the market with",
+    "pl": "Nr 1 na rynku z",
+    "de": "Nr. 1 auf dem Markt mit"
+  },
+  "company-card-text-1": {
+    "uk": "<b>1999</b> року",
+    "en": "<b>1999</b> year",
+    "pl": "<b>1999</b> rok",
+    "de": "<b>1999</b> Jahr"
+  },
+  "company-card-title-2": {
+    "uk": "В Україні збудовано більше",
+    "en": "More have been built in Ukraine",
+    "pl": "W Ukrainie zbudowano więcej",
+    "de": "In der Ukraine wurden mehr gebaut"
+  },
+  "company-card-text-2": {
+    "uk": "споруд",
+    "en": "structures",
+    "pl": "obiektów",
+    "de": "Bauwerke"
+  },
+  "company-card-title-3": {
+    "uk": "Товар завжди",
+    "en": "Goods always",
+    "pl": "Towar zawsze",
+    "de": "Produkt ist immer"
+  },
+  "company-card-text-3": {
+    "uk": "в <b>наявності</b>",
+    "en": "in <b>stock</b>",
+    "pl": "<b>dostępny</b>",
+    "de": "<b>verfügbar</b>"
+  },
+  "section-goods-title": {
+    "uk": "Асортимент",
+    "en": "Assortment",
+    "pl": "Asortyment",
+    "de": "Sortiment"
+  },
+  "goods-btn-get-price": {
+    "uk": "Cпецпропозиція",
+    "en": "Special offer",
+    "pl": "Oferta specjalna",
+    "de": "Sonderangebot"
+  },
+  "goods-size-1": {
+    "uk": "250x1000x250мм",
+    "en": "250x1000x250mm",
+    "pl": "250x1000x250mm",
+    "de": "250x1000x250mm"
+  },
+  "goods-title-1": {
+    "uk": "Термоблок рядовий ПСВ-С 25 (EPS 90)",
+    "en": "Standard Thermoblock PSV-C 25 (EPS 90)",
+    "pl": "Blok styropianowy standardowy PSV-C 25 (EPS 90)",
+    "de": "Standard-Thermoblock PSV-C 25 (EPS 90)"
+  }
+  ,
+  "goods-text-1": {
+    "uk": "Використовується для зведення прямих ділянок стін у малоповерховому будівництві...",
+    "en": "Used for constructing straight sections of walls in low-rise construction...",
+    "pl": "Stosowany do budowy prostych odcinków ścian w budownictwie niskich budynków...",
+    "de": "Wird für den Bau von geraden Abschnitten von Wänden im niedrigen Bauwesen verwendet..."
+  },
+  "goods-size-2": {
+    "uk": "250x1000x250мм",
+    "en": "250x1000x250mm",
+    "pl": "250x1000x250mm",
+    "de": "250x1000x250mm"
+  },
+  "goods-title-2": {
+    "uk": "Термоблок торцевий ПСВ-С 25 (EPS 90)",
+    "en": "End Thermoblock PSV-C 25 (EPS 90)",
+    "pl": "Blok styropianowy końcowy PSV-C 25 (EPS 90)",
+    "de": "End-Thermoblock PSV-C 25 (EPS 90)"
+  }
+  ,
+  "goods-text-2": {
+    "uk": "Використовується при формуванні віконних та дверних отворів, а також – кутів будівлі...",
+    "en": "Used in forming window and door openings, as well as building corners...",
+    "pl": "Stosowany do formowania otworów okiennych i drzwiowych, a także narożników budynków...",
+    "de": "Wird bei der Bildung von Fenster- und Türöffnungen sowie Gebäudeecken verwendet..."
+  },
+  "goods-size-3": {
+    "uk": "250x1000x250мм",
+    "en": "250x1000x250mm",
+    "pl": "250x1000x250mm",
+    "de": "250x1000x250mm"
+  },
+  "goods-title-3": {
+    "uk": "Термоблок рядовий ПСВ-С 35 (EPS 120)",
+    "en": "Standard Thermoblock PSV-C 35 (EPS 120)",
+    "pl": "Blok styropianowy standardowy PSV-C 35 (EPS 120)",
+    "de": "Standard-Thermoblock PSV-C 35 (EPS 120)"
+  }
+  ,
+  "goods-text-3": {
+    "uk": "Використовується переважно для зведення прямих ділянок стін у малоповерховому будівництві...",
+    "en": "Mainly used for constructing straight sections of walls in low-rise construction...",
+    "pl": "Głównie stosowany do budowy prostych odcinków ścian w budownictwie niskich budynków...",
+    "de": "Hauptsächlich verwendet für den Bau von geraden Abschnitten von Wänden im niedrigen Bauwesen..."
+  },
+  "goods-size-4": {
+    "uk": "250x1000x250мм",
+    "en": "250x1000x250mm",
+    "pl": "250x1000x250mm",
+    "de": "250x1000x250mm"
+  },
+  "goods-title-4": {
+    "uk": "Термоблок торцевий ПСВ-С 35 (EPS 120)",
+    "en": "End Thermoblock PSV-C 35 (EPS 120)",
+    "pl": "Blok styropianowy końcowy PSV-C 35 (EPS 120)",
+    "de": "End-Thermoblock PSV-C 35 (EPS 120)"
+  }
+  ,
+  "goods-text-4": {
+    "uk": "Використовується при формуванні віконних та дверних отворів, а також – кутів будівлі...",
+    "en": "Used in forming window and door openings, as well as building corners...",
+    "pl": "Stosowany do formowania otworów okiennych i drzwiowych, a także narożników budynków...",
+    "de": "Verwendet beim Bilden von Fenster- und Türöffnungen sowie Gebäudeecken..."
+  },
+  "goods-size-5": {
+    "uk": "250x1000 від 200 до 550мм",
+    "en": "250x1000 from 200 to 550mm",
+    "pl": "250x1000 od 200 do 550mm",
+    "de": "250x1000 von 200 bis 550mm"
+  },
+  "goods-title-5": {
+    "uk": "Термоблок розбірний зі змінною шириною, ПСВ-С 35 (EPS 120)",
+    "en": "Variable Width Thermoblock, PSV-C 35 (EPS 120)",
+    "pl": "Blok styropianowy o zmiennej szerokości, PSV-C 35 (EPS 120)",
+    "de": "Zerlegbarer Thermoblock mit variabler Breite, PSV-C 35 (EPS 120)"
+  },
+  "goods-text-5": {
+    "uk": "Термоблок розбірний ПСВ-С з регульованою шириною 50x50. Використовується для заливки фундаментів та цокольних поверхів...",
+    "en": "Demountable ПСВ-С thermoblock with adjustable width 50x50. Used for pouring foundations and basement floors...",
+    "pl": "Rozłączny blok styropianowy ПСВ-С z regulowaną szerokością 50x50. Stosowany do wylewania fundamentów i piwnic...",
+    "de": "Demontierbarer ПСВ-С Wärmeblock mit verstellbarer Breite 50x50. Verwendet für das Gießen von Fundamenten und Kellergeschossen..."
+  },
+  "goods-size-6": {
+    "uk": "1250x250x300 мм",
+    "en": "1250x250x300 mm",
+    "pl": "1250x250x300 mm",
+    "de": "1250x250x300 mm"
+  },
+  "goods-title-6": {
+    "uk": "Термоблок рядовий 100х50, ПСВ-С 35 (EPS 120)",
+    "en": "Row thermoblock 100x50, ПСВ-С 35 (EPS 120)",
+    "pl": "Blok termiczny rzędowy 100x50, ПСВ-С 35 (EPS 120)",
+    "de": "Reihen-Wärmeblock 100x50, ПСВ-С 35 (EPS 120)"
+  },
+  "goods-text-6": {
+    "uk": "Новинка, з можливістю вставляти перегородку через кожні 50 мм...",
+    "en": "New product, with the ability to insert a partition every 50 mm...",
+    "pl": "Nowy produkt, z możliwością wstawienia przegrody co 50 mm...",
+    "de": "Neues Produkt, mit der Möglichkeit, alle 50 mm eine Trennwand einzusetzen..."
+  },
+  "goods-size-7": {
+    "uk": "250x1000 від 250 до 600 мм",
+    "en": "250x1000 from 250 to 600 mm",
+    "pl": "250x1000 od 250 do 600 mm",
+    "de": "250x1000 von 250 bis 600 mm"
+  },
+  "goods-title-7": {
+    "uk": "Термоблок розбірний зі змінною шириною ПСВ-С 35 (EPS 120)",
+    "en": "Variable width Thermoblock PSV-C 35 (EPS 120)",
+    "pl": "Blok styropianowy rozkładany o zmiennej szerokości PSV-C 35 (EPS 120)",
+    "de": "Zerlegbarer Thermoblock mit variabler Breite PSV-C 35 (EPS 120)"
+  },
+  "goods-text-7": {
+    "uk": "Термоблок розбірний ПСВ-С із регульованою шириною 100x50. Використовується для будівництва холодильних камер, сушок...",
+    "en": "Demountable ПСВ-С thermoblock with adjustable width 100x50. Used for construction of cold rooms, dryers...",
+    "pl": "Rozłączny blok styropianowy ПСВ-С z regulowaną szerokością 100x50. Stosowany do budowy chłodni, suszarek...",
+    "de": "Demontierbarer ПСВ-С Wärmeblock mit verstellbarer Breite 100x50. Verwendet für den Bau von Kühlräumen, Trocknern..."
+  },
+  "modal-goods-text": {
+    "uk": "Залишайте заявку зараз, щоб отримати <br> максимально вигідну <b>ціну</b> або <b>консультацію</b> на термоблок!",
+    "en": "Leave a request now to get the best <b>price</b> or <b>consultation</b> on the thermoblock!",
+    "pl": "Złóż zamówienie teraz, aby uzyskać najlepszą <b>cenę</b> lub <b>konsultację</b> na temat bloku termicznego!",
+    "de": "Hinterlassen Sie jetzt eine Anfrage, um den besten <b>Preis</b> oder eine <b>Beratung</b> zum Thermoblock zu erhalten!"
+  },
+  "sample-title": {
+    "uk": "Замовити безкоштовний зразок термоблоків",
+    "en": "Order a free sample of Thermoblocks",
+    "pl": "Zamów bezpłatny próbny blok styropianowy",
+    "de": "Bestellen Sie ein kostenloses Muster von Thermoblocks"
+  },
+  "sample-text": {
+    "uk": "<span>Введіть свої дані, і ми <b>безкоштовно відправимо</b> Вам взірець термоблока</span>",
+    "en": "<span>Enter your details, and we will <b>send you a free</b> thermoblock sample</span>",
+    "pl": "<span>Wprowadź swoje dane, a <b>wyślemy Ci darmowy</b> próbny blok styropianowy</span>",
+    "de": "<span>Geben Sie Ihre Daten ein, und wir <b>senden Ihnen kostenlos</b> ein Muster des Wärmeblocks</span>"
+  },
+  "profit-title": {
+    "uk": "Вигода будівництва",
+    "en": "Construction benefits",
+    "pl": "Korzyści budowlane",
+    "de": "Bauvorteile"
+  },
+  "profit-card-text-1": {
+    "uk": "Економія на опаленні до 50%",
+    "en": "Up to 50% savings on heating",
+    "pl": "Oszczędność na ogrzewaniu do 50%",
+    "de": "Bis zu 50% Einsparung bei der Heizung"
+  },
+  "profit-card-title-1": {
+    "uk": "Енергоефективність",
+    "en": "Energy efficiency",
+    "pl": "Efektywność energetyczna",
+    "de": "Energieeffizienz"
+  },
+  "profit-card-text-2": {
+    "uk": "Вартість 1 кв. м. стіни з термоблоків більш ніж на 50% нижче, ніж вартість 1 кв. м. стіни з...",
+    "en": "The cost of 1 square meter of wall made of thermoblocks is more than 50% lower than the cost of 1 square meter of wall made of...",
+    "pl": "Koszt 1 metra kwadratowego ściany z bloków termicznych jest o ponad 50% niższy niż koszt 1 metra kwadratowego ściany z...",
+    "de": "Die Kosten für 1 Quadratmeter Wand aus Wärmeblöcken sind mehr als 50% niedriger als die Kosten für 1 Quadratmeter Wand aus..."
+  },
+  "profit-card-title-2": {
+    "uk": "Економія",
+    "en": "Savings",
+    "pl": "Oszczędność",
+    "de": "Ersparnis"
+  },
+  "profit-card-text-3": {
+    "uk": "Немає обмежень щодо навантаження",
+    "en": "There are no restrictions on the load",
+    "pl": "Nie ma ograniczeń dotyczących obciążenia",
+    "de": "Es gibt keine Beschränkungen hinsichtlich der Belastung"
+  },
+  "profit-card-title-3": {
+    "uk": "Міцність",
+    "en": "Strength",
+    "pl": "Wytrzymałość",
+    "de": "Festigkeit"
+  },
+  "profit-card-text-4": {
+    "uk": "Більше площі за рахунок малої товщини стіни",
+    "en": "More space due to thin wall thickness",
+    "pl": "Więcej miejsca dzięki niskiej grubości ściany",
+    "de": "Mehr Platz durch geringe Wandstärke"
+  },
+  "profit-card-title-4": {
+    "uk": "Площа",
+    "en": "Area",
+    "pl": "Powierzchnia",
+    "de": "Fläche"
+  },
+  "profit-card-text-5": {
+    "uk": "Екологічно чиста сировина",
+    "en": "Environmentally friendly raw materials",
+    "pl": "Ekologiczne surowce",
+    "de": "Umweltfreundliche Rohstoffe"
+  },
+  "profit-card-title-5": {
+    "uk": "Екологія",
+    "en": "Ecology",
+    "pl": "Ekologia",
+    "de": "Ökologie"
+  },
+  "profit-card-text-6": {
+    "uk": "В будинку комфортно і затишно",
+    "en": "Comfortable and cozy in the house",
+    "pl": "Wygodnie i przytulnie w domu",
+    "de": "Gemütlich und behaglich im Haus"
+  },
+  "profit-card-title-6": {
+    "uk": "Комфорт",
+    "en": "Comfort",
+    "pl": "Komfort",
+    "de": "Komfort"
+  },
+  "profit-modal-form-title": {
+    "uk": "Введіть свої дані, щоб отримати консультацію",
+    "en": "Enter your details to receive a consultation",
+    "pl": "Wpisz swoje dane, aby otrzymać konsultację",
+    "de": "Geben Sie Ihre Daten ein, um eine Beratung zu erhalten"
+  },
+  "profit-modal-text-1": {
+    "uk": "Стіна з термоблоків завтовшки <b>25 см зберігає більше тепла</b>, ніж:",
+    "en": "A wall made of thermoblocks <b>25 cm thick retains more heat</b> than:",
+    "pl": "Ściana z bloków termicznych o grubości <b>25 cm zatrzymuje więcej ciepła</b> niż:",
+    "de": "Eine Wand aus Wärmeblöcken mit einer Dicke von <b>25 cm speichert mehr Wärme</b> als:"
+  },
+  "profit-modal-text-list-1": {
+    "uk": "<li>стіна з цегли товщиною 1,8 м</li> <li>стіна з бетону товщиною 2,5 м без утеплення</li>",
+    "en": "<li>a brick wall 1.8 m thick</li><li>a concrete wall 2.5 m thick without insulation</li>",
+    "pl": "<li>ściana z cegły o grubości 1,8 m</li><li>ściana z betonu o grubości 2,5 m bez izolacji</li>",
+    "de": "<li>eine Ziegelwand mit einer Dicke von 1,8 m</li><li>eine Betonwand mit einer Dicke von 2,5 m ohne Isolierung</li>"
+  },
+  "profit-modal-text-2": {
+    "uk": "<p>Вартість 1 кв. м. стіни з термоблоків більш ніж <b>на 50%, нижче</b>, ніж 1 кв. м. стіни із традиційних матеріалів (цегла, газобетон). Для зведення стіни потрібно значно менше часу, матеріалів та техніки. У середньому, за 4 дні бригада із 3-4 осіб зводить поверх із термоблоків площею 200 кв. м.</p><p>Фундамент будинку з термоблоків може бути шириною <b>25-30 см</b>, для стіни з цегли - <b>мінімум 60 см</b>.</p>",
+    "en": "<p>The cost of 1 square meter of a wall made of thermoblocks is more than <b>50% lower</b> than 1 square meter of a wall made of traditional materials (brick, aerated concrete). Erecting a wall requires significantly less time, materials, and equipment. On average, a team of 3-4 people can build a floor with an area of ​​200 square meters from thermoblocks in 4 days.</p><p>The foundation of a house made of thermoblocks can be <b>25-30 cm wide</b>, while for a brick wall it is <b>at least 60 cm</b>.</p>",
+    "pl": "<p>Koszt 1 metra kwadratowego ściany z bloków termicznych jest o <b>ponad 50% niższy</b> niż 1 metr kwadratowy ściany z tradycyjnych materiałów (cegła, beton komórkowy). Zbudowanie ściany wymaga znacznie mniej czasu, materiałów i sprzętu. Średnio zespół 3-4 osób może zbudować kondygnację o powierzchni 200 metrów kwadratowych z bloków termicznych w ciągu 4 dni.</p><p>Fundament domu z bloków termicznych może mieć szerokość <b>25-30 cm</b>, podczas gdy dla ściany z cegły wynosi <b>minimum 60 cm</b>.</p>",
+    "de": "<p>Die Kosten für 1 Quadratmeter einer Wand aus Wärmeblöcken liegen um mehr als <b>50% niedriger</b> als 1 Quadratmeter einer Wand aus traditionellen Materialien (Ziegel, Porenbeton). Der Bau einer Wand erfordert deutlich weniger Zeit, Materialien und Ausrüstung. Im Durchschnitt kann ein Team von 3-4 Personen in 4 Tagen eine Etage mit einer Fläche von 200 Quadratmetern aus Wärmeblöcken errichten.</p><p>Das Fundament eines Hauses aus Wärmeblöcken kann eine Breite von <b>25-30 cm</b> haben, während es für eine Ziegelwand <b>mindestens 60 cm</b> beträgt.</p>"
+  },
+  "profit-modal-text-3": {
+    "uk": "<p>Технологія Термодім відноситься до монолітного залізобетонного будинку. За чинними на сьогоднішній день нормами в Україні дозволено будівництво Термобудинків заввишки до 5 поверхів включно, використовуючи бетонні перекриття великих розмірів і відповідно ваги.</p><p>Забитий у стіну дюбель <b>витримує навантаження 70-80 кг</b>, що дозволяє без будь-яких проблем вирішувати питання підвіски шаф, бойлерів тощо.</p>",
+    "en": "<p>The Thermodym technology relates to monolithic reinforced concrete construction. According to current norms in Ukraine, the construction of Thermohouses up to 5 floors inclusive is permitted, using large-sized concrete slabs and accordingly weight.</p><p>A wall plug <b>can withstand a load of 70-80 kg</b>, allowing for easy installation of shelves, boilers, etc.</p>",
+    "pl": "<p>Technologia Thermodym odnosi się do monolitycznej konstrukcji żelbetowej. Zgodnie z obowiązującymi normami na Ukrainie, dozwolone jest budowanie domów termicznych do 5 pięter włącznie, korzystając z dużych płyt betonowych i odpowiednio wagi.</p><p>Wbić w ścianę kołek <b>wytrzymuje obciążenie 70-80 kg</b>, co pozwala na łatwe montowanie półek, bojlerów itp.</p>",
+    "de": "<p>Die Thermodym-Technologie bezieht sich auf monolithischen Stahlbetonbau. Gemäß den aktuellen Normen in der Ukraine ist der Bau von Thermohäusern bis zu 5 Stockwerken zulässig, wobei große Betonplatten und entsprechendes Gewicht verwendet werden.</p><p>Ein in die Wand geschlagener Dübel <b>kann eine Last von 70-80 kg tragen</b>, was eine einfache Installation von Regalen, Boiler usw. ermöglicht.</p>"
+  },
+  "profit-modal-text-4": {
+    "uk": "<p>Стіни з термоблоків майже вдвічі тонші за стандартні цегляні. Наприклад, при зведенні будинку 10x10 м, при незмінних зовнішніх розмірах будівлі можна отримати до 15 м² додаткової площі, а це повноцінна кімната.</p><b>За рахунок цього, внутрішній простір будинку стає більшим.</b>",
+    "en": "<p>Walls made of thermoblocks are almost twice as thin as standard brick walls. For example, when building a 10x10 m house, with unchanged external dimensions of the building, you can get up to 15 m² of additional area, which is a full room.</p><b>As a result, the interior space of the house becomes larger.</b>",
+    "pl": "<p>Ściany z bloczków termicznych są prawie o połowę cieńsze niż standardowe ściany z cegieł. Na przykład, podczas budowy domu o wymiarach 10x10 m, przy niezmienionych zewnętrznych wymiarach budynku, można uzyskać dodatkową powierzchnię do 15 m², co stanowi pełny pokój.</p><b>W rezultacie przestrzeń wewnętrzna domu staje się większa.</b>",
+    "de": "<p>Wände aus Wärmeblöcken sind fast doppelt so dünn wie Standard-Ziegelwände. Zum Beispiel kann beim Bau eines 10x10 m Hauses bei unveränderten äußeren Abmessungen des Gebäudes bis zu 15 m² zusätzliche Fläche erzielt werden, was einem vollwertigen Raum entspricht.</p><b>Als Ergebnis wird der Innenraum des Hauses größer.</b>"
+  },
+  "profit-modal-text-5": {
+      "uk": "<p>Пінополістирол є абсолютно нешкідливим, <b>екологічно чистим</b>, не виділяє ніяких шкідливих для людини та її оточення речовин. За санітарно-гігієнічними нормами пінополістирол може контактувати з харчовими продуктами, без попередньої обробки.</p><p>З нього виготовляють одноразовий посуд, упаковку для овочів, фруктів. У ньому перевозять і зберігають морожену рибу та м'ясо. При цьому він не створює живильного середовища для грибків та бактерій, не підлягає розкладанню під впливом мікроорганізмів і не має обмеженого терміну придатності</p><b>Крім того, пінополістирол, так як і дерево, має здатність \"дихати\", тобто повільно пропускати через себе повітря</b>",
+      "en": "<p>Polystyrene is absolutely harmless, <b>environmentally friendly</b>, does not emit any harmful substances for humans and their environment. According to sanitary and hygienic norms, polystyrene can come into contact with food products without prior treatment.</p><p>Disposable tableware, packaging for vegetables, fruits are made from it. Frozen fish and meat are transported and stored in it. At the same time, it does not create a conducive environment for fungi and bacteria, does not decompose under the influence of microorganisms, and does not have a limited shelf life</p><b>In addition, polystyrene, like wood, has the ability to \"breathe\", that is, to slowly let air through</b>",
+      "pl": "<p>Polistyren jest całkowicie nieszkodliwy, <b>ekologicznie czysty</b>, nie wydziela żadnych szkodliwych substancji dla ludzi i ich otoczenia. Zgodnie z normami sanitarnej i higienicznej, polistyren może być w kontakcie z produktami spożywczymi bez wcześniejszej obróbki.</p><p>Z niego wytwarzane są jednorazowe naczynia, opakowania na warzywa, owoce. W nim transportuje się i przechowuje mrożoną rybę i mięso. Jednocześnie nie tworzy on korzystnego środowiska dla grzybów i bakterii, nie ulega rozkładowi pod wpływem mikroorganizmów i nie ma ograniczonego terminu przydatności</p><b>Ponadto polistyren, podobnie jak drewno, ma zdolność \"oddychania\", czyli powoli przepuszczania powietrza</b>",
+      "de": "<p>Polystyrol ist absolut harmlos, <b>umweltfreundlich</b>, gibt keine schädlichen Substanzen für Menschen und ihre Umgebung ab. Nach den sanitären und hygienischen Normen kann Polystyrol ohne vorherige Behandlung mit Lebensmitteln in Kontakt kommen.</p><p>Einweggeschirr, Verpackungen für Gemüse, Obst werden daraus hergestellt. Gefrorener Fisch und Fleisch werden darin transportiert und gelagert. Gleichzeitig schafft es keine förderliche Umgebung für Pilze und Bakterien, zersetzt sich nicht unter dem Einfluss von Mikroorganismen und hat keine begrenzte Haltbarkeit</p><b>Darüber hinaus hat Polystyrol wie Holz die Fähigkeit zu \"atmen\", das heißt, langsam Luft durchzulassen</b>"
+  },
+  "profit-modal-text-6": {
+    "uk": "<p>В яких би кліматичних умовах ви не жили, у будинку збудованому по технології <b>Термодім</b> - Вам завжди буде комфортно. <b>У спеку</b> - в ньому прохолодно, <b>у мороз</b> - тепло. </p>",
+    "en": "<p>No matter what climate conditions you live in, in a house built with <b>Thermodym</b> technology, you will always be comfortable. <b>In heat</b> - it's cool inside, <b>in frost</b> - it's warm.</p>",
+    "pl": "<p>W jakichkolwiek warunkach klimatycznych by nie mieszkali, w domu zbudowanym w technologii <b>Thermodym</b> zawsze będzie komfortowo. <b>W upał</b> - wewnątrz jest chłodno, <b>w mrozy</b> - ciepło.</p>",
+    "de": "<p>Egal in welchem Klima Sie leben, in einem Haus, das mit der <b>Thermodym</b>-Technologie gebaut wurde, werden Sie immer komfortabel leben. <b>Bei Hitze</b> - kühl drinnen, <b>bei Frost</b> - warm.</p>"
+  },
+  "why-title": {
+    "uk": "Чому наші термоблоки №1 в Україні?",
+    "en": "Why are our thermoblocks No. in Ukraine?",
+    "pl": "Dlaczego nasze bloki termiczne są numerem 1 na Ukrainie?",
+    "de": "Warum sind unsere Wärmeblöcke Nr. 1 in der Ukraine?"
+  },
+  "why-title-card-1": {
+    "uk": "Замок",
+    "en": "Lock",
+    "pl": "Zamek",
+    "de": "Schloss"
+  },
+  "why-text-card-1": {
+    "uk": "У верхній і нижній частині блоків мають спеціальні з'єднувальні замки складної форми, що забезпечують щільне з'єднання між рядами і запобігають зміщенню блоків при заливанні бетоном. Така конструкція дозволяє ідеально витримувати геометричні розміри та герметичність стін",
+    "en": "At the top and bottom of the blocks, there are special complex-shaped connecting locks that ensure tight connection between rows and prevent displacement of blocks during concrete pouring. This design allows for perfect maintenance of geometric dimensions and wall tightness.",
+    "pl": "Na górnej i dolnej części bloków znajdują się specjalne zamki łączeniowe o skomplikowanym kształcie, które zapewniają szczelne połączenie między rzędami i zapobiegają przemieszczaniu się bloków podczas wylewania betonu. Taki projekt pozwala na idealne utrzymanie wymiarów geometrycznych i szczelności ścian.",
+    "de": "Oben und unten an den Blöcken befinden sich spezielle, komplex geformte Verriegelungen, die eine feste Verbindung zwischen den Reihen gewährleisten und ein Verschieben der Blöcke während des Betongusses verhindern. Diese Konstruktion ermöglicht eine perfekte Einhaltung der geometrischen Abmessungen und der Dichtigkeit der Wände."
+  },
+  "why-title-card-2": {
+    "uk": "Геометрія",
+    "en": "Geometry",
+    "pl": "Geometria",
+    "de": "Geometrie"
+  },
+  "why-text-card-2": {
+    "uk": "Ідеальна геометрія термоблоків досягається за рахунок сучасного, автоматичного обладнання, на якому він виготовляється. У процесі будівництва стіна виходить рівною і гладкою як скло, тому витрата матеріалів під час обробки зводиться до мінімуму",
+    "en": "The perfect geometry of the thermoblocks is achieved through modern, automatic equipment on which it is manufactured. During construction, the wall comes out smooth and even like glass, so the material wastage during processing is minimized.",
+    "pl": "Idealna geometria bloków termicznych jest osiągana dzięki nowoczesnemu, automatycznemu sprzętowi, na którym są produkowane. Podczas budowy ściana wychodzi gładka i równa jak szkło, dlatego zużycie materiałów podczas obróbki jest minimalizowane.",
+    "de": "Die perfekte Geometrie der Wärmeblöcke wird durch moderne, automatische Ausrüstung erreicht, auf der sie hergestellt werden. Während des Baus kommt die Wand glatt und eben wie Glas heraus, weshalb der Materialverbrauch während der Verarbeitung minimiert wird."
+  },
+  "why-title-card-3": {
+    "uk": "Глибокий боковий замок \"шип-паз\"",
+    "en": "Deep side lock \"tongue and groove\"",
+    "pl": "Głęboki zamek boczny \"pióro-wpust\"",
+    "de": "Tiefes Seitenschloss \"Nut und Feder\""
+  },
+  "why-text-card-3": {
+    "uk": "Забезпечує надійне з'єднання між блоками в одному ряду, перешкоджаючи протіканню бетону. Саме тому незнімна опалубка з пінополістиролу надійний матеріал для будівництва",
+    "en": "Provides reliable connection between blocks in a single row, preventing concrete leakage. That's why non-removable polystyrene formwork is a reliable material for construction.",
+    "pl": "Zapewnia niezawodne połączenie między blokami w jednym rzędzie, zapobiegając przeciekaniu betonu. Dlatego niewymienialna szalunkowa z polistyrenu jest niezawodnym materiałem budowlanym.",
+    "de": "Bietet eine zuverlässige Verbindung zwischen Blöcken in einer Reihe, um das Auslaufen von Beton zu verhindern. Deshalb ist die nicht abnehmbare Polystyrol-Schalung ein zuverlässiges Baumaterial."
+  },
+  "why-title-card-4": {
+    "uk": "Внутрішня плоскість стіни",
+    "en": "Inner surface of the wall",
+    "pl": "Wewnętrzna powierzchnia ściany",
+    "de": "Innere Oberfläche der Wand"
+  },
+  "why-text-card-4": {
+    "uk": "Внутрішня плоскість стінок блоку така ж рівна, як і зовнішня. Завдяки цьому монолітна стіна, яку ми отримуємо після заливання бетону, має дзеркальну гладку поверхню з незмінною товщиною в будь-якій точці, що дорівнює 150 мм.",
+    "en": "The inner surface of the block walls is as smooth as the outer surface. As a result, the monolithic wall obtained after pouring concrete has a mirror-smooth surface with a constant thickness of 150 mm at any point.",
+    "pl": "Wewnętrzna powierzchnia ścian bloku jest równie gładka jak zewnętrzna powierzchnia. W rezultacie monolityczna ściana uzyskana po zalaniu betonu ma lustrzane gładkie powierzchnie o stałej grubości 150 mm w dowolnym miejscu.",
+    "de": "Die innere Oberfläche der Blockwände ist genauso glatt wie die äußere Oberfläche. Als Ergebnis hat die monolithische Wand, die nach dem Betonieren erhalten wird, eine spiegelglatte Oberfläche mit einer konstanten Dicke von 150 mm an jeder Stelle."
+  },
+  "why-title-card-5": {
+    "uk": "Щільність",
+    "en": "Density",
+    "pl": "Gęstość",
+    "de": "Dichte"
+  },
+  "why-text-card-5": {
+    "uk": "Щільність термоблока 35 кг/м³ гарантує, що під час заливки бетону блоки не розірве створюваним усередині тиском, а оздоблювальні матеріали, що монтуються на блоки (штукатурка, облицювальна плитка тощо), не зможуть якось пошкодити або відшарувати зовнішній шар пінополістиролу",
+    "en": "The density of the thermoblock at 35 kg/m³ ensures that during concrete pouring, the blocks will not be ruptured by the pressure created inside. Additionally, finishing materials mounted on the blocks (such as plaster, facing tiles, etc.) will not be able to damage or detach the external layer of polystyrene foam.",
+    "pl": "Gęstość bloku styropianowego wynosząca 35 kg/m³ gwarantuje że podczas wylewania betonu bloki nie zostaną rozerwane przez ciśnienie tworzone wewnątrz. Dodatkowo, materiały wykończeniowe montowane na blokach (takie jak tynk, płytki elewacyjne itp.) nie będą w stanie uszkodzić ani odrywać zewnętrznej warstwy pianki polistyrenowej.",
+    "de": "Die Dichte des Wärmeblocks von 35 kg/m³ stellt sicher, dass die Blöcke während des Betonierens nicht durch den im Inneren erzeugten Druck zerstört werden. Zusätzlich werden Veredelungsmaterialien, die auf den Blöcken montiert sind (wie Putz, Verkleidungsplatten usw.), nicht in der Lage sein, die äußere Schicht aus Polystyrolschaum zu beschädigen oder abzulösen."
+  },
+  "why-title-card-6": {
+    "uk": "Перемичка",
+    "en": "Lintel",
+    "pl": "Dźwigar",
+    "de": "Sturz"
+  },
+  "why-text-card-6": {
+    "uk": "Спеціальна 'радіусна' форма примикання перемички до стіни блоку дозволяє збільшити площу примикання перемички до стіни. Завдяки цьому блок стає більш стійким до навантажень, які впливають на стінку під час заливки бетону",
+    "en": "The special 'radius' shape of the lintel connection to the block wall allows to increase the area of the lintel's attachment to the wall. This makes the block more resistant to loads that affect the wall during concrete pouring",
+    "pl": "Specjalny kształt 'promienia' połączenia nadproża ze ścianą bloku pozwala zwiększyć powierzchnię przyłączenia nadproża do ściany. Dzięki temu blok staje się bardziej odporny na obciążenia, które działają na ścianę podczas wylewania betonu",
+    "de": "Die spezielle 'radielle' Form der Verbindung des Sturzes zur Blockwand ermöglicht eine Vergrößerung der Fläche der Verbindung des Sturzes zur Wand. Dadurch wird der Block widerstandsfähiger gegen Belastungen, die während des Betonierens auf die Wand wirken"
+  },
+  "building-title": {
+    "uk": "З термоблоків будують",
+    "en": "Built from thermoblocks",
+    "pl": "Budowane z bloków termicznych",
+    "de": "Gebaut aus Wärmeblöcken"
+  },
+  "building-card-title-1": {
+    "uk": "Котеджі",
+    "en": "Cottages",
+    "pl": "Domki letniskowe",
+    "de": "Ferienhäuser"
+  }
+  ,
+  "building-card-title-2": {
+    "uk": "Багатоповерхові будинки",
+    "en": "Multi-storey buildings",
+    "pl": "Budynki wielopiętrowe",
+    "de": "Mehrgeschossige Gebäude"
+  },
+  "building-card-title-3": {
+    "uk": "Басейни",
+    "en": "Swimming pools",
+    "pl": "Baseny",
+    "de": "Schwimmbäder"
+  },
+  "building-card-title-4": {
+    "uk": "Складські приміщення",
+    "en": "Warehouse facilities",
+    "pl": "Magazyny",
+    "de": "Lagergebäude"
+  },
+  "building-card-title-5": {
+    "uk": "Медичні заклади",
+    "en": "Medical facilities",
+    "pl": "Placówki medyczne",
+    "de": "Medizinische Einrichtungen"
+  },
+  "building-card-title-6": {
+    "uk": "Готелі",
+    "en": "Hotels",
+    "pl": "Hotele",
+    "de": "Hotels"
+  },
+  "how-build-title": {
+    "uk": "Як побудувати енергоефективний будинок?",
+    "en": "How to build an energy-efficient house?",
+    "pl": "Jak zbudować energooszczędny dom?",
+    "de": "Wie baue ich ein energieeffizientes Haus?"
+  },
+  "deliver-map-title": {
+    "uk": "Постачаємо в різні країни світу",
+    "en": "We supply to various countries around the world",
+    "pl": "Dostarczamy do różnych krajów na całym świecie",
+    "de": "Wir liefern in verschiedene Länder auf der ganzen Welt"
+  },
+  "documents-map-title": {
+    "uk": "Нормативні документи",
+    "en": "Regulatory documents",
+    "pl": "Dokumenty regulacyjne",
+    "de": "Normative Dokumente"
+  },
+  "doc-list-title-1": {
+    "uk": "Сертифікат на термоблоки",
+    "en": "Certificate for thermoblocks",
+    "pl": "Certyfikat dla bloków termicznych",
+    "de": "Zertifikat für Wärmeblöcke"
+  },
+  "doc-list-title-2": {
+    "uk": "Сертифікат на радіаційну безпеку",
+    "en": "Certificate for radiation safety",
+    "pl": "Certyfikat bezpieczeństwa radiacyjnego",
+    "de": "Zertifikat für Strahlungssicherheit"
+  },
+  "doc-list-title-3": {
+    "uk": "ТУ для блоків незнімної опалубки",
+    "en": "Technical specifications for permanent formwork blocks",
+    "pl": "Specyfikacja techniczna dla bloków o stałym deskowaniu",
+    "de": "Technische Spezifikationen für Schalungsblöcke"
+  },
+  "doc-list-title-4": {
+    "uk": "Протокол узгодження проекту ТУ",
+    "en": "Protocol of agreement on the project of technical specifications",
+    "pl": "Protokół porozumienia w sprawie projektu specyfikacji technicznych",
+    "de": "Protokoll der Vereinbarung über das Projekt der technischen Spezifikationen"
+  },
+  "doc-list-title-5": {
+    "uk": "Висновок про пожежну безпеку",
+    "en": "Conclusion on fire safety",
+    "pl": "Wniosek dotyczący bezpieczeństwa przeciwpożarowego",
+    "de": "Fazit zur Brandsicherheit"
+  },
+  "doc-list-title-6": {
+    "uk": "Санітарно-гігієнічні висновки",
+    "en": "Sanitary-hygienic conclusions",
+    "pl": "Wnioski sanitarno-higieniczne",
+    "de": "Sanitär-hygienische Schlussfolgerungen"
+  },
+  "doc-list-title-7": {
+    "uk": "Протокол по визначенню групи горючості",
+    "en": "Protocol for determining flammability group",
+    "pl": "Protokół określający grupę palności",
+    "de": "Protokoll zur Bestimmung der Brennbarkeitsgruppe"
+  },
+  "doc-list-title-8": {
+    "uk": "Протокол по визначенню групи займистості",
+    "en": "Protocol for determining the combustibility group",
+    "pl": "Protokół określający grupę palności",
+    "de": "Protokoll zur Bestimmung der Entzündbarkeitsgruppe"
+  },
+  "doc-list-title-9": {
+    "uk": "Протокол про визначення теплопровідності",
+    "en": "Protocol for determining thermal conductivity",
+    "pl": "Protokół określający przewodność cieplną",
+    "de": "Protokoll zur Bestimmung der Wärmeleitfähigkeit"
+  },
+  "doc-list-title-10": {
+    "uk": "Cвідоцтво на знак для товарiв та послуг",
+    "en": "Certificate for trademark of goods and services",
+    "pl": "Certyfikat na znak towarów i usług",
+    "de": "Zertifikat für Waren- und Dienstleistungsmarke"
+  },
+  "doc-list-title-11": {
+    "uk": "Патенти",
+    "en": "Patents",
+    "pl": "Patenty",
+    "de": "Patente"
+  },
+  "doc-list-title-12": {
+    "uk": "Ліцензії",
+    "en": "Licenses",
+    "pl": "Licencje",
+    "de": "Lizenzen"
+  },
+  "doc-list-title-13": {
+    "uk": "Посвідчення дилера",
+    "en": "Dealer certificate",
+    "pl": "Certyfikat dilera",
+    "de": "Händlerzertifikat"
+  },
+  "galleryFolder1": {
+    "uk": "Приватний будинок, с. Козин",
+    "en": "Private house, village Kozyn",
+    "pl": "Dom prywatny, wieś Kozyn",
+    "de": "Privathaus, Dorf Kozyn"
+  },
+  "galleryFolder2": {
+    "uk": "Ресторан «Козачок», с. Щасливе",
+    "en": "Restaurant «Kozachok», village Schaslyve",
+    "pl": "Restauracja «Kozaczek», wieś Szczęśliwe",
+    "de": "Restaurant «Kozachok», Dorf Schaslyve"
+  },
+  "galleryFolder3": {
+    "uk": "Приватний будинок. Київ, острів Водників",
+    "en": "Private house. Kyiv, Vodnyky Island",
+    "pl": "Dom prywatny. Kijów, Wyspa Wodników",
+    "de": "Privathaus. Kiew, Vodnyky-Insel"
+  },
+  "galleryFolder4": {
+    "uk": "Приватний будинок. Київська область, Хлепча",
+    "en": "Private house. Kyiv region, Khlepcha",
+    "pl": "Dom prywatny. Obwód kijowski, Chłepcza",
+    "de": "Privathaus. Oblast Kiew, Chlepcha"
+  },
+  "galleryFolder5": {
+    "uk": "Готель в Яремче, 2700 м²",
+    "en": "Hotel in Yaremche, 2700 m²",
+    "pl": "Hotel w Jaremczach, 2700 m²",
+    "de": "Hotel in Jaremtsche, 2700 m²"
+  },
+  "galleryFolder6": {
+    "uk": "«Клубний будинок», р-н. Голосієво, Київ",
+    "en": "Club house, Holosiivskyi district, Kyiv",
+    "pl": "Dom klubowy, dzielnica Hołosijiw, Kijów",
+    "de": "Clubhaus, Holosiivskyi Bezirk, Kiew"
+  },
+
+
+
+
+  "calc-calculate-title": {
+    "uk": "Розрахувати кількість термоблоків",
+    "en": "Calculate the quantity of thermoblocks",
+    "pl": "Oblicz liczbę bloków termicznych",
+    "de": "Die Anzahl der Wärmeblöcke berechnen"
+  },
+  "calc-calculate-text": {
+    "uk": "<b>Залиште заявку</b>, і ми <b>безкоштовно</b> розрахуємо кількість блоків та матеріалів для вашої споруди",
+    "en": "<b>Leave a request</b>, and we will <b>calculate for free</b> the quantity of blocks and materials for your construction",
+    "pl": "<b>Zostaw zgłoszenie</b>, a my <b>bezpłatnie obliczymy</b> ilość bloków i materiałów do budowy Twojej konstrukcji",
+    "de": "<b>Hinterlassen Sie eine Anfrage</b> und wir werden <b>kostenlos</b> die Menge an Blöcken und Materialien für Ihren Bau berechnen"
+  },
+  "comparison-table": {
+    "uk": "Порівняння вартості будівництва з різних технологій",
+    "en": "Comparison of construction costs with different technologies",
+    "pl": "Porównanie kosztów budowy z różnymi technologiami",
+    "de": "Vergleich der Baukosten mit verschiedenen Technologien"
+  },
+  "footer-text": {
+      "uk": "Компанія \"Валькірія\". Виробництво термоблоків",
+      "en": "Company \"Валькірія\". Production of thermoblocks",
+      "pl": "Firma \"Валькірія\". Produkcja bloków termicznych",
+      "de": "Firma \"Валькірія\". Produktion von Wärmeblöcken"
+  }
+}
