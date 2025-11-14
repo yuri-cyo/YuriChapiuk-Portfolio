@@ -11,7 +11,7 @@ export function renderPortfolio() {
 		{
 			//! Card 9
 			title: 'otake.io',
-			icon: 'img/portfolio/favicon/otake_icon.svg',
+			icon: 'img/portfolio/favicon/otake_icon.png',
 			description: {
 				'en': `
 					Startup project: otake.io<br>
